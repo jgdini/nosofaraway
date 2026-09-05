@@ -76,7 +76,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   font-family:var(--font-body); font-weight:700; font-size:.98rem;
   padding:15px 26px; border-radius:3px; text-decoration:none;
   transition:transform .18s ease, box-shadow .18s ease;
-  white-space:nowrap;
+  white-space:normal; text-align:center;
 }
 .btn-ticket{
   background:var(--rust); color:var(--cream);
