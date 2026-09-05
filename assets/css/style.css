@@ -185,7 +185,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .boarding-pass__items strong{ display:block; color:var(--ink); font-family:var(--font-display); font-size:1.03rem; margin-bottom:3px; }
 .boarding-pass__items p{ margin:0; color:#5B5340; font-size:.9rem; }
 
-.programa-cta{ margin-top:44px; text-align:center; }
+.programa-cta{ margin-top:44px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:16px; }
 
 /* além da austrália */
 .beyond-grid{ display:grid; grid-template-columns:1.5fr .8fr; gap:50px; align-items:center; }
@@ -202,12 +202,33 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .faq-item[open] summary::after{ transform:rotate(45deg); }
 .faq-item p{ color:#C9C4AE; margin:14px 0 0; font-size:.95rem; }
 
-/* final cta */
-.final-cta{ text-align:center; max-width:760px; }
-.final-cta .section-lead{ margin-inline:auto; }
+/* final cta / check-in form */
 .section--rust .eyebrow{ color:var(--ink); }
 .section--rust .btn-ticket{ background:var(--ink); outline-color:var(--ink); color:var(--cream); }
 .section--rust .btn-ticket:hover{ background:#0D1930; }
+
+.analise-grid{ display:grid; grid-template-columns:1fr .95fr; gap:56px; align-items:start; }
+.analise-copy .section-lead{ margin-bottom:32px; }
+.hero-trust--onrust{ color:rgba(20,33,61,.75); }
+.hero-trust--onrust li::before{ color:var(--ink); }
+
+.checkin-card{ background:var(--cream); border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(20,33,61,.28); position:relative; }
+.checkin-card__header{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); color:var(--gold); font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em; padding:14px 24px; border-bottom:2px dashed rgba(212,162,76,.5); }
+.checkin-card__body{ display:grid; gap:16px; padding:28px 26px 24px; }
+.checkin-card__body[hidden]{ display:none; }
+.checkin-card label{ display:flex; flex-direction:column; gap:6px; font-family:var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:#8A7F5E; }
+.checkin-card input, .checkin-card select{
+  font-family:var(--font-body); font-size:.98rem; color:var(--ink-text);
+  padding:12px 14px; border:1.5px solid #E3D9BF; border-radius:4px; background:#fff;
+}
+.checkin-card input:focus, .checkin-card select:focus{ outline:2px solid var(--rust); outline-offset:1px; border-color:var(--rust); }
+.checkin-submit{ width:100%; justify-content:center; margin-top:6px; }
+.checkin-note{ margin:0; text-align:center; font-size:.76rem; color:#8A7F5E; }
+
+.checkin-card__success{ padding:60px 30px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; color:var(--eucalyptus); }
+.checkin-card__success[hidden]{ display:none; }
+.checkin-card__success strong{ font-family:var(--font-display); font-size:1.3rem; color:var(--ink); }
+.checkin-card__success p{ color:#5B5340; margin:0; max-width:34ch; }
 
 /* -------------------- footer -------------------- */
 .site-footer{ background:var(--ink); padding-block:34px; }
@@ -234,6 +255,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   .boarding-pass{ grid-template-columns:1fr; }
   .boarding-pass__perf{ display:none; }
   .beyond-grid{ grid-template-columns:1fr; }
+  .analise-grid{ grid-template-columns:1fr; }
 }
 
 @media (max-width: 760px){

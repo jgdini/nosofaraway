@@ -24,6 +24,18 @@
     });
   }
 
+  // Lead form (check-in) — PLACEHOLDER: front-end only, no real submission yet.
+  // Wire this to a real endpoint/e-mail/CRM during the WordPress build.
+  var leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (!leadForm.checkValidity()) { leadForm.reportValidity(); return; }
+      leadForm.querySelector('.checkin-card__body').hidden = true;
+      leadForm.querySelector('.checkin-card__success').hidden = false;
+    });
+  }
+
   // Scroll-reveal
   var revealTargets = document.querySelectorAll(
     '.origin-card, .stamp-card, .boarding-pass, .faq-item, .beyond-note'
