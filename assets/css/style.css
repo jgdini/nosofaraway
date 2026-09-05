@@ -88,7 +88,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .btn-ticket:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(187,68,48,.35); background:var(--rust-dark); }
 .btn-small{ padding:10px 16px; font-size:.85rem; }
 .btn-large{ padding:19px 34px; font-size:1.08rem; }
-.header-cta{ margin-left:auto; }
+.header-actions{ display:flex; align-items:center; gap:12px; margin-left:auto; }
 
 .link-inline{ font-weight:700; text-decoration:underline; text-underline-offset:4px; color:var(--ink); }
 .link-inline--light{ color:var(--cream); }
@@ -118,15 +118,14 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .nav-toggle{ display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:30px; background:none; border:0; cursor:pointer; margin-left:auto; }
 .nav-toggle span{ display:block; height:2px; background:var(--cream); border-radius:2px; }
 
-/* -------------------- fx ticker (cotação AUD ao vivo) -------------------- */
-.fx-ticker{
-  background:var(--ink-soft); border-bottom:1px solid rgba(212,162,76,.25);
-  padding:7px 20px; text-align:center;
-  font-family:var(--font-mono); font-size:.74rem; letter-spacing:.03em; color:#B9B49E;
+/* -------------------- fx badge (cotação AUD ao vivo, no header) -------------------- */
+.fx-badge{
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(212,162,76,.12); border:1px solid rgba(212,162,76,.35); border-radius:20px;
+  padding:6px 12px; font-family:var(--font-mono); font-size:.74rem; white-space:nowrap;
 }
-.fx-ticker__label{ color:#8A856F; margin-right:6px; }
-.fx-ticker__value{ color:var(--gold); font-weight:700; margin-right:8px; }
-.fx-ticker__status{ color:#6E6A58; font-size:.68rem; }
+.fx-badge__label{ color:#8A856F; letter-spacing:.04em; }
+.fx-badge strong{ color:var(--gold); font-weight:700; }
 
 /* -------------------- hero -------------------- */
 .hero{

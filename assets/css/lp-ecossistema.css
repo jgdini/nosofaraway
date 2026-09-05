@@ -190,6 +190,10 @@ body.lp-body{ padding-bottom:0; }
   .lp-moment-grid{ grid-template-columns:1fr; }
 }
 
+@media (max-width: 480px){
+  .lp-header .fx-badge{ display:none; }
+}
+
 @media (max-width: 640px){
   .lp-stat-grid{ grid-template-columns:1fr 1fr; gap:12px; }
   .lp-pain-grid{ grid-template-columns:1fr; }
