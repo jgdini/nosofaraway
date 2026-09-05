@@ -26,6 +26,27 @@
     });
   }
 
+  // Live AUD -> BRL exchange rate (AwesomeAPI, free, no key, CORS-open)
+  var fxEls = document.querySelectorAll('[data-fx-value]');
+  if (fxEls.length) {
+    fetch('https://economia.awesomeapi.com.br/last/AUD-BRL')
+      .then(function (r) { if (!r.ok) throw new Error('fx fetch failed'); return r.json(); })
+      .then(function (data) {
+        var rate = parseFloat(data.AUDBRL.bid);
+        var formatted = rate.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        fxEls.forEach(function (el) { el.textContent = 'R$ ' + formatted; });
+        document.querySelectorAll('[data-fx-status]').forEach(function (el) {
+          el.textContent = '';
+        });
+      })
+      .catch(function () {
+        fxEls.forEach(function (el) { el.textContent = 'indisponível'; });
+        document.querySelectorAll('[data-fx-status]').forEach(function (el) {
+          el.textContent = 'não foi possível carregar a cotação';
+        });
+      });
+  }
+
   // Boarding board — split-flap word cycle (decorative, aria-hidden in markup)
   var boardWord = document.getElementById('board-word');
   if (boardWord && !prefersReduced) {

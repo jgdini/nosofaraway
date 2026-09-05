@@ -23,11 +23,69 @@
      R$3.726) foi ajustado pra R$3.722, que é o valor que encontrei com
      fonte primária confirmável (IBGE, 1º tri/2026) — confirmar com o
      time se há uma fonte específica pro R$3.726 antes de publicar.
-     Preço da oferta (Dobra 13) é placeholder — falta o valor real.
+     Preço (Dobra 13): João confirmou que ainda não foi definido, então
+     a oferta fica sem valor visível por enquanto — só checklist + CTA.
+     Acesso (FAQ): confirmado como anual.
      Depoimentos reaproveitam os nomes reais já documentados no site
-     (Rodrigo & Gabriel, Ana, Pedro & Wenner) — não fabriquei prints
-     de comentário nem depoimentos novos sem autorização.
+     (Rodrigo & Gabriel, Ana, Pedro & Wenner) — João autorizou substituir
+     por depoimentos/prints novos quando houver material real disponível;
+     não fabriquei nada novo sem esse material.
      ===================================================================== -->
+
+<!-- ======================= SPRITE DE ÍCONES (linha, sem emoji) ======================= -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="ic-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M15 9l-2.2 5.2L9 16l2.2-5.2z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="ic-cap" viewBox="0 0 24 24">
+      <path d="M12 3.5L2.5 8.3 12 13l9.5-4.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M6.5 10.6v4.3c0 1.6 2.5 3 5.5 3s5.5-1.4 5.5-3v-4.3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M21.5 8.3v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7.5" width="18" height="11.5" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M3 12.5h18" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ic-people" viewBox="0 0 24 24">
+      <circle cx="8.3" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="17" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M2.5 19.5c.4-3.4 2.9-5.8 5.8-5.8s5.4 2.4 5.8 5.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M14.8 14c2.2.5 3.9 2.6 4.2 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-house" viewBox="0 0 24 24">
+      <path d="M3.5 11.5L12 4l8.5 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.8 10v8.7c0 .7.6 1.3 1.3 1.3h9.8c.7 0 1.3-.6 1.3-1.3V10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ic-document" viewBox="0 0 24 24">
+      <rect x="5.5" y="3" width="13" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8.5 8.5h7M8.5 12.5h7M8.5 16.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-passport" viewBox="0 0 24 24">
+      <rect x="4" y="3.5" width="16" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="10.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8 17.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-mindset" viewBox="0 0 24 24">
+      <path d="M2.5 19.5L9 8l3.5 5.5L15.5 9l6 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M16 4v5.2M16 4l3.3 1.7L16 7.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="ic-pin" viewBox="0 0 24 24">
+      <path d="M12 21.5S5.3 14.2 5.3 9.3a6.7 6.7 0 1 1 13.4 0c0 4.9-6.7 12.2-6.7 12.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.3" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ic-plane" viewBox="0 0 24 24">
+      <path d="M2 21L23 12L2 3L2 10L17 12L2 14Z" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
 
 <!-- ======================= HEADER (minimalista, foco em conversão) ======================= -->
 <header class="lp-header">
@@ -49,6 +107,12 @@
     </a>
   </div>
 </header>
+
+<div class="fx-ticker">
+  <span class="fx-ticker__label">1 AUD =</span>
+  <strong class="fx-ticker__value" data-fx-value>—</strong>
+  <span class="fx-ticker__status" data-fx-status>carregando cotação…</span>
+</div>
 
 <main id="top">
 
@@ -108,12 +172,12 @@
 
     <ul class="lp-broken-journey">
       <li><span class="lp-bj-icon lp-flag-chip">BR</span>"Qual visto?"</li>
-      <li><span class="lp-bj-icon">✈️</span>"Como me preparo?"</li>
+      <li><svg class="lp-bj-icon lp-icon" aria-hidden="true"><use href="#ic-plane"/></svg>"Como me preparo?"</li>
       <li><span class="lp-bj-icon lp-flag-chip">AU</span>"Cheguei. E agora?"</li>
-      <li><span class="lp-bj-icon">💼</span>"Onde estão as oportunidades?"</li>
-      <li><span class="lp-bj-icon">📄</span>"Como renovo?"</li>
-      <li><span class="lp-bj-icon">🤝</span>"Como faço as conexões certas?"</li>
-      <li><span class="lp-bj-icon">🏡</span>"Como construo um caminho de longo prazo?"</li>
+      <li><svg class="lp-bj-icon lp-icon" aria-hidden="true"><use href="#ic-briefcase"/></svg>"Onde estão as oportunidades?"</li>
+      <li><svg class="lp-bj-icon lp-icon" aria-hidden="true"><use href="#ic-document"/></svg>"Como renovo?"</li>
+      <li><svg class="lp-bj-icon lp-icon" aria-hidden="true"><use href="#ic-people"/></svg>"Como faço as conexões certas?"</li>
+      <li><svg class="lp-bj-icon lp-icon" aria-hidden="true"><use href="#ic-house"/></svg>"Como construo um caminho de longo prazo?"</li>
     </ul>
 
     <p class="lp-lead lp-lead--light lp-center">Sem direção, cada decisão pode custar tempo, dinheiro e oportunidades.</p>
@@ -126,6 +190,12 @@
   <div class="wrap">
     <p class="eyebrow eyebrow--dark lp-center">Não é sobre trocar de país</p>
     <h2 class="lp-h2 lp-center">Você não está pensando apenas em mudar de país.<br>Está pensando em mudar as possibilidades da sua vida.</h2>
+
+    <div class="lp-fx-card">
+      <span class="lp-fx-card__label">Cotação agora</span>
+      <span class="lp-fx-card__value">1 AUD = <strong data-fx-value>—</strong></span>
+      <span class="lp-fx-card__status" data-fx-status>carregando…</span>
+    </div>
 
     <div class="lp-compare">
       <div class="lp-compare-col">
@@ -186,12 +256,12 @@
     </div>
 
     <div class="lp-pillars-row">
-      <div><span>🧭</span>Direção</div>
-      <div><span>🎓</span>Educação</div>
-      <div><span>💼</span>Carreira</div>
-      <div><span>🤝</span>Networking</div>
-      <div><span>🛂</span>Imigração</div>
-      <div><span>🧠</span>Mentalidade</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-compass"/></svg>Direção</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-cap"/></svg>Educação</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-briefcase"/></svg>Carreira</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-people"/></svg>Networking</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-passport"/></svg>Imigração</div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-mindset"/></svg>Mentalidade</div>
     </div>
 
     <div class="lp-center" style="margin-top:40px;">
@@ -265,14 +335,14 @@
     <h2 class="lp-h2 lp-h2--light lp-center">É direção.</h2>
 
     <div class="lp-offer-grid">
-      <div class="lp-offer-card"><span class="lp-offer-icon">🎯</span><h3>Mentoria com Marcelo</h3><p>Experiência real de quem construiu a própria trajetória na Austrália.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">🛂</span><h3>Agente de imigração</h3><p>Orientação especializada pra compreender caminhos e possibilidades migratórias.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">🧭</span><h3>Caminho das pedras</h3><p>O que preparar, quando preparar e quais decisões precisam entrar no radar.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">📍</span><h3>Plano de direção</h3><p>Entenda seu momento e quais próximos passos fazem sentido pro seu objetivo.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">💼</span><h3>Oportunidades</h3><p>Aprenda onde procurar e como se posicionar pro mercado australiano.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">🤝</span><h3>Networking</h3><p>Conecte-se com pessoas que já estão construindo suas trajetórias no país.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">🎓</span><h3>Educação</h3><p>Parceiros, escolas, colleges, universidades e benefícios do ecossistema.</p></div>
-      <div class="lp-offer-card"><span class="lp-offer-icon">🧠</span><h3>Mentalidade</h3><p>Porque mudar de país exige muito mais do que comprar uma passagem.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-target"/></svg><h3>Mentoria com Marcelo</h3><p>Experiência real de quem construiu a própria trajetória na Austrália.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-passport"/></svg><h3>Agente de imigração</h3><p>Orientação especializada pra compreender caminhos e possibilidades migratórias.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-compass"/></svg><h3>Caminho das pedras</h3><p>O que preparar, quando preparar e quais decisões precisam entrar no radar.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-pin"/></svg><h3>Plano de direção</h3><p>Entenda seu momento e quais próximos passos fazem sentido pro seu objetivo.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-briefcase"/></svg><h3>Oportunidades</h3><p>Aprenda onde procurar e como se posicionar pro mercado australiano.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-people"/></svg><h3>Networking</h3><p>Conecte-se com pessoas que já estão construindo suas trajetórias no país.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-cap"/></svg><h3>Educação</h3><p>Parceiros, escolas, colleges, universidades e benefícios do ecossistema.</p></div>
+      <div class="lp-offer-card"><svg class="lp-offer-icon lp-icon" aria-hidden="true"><use href="#ic-mindset"/></svg><h3>Mentalidade</h3><p>Porque mudar de país exige muito mais do que comprar uma passagem.</p></div>
     </div>
   </div>
 </section>
@@ -296,7 +366,7 @@
         <ul><li>Carreira</li><li>Networking</li><li>Renovação</li><li>Direção</li></ul>
       </a>
       <a href="#oferta" class="lp-moment-card">
-        <span class="lp-moment-flag">🏡</span>
+        <svg class="lp-moment-flag lp-icon" aria-hidden="true"><use href="#ic-house"/></svg>
         <h3>Quero ficar</h3>
         <p class="lp-moment-quote">"A Austrália deixou de ser uma experiência. Quero construir meu futuro aqui."</p>
         <ul><li>Estratégia</li><li>Especialistas</li><li>Planejamento migratório</li><li>Conexões</li></ul>
@@ -370,8 +440,6 @@
         <li>✓ Comunidade</li>
         <li>✓ Parceiros e benefícios</li>
       </ul>
-      <p class="lp-pricing-value"><span class="tbd">[PREÇO A DEFINIR]</span></p>
-      <p class="lp-pricing-installment">de <s>R$ X</s> por 12x de <strong>R$ XX</strong></p>
       <a href="https://pay.hotmart.com/Y94773826I?checkoutMode=10&amp;bid=1777007463025" class="btn btn-ticket btn-large" target="_blank" rel="noopener">
         <span>Quero entrar pro ecossistema</span>
       </a>
@@ -416,7 +484,7 @@
       </details>
       <details class="faq-item">
         <summary>Por quanto tempo tenho acesso?</summary>
-        <p><span class="tbd">[CONFIRMAR: prazo/modelo de acesso — assinatura ou vitalício]</span></p>
+        <p>O acesso ao ecossistema é anual.</p>
       </details>
     </div>
   </div>

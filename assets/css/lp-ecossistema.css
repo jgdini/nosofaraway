@@ -55,11 +55,23 @@ body.lp-body{ padding-bottom:0; }
 .lp-broken-journey li{ display:flex; align-items:center; gap:16px; font-family:var(--font-display); font-style:italic; font-size:1.15rem; color:var(--cream); padding-bottom:14px; border-bottom:1px dashed rgba(212,162,76,.3); }
 .lp-broken-journey li:last-child{ border-bottom:none; }
 .lp-bj-icon{ flex:none; font-size:1.3rem; font-style:normal; }
+.lp-icon{ width:1.5rem; height:1.5rem; flex:none; color:var(--gold); }
 .lp-flag-chip{
   font-family:var(--font-mono); font-weight:700; font-size:.68rem; font-style:normal;
   background:var(--gold); color:var(--ink); padding:3px 7px; border-radius:4px;
   letter-spacing:.03em; line-height:1;
 }
+
+/* -------------------- cotação em destaque (dobra 04) -------------------- */
+.lp-fx-card{
+  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:center; gap:10px;
+  max-width:420px; margin:0 auto 40px; padding:14px 22px;
+  background:var(--ink); border-radius:8px; font-family:var(--font-mono);
+}
+.lp-fx-card__label{ font-size:.68rem; letter-spacing:.08em; color:var(--gold); text-transform:uppercase; }
+.lp-fx-card__value{ font-size:1.15rem; color:var(--cream); }
+.lp-fx-card__value strong{ color:var(--gold); }
+.lp-fx-card__status{ font-size:.66rem; color:#8A856F; width:100%; text-align:center; }
 
 /* -------------------- brasil x austrália compare (dobra 04) -------------------- */
 .lp-compare{ display:grid; grid-template-columns:1fr 1fr; gap:44px; max-width:900px; margin:0 auto 8px; }
@@ -84,7 +96,7 @@ body.lp-body{ padding-bottom:0; }
 .lp-flow i{ font-style:normal; color:var(--rust); font-size:1.2rem; }
 .lp-pillars-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:28px; margin-top:36px; }
 .lp-pillars-row div{ display:flex; flex-direction:column; align-items:center; gap:8px; font-family:var(--font-mono); font-size:.78rem; letter-spacing:.04em; color:#5B5340; width:90px; text-align:center; }
-.lp-pillars-row span{ font-size:1.7rem; }
+.lp-pillars-row .lp-icon{ width:1.9rem; height:1.9rem; color:var(--rust); }
 
 /* -------------------- antes/depois jornada (dobra 07) -------------------- */
 .lp-journey-compare{ display:grid; grid-template-columns:1fr 1fr; gap:36px; max-width:920px; margin:0 auto; }
@@ -109,7 +121,8 @@ body.lp-body{ padding-bottom:0; }
 /* -------------------- offer grid (dobra 09) -------------------- */
 .lp-offer-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
 .lp-offer-card{ background:var(--ink-soft); border:1px solid rgba(212,162,76,.25); border-radius:8px; padding:24px 20px; }
-.lp-offer-icon{ font-size:1.6rem; display:block; margin-bottom:12px; }
+.lp-offer-icon{ display:block; margin-bottom:12px; }
+.lp-offer-icon.lp-icon{ width:1.9rem; height:1.9rem; }
 .lp-offer-card h3{ font-family:var(--font-display); font-size:1.02rem; color:var(--cream); margin:0 0 8px; }
 .lp-offer-card p{ font-size:.86rem; color:#B9B49E; margin:0; }
 
@@ -117,8 +130,9 @@ body.lp-body{ padding-bottom:0; }
 .lp-moment-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:980px; margin:0 auto; }
 .lp-moment-card{ display:block; background:var(--cream); border:1px solid #E3D9BF; border-radius:10px; padding:28px 24px; text-decoration:none; color:inherit; transition:transform .18s ease, box-shadow .18s ease; }
 .lp-moment-card:hover{ transform:translateY(-4px); box-shadow:0 18px 34px rgba(20,33,61,.14); }
-.lp-moment-flag{ font-size:1.8rem; display:inline-block; }
-.lp-moment-flag.lp-flag-chip{ font-size:.72rem; padding:5px 9px; }
+.lp-moment-flag{ display:inline-block; }
+.lp-moment-flag.lp-icon{ width:2rem; height:2rem; color:var(--rust); }
+.lp-moment-flag.lp-flag-chip{ font-size:.72rem; padding:5px 9px; width:auto; height:auto; color:var(--ink); }
 .lp-moment-card h3{ font-family:var(--font-display); font-size:1.2rem; color:var(--ink); margin:10px 0; }
 .lp-moment-quote{ font-style:italic; color:#5B5340; font-size:.92rem; margin-bottom:16px; }
 .lp-moment-card ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; font-family:var(--font-mono); font-size:.76rem; color:var(--rust); }
