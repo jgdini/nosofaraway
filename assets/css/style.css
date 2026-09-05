@@ -39,6 +39,12 @@ body{
   -webkit-font-smoothing:antialiased;
   line-height:1.5;
   padding-bottom:38px; /* clears the fixed flight-tracker bar */
+  cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22rotate(-20%2012%2012)%22%3E%3Cpath%20d%3D%22M2%2021L23%2012L2%203L2%2010L17%2012L2%2014Z%22%20fill%3D%22%23D4A24C%22%20stroke%3D%22%2314213D%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") 4 4, auto;
+}
+
+/* keep a normal pointer affordance on clickable controls */
+a, button, .btn, summary, select, [role="button"], input[type="submit"]{
+  cursor:pointer;
 }
 
 img{ max-width:100%; display:block; }
