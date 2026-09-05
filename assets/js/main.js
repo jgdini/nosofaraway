@@ -47,6 +47,57 @@
       });
   }
 
+  // Count-up numbers + growing bars (LP stat sections), triggered once on scroll into view.
+  // NOTE: we observe the *row/card* container, not the bar-fill itself — a bar-fill starts
+  // at width:0, and a zero-area element never satisfies an IntersectionObserver threshold.
+  var statCards = document.querySelectorAll('.lp-stat-card');
+  var barRows = document.querySelectorAll('.lp-bar-row');
+
+  function formatCount(value, decimals) {
+    return value.toLocaleString('pt-BR', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  }
+
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute('data-target'));
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var duration = 1400;
+    var startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      el.textContent = formatCount(target * eased, decimals);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = formatCount(target, decimals);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function triggerStatGroup(container) {
+    var count = container.querySelector('.lp-count');
+    if (count) animateCount(count);
+    var bar = container.querySelector('.lp-bar-fill[data-target-width]');
+    if (bar) bar.style.width = bar.getAttribute('data-target-width') + '%';
+  }
+
+  if (statCards.length || barRows.length) {
+    if ('IntersectionObserver' in window && !prefersReduced) {
+      var statObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          triggerStatGroup(entry.target);
+          statObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.4 });
+      statCards.forEach(function (el) { statObserver.observe(el); });
+      barRows.forEach(function (el) { statObserver.observe(el); });
+    } else {
+      // reduced motion (or no IO support): jump straight to final values
+      statCards.forEach(triggerStatGroup);
+      barRows.forEach(triggerStatGroup);
+    }
+  }
+
   // Boarding board — split-flap word cycle (decorative, aria-hidden in markup)
   var boardWord = document.getElementById('board-word');
   if (boardWord && !prefersReduced) {
