@@ -106,6 +106,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .main-nav{ display:flex; gap:26px; font-size:.92rem; font-weight:500; }
 .main-nav a{ text-decoration:none; color:#D9D4C4; transition:color .15s ease; }
 .main-nav a:hover{ color:var(--gold); }
+.main-nav a[aria-current="page"]{ color:var(--gold); }
 
 .nav-toggle{ display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:30px; background:none; border:0; cursor:pointer; margin-left:auto; }
 .nav-toggle span{ display:block; height:2px; background:var(--cream); border-radius:2px; }
