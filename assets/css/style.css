@@ -129,6 +129,28 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .route-label--to{ right:5%; top:14%; }
 
 .hero-grid{ position:relative; z-index:1; display:grid; grid-template-columns:1.35fr .8fr; gap:56px; align-items:center; }
+/* boarding board (split-flap) */
+.board{
+  display:inline-flex; align-items:center; gap:12px;
+  background:#0D1728; border:1px solid rgba(212,162,76,.35); border-radius:5px;
+  padding:10px 16px; margin-bottom:22px; perspective:400px;
+}
+.board__label{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em; color:#8A856F; white-space:nowrap; }
+.board__word-wrap{ display:inline-block; min-width:10ch; overflow:hidden; }
+.board__word{
+  display:block; font-family:var(--font-mono); font-weight:700; font-size:1.02rem;
+  letter-spacing:.1em; color:var(--gold); transform-origin:50% 50%; backface-visibility:hidden;
+  position:relative;
+}
+.board__word::after{ content:''; position:absolute; left:-2px; right:-2px; top:50%; height:1px; background:rgba(0,0,0,.55); }
+.board__word.is-flipping{ animation:boardFlip .5s ease; }
+@keyframes boardFlip{
+  0%{ transform:rotateX(0deg); opacity:1; }
+  45%{ transform:rotateX(90deg); opacity:.2; }
+  55%{ transform:rotateX(-90deg); opacity:.2; }
+  100%{ transform:rotateX(0deg); opacity:1; }
+}
+
 .hero-title{ font-size:clamp(2.1rem, 4vw, 3.15rem); font-weight:600; margin-bottom:22px; }
 .hero-title em{ font-style:italic; color:var(--gold); }
 .hero-sub{ font-size:1.12rem; color:#D9D4C4; max-width:560px; margin-bottom:34px; }

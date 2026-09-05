@@ -4,6 +4,8 @@
 (function(){
   "use strict";
 
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Footer year
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -24,6 +26,23 @@
     });
   }
 
+  // Boarding board — split-flap word cycle (decorative, aria-hidden in markup)
+  var boardWord = document.getElementById('board-word');
+  if (boardWord && !prefersReduced) {
+    var boardWords = ['ESTUDAR', 'TRABALHAR', 'MORAR', 'RECOMEÇAR'];
+    var boardIndex = 0;
+    setInterval(function () {
+      boardWord.classList.add('is-flipping');
+      setTimeout(function () {
+        boardIndex = (boardIndex + 1) % boardWords.length;
+        boardWord.textContent = boardWords[boardIndex];
+      }, 250);
+      setTimeout(function () {
+        boardWord.classList.remove('is-flipping');
+      }, 500);
+    }, 2600);
+  }
+
   // Lead form (check-in) — PLACEHOLDER: front-end only, no real submission yet.
   // Wire this to a real endpoint/e-mail/CRM during the WordPress build.
   var leadForm = document.getElementById('lead-form');
@@ -42,7 +61,6 @@
   );
   revealTargets.forEach(function(el){ el.setAttribute('data-reveal', ''); });
 
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if ('IntersectionObserver' in window && !prefersReduced) {
     var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
