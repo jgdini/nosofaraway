@@ -151,6 +151,21 @@ body.lp-body{ padding-bottom:0; }
 .lp-marcelo-today{ font-size:1.02rem; color:#4A4F70; margin-bottom:22px; }
 .lp-marcelo-callout{ font-family:var(--font-display); font-weight:700; font-size:1.4rem; color:var(--ink); border-left:3px solid var(--gold); padding-left:16px; }
 
+/* -------------------- o livro (dobra 08.5) -------------------- */
+.lp-book-photo{ aspect-ratio:1/1; border-color:var(--gold); background:#0C1030; }
+.lp-book-photo img{ object-fit:contain; }
+.lp-book-meta{ font-family:var(--font-mono); font-size:.78rem; color:#8A90B8; margin:0 0 22px; }
+.lp-book-cta-label{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; color:var(--gold); margin:0 0 10px; }
+.lp-book-links{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:26px; }
+.lp-book-link{
+  display:inline-flex; align-items:center; padding:9px 16px; border-radius:20px;
+  border:1px solid rgba(74,168,216,.4); background:rgba(74,168,216,.1);
+  color:var(--cream); font-family:var(--font-mono); font-size:.8rem; text-decoration:none;
+  transition:background .18s ease, border-color .18s ease;
+}
+.lp-book-link:hover{ background:rgba(74,168,216,.22); border-color:var(--gold); }
+.lp-book-divider{ height:1px; background:rgba(255,255,255,.14); margin:28px 0; }
+
 /* -------------------- offer grid (dobra 09) -------------------- */
 .lp-offer-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
 .lp-offer-card{ background:var(--ink-soft); border:1px solid rgba(74,168,216,.25); border-radius:8px; padding:24px 20px; }
