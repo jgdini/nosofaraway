@@ -43,6 +43,33 @@
     }, 2600);
   }
 
+  // Flight tracker — plane position mirrors scroll progress (Brasil → Austrália)
+  var trackerPlane = document.getElementById('flight-tracker-plane');
+  var trackerTrack = trackerPlane ? trackerPlane.parentElement : null;
+  if (trackerPlane && trackerTrack) {
+    var tickingTracker = false;
+    var updateTracker = function () {
+      tickingTracker = false;
+      var docEl = document.documentElement;
+      var scrollable = docEl.scrollHeight - docEl.clientHeight;
+      var progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+      progress = Math.max(0, Math.min(1, progress));
+      var trackWidth = trackerTrack.clientWidth;
+      var planeWidth = trackerPlane.offsetWidth;
+      var x = progress * (trackWidth - planeWidth);
+      trackerPlane.style.transform = 'translate(' + x + 'px, -50%)';
+    };
+    var onTrackerScroll = function () {
+      if (!tickingTracker) {
+        tickingTracker = true;
+        requestAnimationFrame(updateTracker);
+      }
+    };
+    window.addEventListener('scroll', onTrackerScroll, { passive: true });
+    window.addEventListener('resize', onTrackerScroll);
+    updateTracker();
+  }
+
   // Lead form (check-in) — PLACEHOLDER: front-end only, no real submission yet.
   // Wire this to a real endpoint/e-mail/CRM during the WordPress build.
   var leadForm = document.getElementById('lead-form');

@@ -38,6 +38,7 @@ body{
   background:var(--paper);
   -webkit-font-smoothing:antialiased;
   line-height:1.5;
+  padding-bottom:38px; /* clears the fixed flight-tracker bar */
 }
 
 img{ max-width:100%; display:block; }
@@ -315,6 +316,31 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .footer-nav a{ text-decoration:none; color:#B9B49E; }
 .footer-nav a:hover{ color:var(--gold); }
 .footer-note{ width:100%; font-size:.78rem; color:#6E6A58; font-family:var(--font-mono); margin:0; }
+
+/* -------------------- flight tracker (scroll progress) -------------------- */
+.flight-tracker{
+  position:fixed; left:0; right:0; bottom:0; z-index:40;
+  display:flex; align-items:center; gap:10px;
+  padding:8px 20px; background:rgba(13,23,40,.92); backdrop-filter:blur(6px);
+  border-top:1px solid rgba(212,162,76,.3);
+}
+.flight-tracker__label{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.1em; color:#8A856F; flex:none; }
+.flight-tracker__track{ position:relative; flex:1; height:2px; background-image:repeating-linear-gradient(90deg, rgba(212,162,76,.4) 0 6px, transparent 6px 12px); }
+.flight-tracker__plane{
+  position:absolute; top:50%; left:0; color:var(--gold);
+  transform:translate(0, -50%); will-change:transform;
+  filter:drop-shadow(0 0 3px rgba(212,162,76,.6));
+}
+.flight-tracker__plane svg{ display:block; transform:scaleX(-1); }
+
+/* stamp impact (VISTO APROVADO tags) */
+@keyframes stampImpact{
+  0%{ transform:scale(2.4) rotate(-3deg); opacity:0; }
+  55%{ transform:scale(.86) rotate(-3deg); opacity:1; }
+  75%{ transform:scale(1.08) rotate(-3deg); }
+  100%{ transform:scale(1) rotate(-3deg); opacity:1; }
+}
+.stamp-card.is-visible .stamp-tag{ animation:stampImpact .6s cubic-bezier(.34,1.56,.64,1) .12s both; }
 
 /* reveal-on-scroll */
 [data-reveal]{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
