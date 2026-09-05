@@ -36,12 +36,7 @@ body.lp-body{ padding-bottom:0; }
 .lp-hero-pillars .lp-icon{ width:1.6rem; height:1.6rem; color:var(--gold); }
 
 .lp-hero-photo{ position:relative; margin:0; border-radius:12px; overflow:hidden; border:2px solid var(--gold); box-shadow:0 30px 60px rgba(0,0,0,.4); aspect-ratio:3/4; }
-.lp-hero-photo img{ width:100%; height:100%; object-fit:cover; }
-.lp-hero-photo__caption{
-  position:absolute; right:14px; bottom:14px; text-align:right;
-  font-family:var(--font-display); font-style:italic; font-size:.88rem; line-height:1.35;
-  color:var(--cream); text-shadow:0 2px 10px rgba(0,0,0,.6);
-}
+.lp-hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:35% top; }
 
 /* -------------------- headings / leads (LP scale, more forceful) -------------------- */
 .lp-h2{ font-family:var(--font-display); font-weight:700; font-size:clamp(1.7rem, 3.2vw, 2.5rem); line-height:1.18; color:var(--ink); max-width:820px; margin:0 auto 30px; }
