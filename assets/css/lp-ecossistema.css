@@ -107,6 +107,36 @@ body.lp-body{ padding-bottom:0; }
 .lp-journey-chain li::before{ content:'●'; position:absolute; left:-5px; top:14px; font-size:.5rem; color:var(--gold); }
 .lp-journey-final{ font-weight:700; color:var(--cream) !important; border-left-color:var(--gold) !important; }
 
+/* -------------------- dobra Expert Education -------------------- */
+.lp-stack{ max-width:640px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:6px; }
+.lp-stack-tier{
+  width:100%; background:var(--ink); border:1px solid rgba(74,168,216,.3); border-radius:10px;
+  padding:24px 28px; text-align:center;
+}
+.lp-stack-tier--expert{ background:#FFFFFF; border-color:#E3EAF6; box-shadow:0 18px 40px rgba(18,23,58,.1); }
+.lp-stack-tier__name{ font-family:var(--font-display); font-weight:700; font-size:1.2rem; color:var(--cream); margin:0 0 6px; }
+.lp-expert-logo{ height:34px; width:auto; margin:0 auto 10px; }
+.lp-stack-tier__role{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.03em; color:var(--gold); margin:0 0 10px; }
+.lp-stack-tier--expert .lp-stack-tier__role{ color:var(--rust); }
+.lp-stack-tier__items{ font-size:.85rem; color:#B9BEDD; margin:0; }
+.lp-stack-tier--expert .lp-stack-tier__items{ color:#4A4F70; }
+.lp-stack-arrow{ font-size:1.4rem; color:var(--gold); line-height:1; }
+
+.lp-hop-list{ max-width:680px; margin:0 auto; display:flex; flex-direction:column; }
+.lp-hop{ display:grid; grid-template-columns:1.2fr 1fr; gap:6px 24px; align-items:baseline; padding:16px 0; border-bottom:1px dashed rgba(74,168,216,.25); }
+.lp-hop:last-child{ border-bottom:none; }
+.lp-hop__q{ margin:0; font-family:var(--font-display); font-style:italic; color:var(--cream); font-size:1.02rem; }
+.lp-hop__a{ margin:0; color:var(--gold); font-weight:700; font-size:.95rem; text-align:right; }
+
+/* 4 etapas: sonho -> plano -> execução -> construção */
+.lp-steps4{ display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; max-width:1080px; margin:0 auto; }
+.lp-step4{ flex:1 1 180px; max-width:220px; text-align:center; background:var(--cream); border:1px solid #E3EAF6; border-radius:10px; padding:22px 16px; }
+.lp-step4__num{ display:block; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; color:var(--rust); margin-bottom:6px; }
+.lp-step4 strong{ display:block; font-family:var(--font-display); font-size:1.1rem; color:var(--ink); margin-bottom:6px; }
+.lp-step4 p{ margin:0; font-size:.82rem; color:#4A4F70; line-height:1.5; }
+.lp-step4__arrow{ font-style:normal; color:var(--gold); font-size:1.3rem; flex:none; }
+.lp-steps4-closing{ margin-top:36px; }
+
 /* -------------------- Marcelo authority (dobra 08) -------------------- */
 .lp-marcelo-grid{ display:grid; grid-template-columns:.55fr 1fr; gap:52px; align-items:center; }
 .lp-marcelo-photo{ margin:0; border-radius:10px; overflow:hidden; border:2px solid var(--rust); box-shadow:0 24px 50px rgba(18,23,58,.2); aspect-ratio:4/5; }
@@ -196,6 +226,10 @@ body.lp-body{ padding-bottom:0; }
   .lp-stat-grid{ grid-template-columns:1fr 1fr; gap:12px; }
   .lp-pain-grid{ grid-template-columns:1fr; }
   .lp-offer-grid{ grid-template-columns:1fr; }
+  .lp-hop{ grid-template-columns:1fr; }
+  .lp-hop__a{ text-align:left; }
+  .lp-steps4{ flex-direction:column; }
+  .lp-step4__arrow{ transform:rotate(90deg); }
   body.lp-body{ padding-bottom:74px; } /* clears sticky CTA */
   .lp-sticky-cta{
     display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60;
