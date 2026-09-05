@@ -109,30 +109,18 @@
 <main id="top">
 
 <!-- ======================= DOBRA 01 — HERO ======================= -->
-<section class="lp-hero">
-  <div class="wrap lp-hero-grid">
-    <div class="lp-hero-copy">
-      <p class="eyebrow">Mentorias · Imigração · Carreira · Networking · Educação</p>
-      <h1 class="lp-hero-title">O maior ecossistema para brasileiros que querem construir uma vida na <span class="lp-hero-title__accent">Austrália</span>.</h1>
-      <p class="lp-hero-sub">Do planejamento no Brasil à construção de uma vida na Austrália: tenha acesso ao conhecimento, às conexões e aos caminhos que podem levar anos pra descobrir sozinho.</p>
-      <a href="#oferta" class="btn btn-ticket btn-large">
-        <span>Quero construir meu caminho na Austrália</span>
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p class="lp-hero-micro">Para quem quer ir. Para quem já chegou. Para quem decidiu ficar.</p>
-
-      <div class="lp-hero-pillars">
-        <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-cap"/></svg><span>Mentorias</span></div>
-        <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-passport"/></svg><span>Imigração</span></div>
-        <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-briefcase"/></svg><span>Carreira</span></div>
-        <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-people"/></svg><span>Networking</span></div>
-        <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-cap"/></svg><span>Educação</span></div>
-      </div>
-    </div>
-
-    <figure class="lp-hero-photo">
-      <img src="assets/img/marcelo-sydney-office.jpg" alt="Marcelo Lusardo, com o skyline de Sydney ao fundo">
-    </figure>
+<!-- NOTA: hero é a arte pronta que o João mandou, usada como imagem inteira
+     (não recriada em HTML/CSS). O texto do H1/parágrafo fica em sr-only pra
+     SEO/leitor de tela, e o botão real fica invisível por cima do botão
+     desenhado na imagem, na posição exata dele, pra continuar clicável. -->
+<section class="lp-hero lp-hero--image">
+  <div class="lp-hero-image-wrap">
+    <img src="assets/img/lp-hero-full.jpg" alt="O maior ecossistema para brasileiros que querem construir uma vida na Austrália — Marcelo Lusardo, mentorias, imigração, carreira, networking e educação." class="lp-hero-image">
+    <h1 class="sr-only">O maior ecossistema para brasileiros que querem construir uma vida na Austrália.</h1>
+    <p class="sr-only">Do planejamento no Brasil à construção de uma vida na Austrália: tenha acesso ao conhecimento, às conexões e aos caminhos que podem levar anos pra descobrir sozinho. Mentorias, imigração, carreira, networking e educação. Para quem quer ir, para quem já chegou, para quem decidiu ficar.</p>
+    <a href="#oferta" class="lp-hero-image__cta">
+      <span class="sr-only">Quero construir meu caminho na Austrália</span>
+    </a>
   </div>
 </section>
 
