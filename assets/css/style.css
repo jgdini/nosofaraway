@@ -163,6 +163,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .origin-card h3{ font-size:1.18rem; font-weight:600; color:var(--ink); margin-bottom:10px; }
 .origin-card p{ color:#5B5340; margin:0 0 16px; font-size:.95rem; }
 .origin-card blockquote{ margin:0; padding-left:14px; border-left:2.5px solid var(--gold); font-family:var(--font-display); font-style:italic; color:var(--ink); font-size:.98rem; }
+.origin-more{ margin:36px 0 0; }
 
 /* provas / stamp cards */
 .stamp-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
@@ -230,6 +231,45 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .checkin-card__success strong{ font-family:var(--font-display); font-size:1.3rem; color:var(--ink); }
 .checkin-card__success p{ color:#5B5340; margin:0; max-width:34ch; }
 
+/* -------------------- bio page (Marcelo Lusardo) -------------------- */
+.bio-hero{
+  background:radial-gradient(120% 140% at 85% 0%, var(--ink-soft) 0%, var(--ink) 60%);
+  padding-block:80px 66px; color:var(--cream);
+}
+.bio-hero-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:56px; align-items:center; }
+.bio-hero-copy .hero-title{ font-size:clamp(2rem, 3.6vw, 2.9rem); margin-bottom:20px; }
+.bio-hero-copy .hero-sub{ max-width:560px; }
+
+.id-card{ margin:0; background:var(--cream); border-radius:10px; padding:26px; box-shadow:0 22px 50px rgba(0,0,0,.28); justify-self:center; width:100%; max-width:280px; }
+.id-card__photo{
+  aspect-ratio:3/4; width:100%; border:1.5px dashed var(--rust); border-radius:4px;
+  display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  background:repeating-linear-gradient(135deg, rgba(187,68,48,.06) 0 10px, transparent 10px 20px);
+}
+.id-card__photo span{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; color:var(--rust); }
+.id-card__row{ display:flex; flex-direction:column; gap:2px; padding:9px 0; border-top:1px dashed #E3D9BF; }
+.id-card__row:first-of-type{ border-top:none; }
+.id-card .bp-label{ color:var(--rust); margin-top:0; }
+.id-card .bp-value{ color:var(--ink); font-size:1rem; }
+
+/* timeline */
+.timeline{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0; max-width:760px; }
+.timeline-item{ display:grid; grid-template-columns:110px 1fr; gap:24px; padding-block:30px; border-top:1px solid #E3D9BF; }
+.timeline-item:first-child{ border-top:none; padding-top:0; }
+.timeline-mark{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.1em; color:var(--rust); padding-top:4px; }
+.timeline-body h3{ font-size:1.25rem; font-weight:600; color:var(--ink); margin-bottom:10px; }
+.timeline-body p{ color:#5B5340; margin:0 0 14px; }
+.timeline-body blockquote{ margin:0; padding-left:14px; border-left:2.5px solid var(--gold); font-family:var(--font-display); font-style:italic; color:var(--ink); font-size:1.02rem; }
+.tbd{ font-family:var(--font-mono); font-size:.72rem; color:var(--rust); background:rgba(187,68,48,.1); padding:1px 6px; border-radius:3px; }
+
+/* hoje / pillars */
+.hoje-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:56px; align-items:start; }
+.pillars{ background:var(--ink-soft); border:1px solid rgba(212,162,76,.3); border-radius:var(--radius); padding:28px; }
+.pillars-label{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; color:var(--gold); text-transform:uppercase; margin:0 0 18px; }
+.pillars ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
+.pillars li{ display:flex; align-items:center; gap:14px; font-family:var(--font-display); font-size:1.2rem; color:var(--cream); }
+.pillars li span{ font-family:var(--font-mono); font-size:.9rem; color:var(--rust); background:var(--cream); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:none; }
+
 /* -------------------- footer -------------------- */
 .site-footer{ background:var(--ink); padding-block:34px; }
 .site-footer .brand-text strong{ color:var(--cream); }
@@ -256,6 +296,10 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   .boarding-pass__perf{ display:none; }
   .beyond-grid{ grid-template-columns:1fr; }
   .analise-grid{ grid-template-columns:1fr; }
+  .bio-hero-grid{ grid-template-columns:1fr; }
+  .id-card{ order:-1; max-width:220px; }
+  .hoje-grid{ grid-template-columns:1fr; }
+  .timeline-item{ grid-template-columns:1fr; gap:8px; }
 }
 
 @media (max-width: 760px){
