@@ -94,6 +94,8 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .btn-ticket:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(91,95,196,.35); background:var(--rust-dark); }
 .btn-small{ padding:10px 16px; font-size:.85rem; }
 .btn-large{ padding:19px 34px; font-size:1.08rem; }
+.btn-outline{ background:transparent; color:var(--ink); border:1.5px solid var(--rust); }
+.btn-outline:hover{ background:var(--rust); color:var(--cream); }
 .header-actions{ display:flex; align-items:center; gap:12px; margin-left:auto; }
 
 .link-inline{ font-weight:700; text-decoration:underline; text-underline-offset:4px; color:var(--ink); }
@@ -213,6 +215,8 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .origin-card p{ color:#4A4F70; margin:0 0 16px; font-size:.95rem; }
 .origin-card blockquote{ margin:0; padding-left:14px; border-left:2.5px solid var(--gold); font-family:var(--font-display); font-style:italic; color:var(--ink); font-size:.98rem; }
 .origin-more{ margin:36px 0 0; }
+.origin-book-note{ margin-top:22px; }
+.origin-book-note .stamp-note{ margin:0 0 14px; }
 
 /* provas / stamp cards */
 .stamp-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
