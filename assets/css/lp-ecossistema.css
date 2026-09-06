@@ -150,13 +150,25 @@ body.lp-body{ padding-bottom:0; }
 .lp-steps4-closing{ margin-top:36px; }
 
 /* -------------------- Marcelo authority (dobra 08) -------------------- */
+/* primeira parte: foto real de fundo (Marcelo no escritório em Sydney)
+   com gradiente escuro — mesmo padrão do fechamento (.lp-closing) */
+.lp-marcelo-hero{
+  position:relative; padding-block:100px;
+  background:
+    linear-gradient(180deg, rgba(14,17,46,.72), rgba(14,17,46,.9)),
+    url("../img/marcelo-lp-office.jpg") center 22% / cover no-repeat;
+  color:var(--cream);
+}
+.lp-marcelo-hero-inner{ max-width:640px; margin:0 auto; }
+.lp-marcelo-story{ list-style:none; margin:22px 0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:1.02rem; color:#2A2E4C; }
+.lp-marcelo-story li::before{ content:'— '; color:var(--rust); }
+.lp-marcelo-story--light{ color:var(--cream); }
+.lp-marcelo-story--light li::before{ color:var(--gold); }
+
+/* segunda parte (depois da Expert Education): foto lado a lado */
 .lp-marcelo-grid{ display:grid; grid-template-columns:.55fr 1fr; gap:52px; align-items:center; }
 .lp-marcelo-photo{ margin:0; border-radius:10px; overflow:hidden; border:2px solid var(--rust); box-shadow:0 24px 50px rgba(18,23,58,.2); aspect-ratio:4/5; }
 .lp-marcelo-photo img{ width:100%; height:100%; object-fit:cover; }
-.lp-marcelo-story{ list-style:none; margin:22px 0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:1.02rem; color:#2A2E4C; }
-.lp-marcelo-story li::before{ content:'— '; color:var(--rust); }
-.lp-marcelo-today{ font-size:1.02rem; color:#4A4F70; margin-bottom:22px; }
-.lp-marcelo-callout{ font-family:var(--font-display); font-weight:700; font-size:1.4rem; color:var(--ink); border-left:3px solid var(--gold); padding-left:16px; }
 
 /* -------------------- o livro (dobra 08.5) -------------------- */
 .lp-book-meta{ font-family:var(--font-mono); font-size:.78rem; color:#8A90B8; margin:0 0 34px; }
