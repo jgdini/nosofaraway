@@ -29,6 +29,7 @@ body.lp-body{ padding-bottom:0; }
     url("../img/lp-hero-photo.jpg") right center / auto 100% no-repeat, var(--ink);
 }
 .lp-hero-v2 .wrap{ width:100%; }
+.lp-hero-v2__mobile-photo{ display:none; }
 .lp-hero-v2__tags{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.08em; color:var(--gold); margin:0 0 22px; }
 .lp-hero-v2__title{ font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.2vw,3.1rem); line-height:1.15; max-width:640px; margin:0 0 22px; }
 .lp-hero-v2__sub{ font-size:1.08rem; line-height:1.6; color:#D6DCEE; max-width:520px; margin:0 0 28px; }
@@ -262,14 +263,20 @@ body.lp-body{ padding-bottom:0; }
 
 @media (max-width: 640px){
   /* hero: em vez de foto ancorada à direita (não cabe do lado do texto
-     numa tela estreita), a foto vira um fundo cheio e mais apagado
-     atrás de todo o texto — mesmo padrão da dobra do Marcelo. */
+     numa tela estreita) ou de fundo atrás do texto, a foto vira um
+     bloco de verdade ACIMA do texto — mesmo padrão do site de
+     referência que o João mandou (foto nítida em cima, texto embaixo
+     num fundo sólido), já que a maior parte das vendas é no mobile. */
   .lp-hero-v2{
-    padding-block:70px 44px;
-    background:
-      linear-gradient(180deg, rgba(18,23,58,.8), rgba(18,23,58,.94)),
-      url("../img/lp-hero-photo.jpg") 68% 30% / cover no-repeat;
+    padding-block:0 44px; display:block; min-height:0;
+    background:var(--ink);
   }
+  .lp-hero-v2__mobile-photo{
+    display:block; width:100%; height:auto; aspect-ratio:1/1;
+    object-fit:cover; object-position:68% 40%; margin-bottom:28px;
+  }
+  .lp-hero-v2 .wrap{ padding-top:0; }
+  .lp-hero-v2__tags{ margin-top:0; }
   .lp-hero-v2__title, .lp-hero-v2__sub{ max-width:100%; }
   /* dobra do Marcelo: mesma lógica — foto ancorada não cabe do lado do
      texto numa tela estreita, então vira fundo cheio e mais apagado. */
