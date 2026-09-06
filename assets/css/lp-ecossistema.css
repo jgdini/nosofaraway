@@ -199,8 +199,9 @@ body.lp-body{ padding-bottom:0; }
 .lp-pricing-name{ font-family:var(--font-mono); letter-spacing:.1em; color:var(--gold); font-size:.85rem; margin-bottom:20px; }
 .lp-pricing-checklist{ list-style:none; margin:0 0 26px; padding:0; text-align:left; display:inline-flex; flex-direction:column; gap:8px; color:var(--cream); font-size:.94rem; }
 .lp-pricing-checklist__bonus{ color:var(--cta-green); font-weight:700; padding-top:8px; border-top:1px dashed rgba(34,197,94,.4); margin-top:2px; }
-.lp-pricing-value{ margin:0; }
+.lp-pricing-value{ margin:0; font-family:var(--font-display); font-weight:800; font-size:2.6rem; color:var(--cream); line-height:1; }
 .lp-pricing-value .tbd{ font-size:.9rem; }
+.lp-pricing-value__cents{ font-size:1.6rem; font-weight:700; }
 .lp-pricing-installment{ color:#A8AFCC; font-size:.9rem; margin-bottom:22px; }
 .lp-pricing-installment s{ opacity:.6; }
 .lp-pricing-installment strong{ color:var(--gold); font-size:1.1rem; }
