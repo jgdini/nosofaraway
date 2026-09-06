@@ -147,12 +147,17 @@
     <p class="origin-more"><a href="marcelo-lusardo.html" class="link-inline">Leia a história completa de Marcelo Lusardo →</a></p>
 
     <!-- NOTA: banner pronto que o João mandou (oferta com preço e CTA já
-         desenhados), usado inteiro. Botão real invisível por cima do botão
-         desenhado na imagem, apontando pro checkout real da Hotmart.
+         desenhados), usado inteiro. Existe uma versão vertical recortada
+         pro mobile, trocada via <picture> no breakpoint de 760px. Botão
+         real invisível por cima do botão desenhado em cada imagem,
+         apontando pro checkout real da Hotmart.
          ATENÇÃO: essa arte mostra o preço "R$ 1.030,00" (acesso anual). -->
     <p class="origin-book-lead">Essa travessia também virou livro, e quem entra pro ecossistema leva ele de graça:</p>
     <figure class="book-banner origin-book-banner">
-      <img src="assets/img/livro-oferta-ecossistema.jpg" alt="Entre para o Ecossistema Austrália Sem Fronteiras e ganhe o livro do Marcelo Lusardo autografado. Livro físico autografado, entregue em casa. Acesso completo ao ecossistema por um ano: conteúdo, direcionamento e rede de apoio. Acesso anual: R$ 1.030,00. Pagamento seguro, acesso imediato, livro enviado para todo o Brasil.">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/img/livro-oferta-mobile.jpg">
+        <img src="assets/img/livro-oferta-ecossistema.jpg" alt="Entre para o Ecossistema Austrália Sem Fronteiras e ganhe o livro do Marcelo Lusardo autografado. Livro físico autografado, entregue em casa. Acesso completo ao ecossistema por um ano: conteúdo, direcionamento e rede de apoio. Acesso anual: R$ 1.030,00. Pagamento seguro, acesso imediato, livro enviado para todo o Brasil.">
+      </picture>
       <a href="https://pay.hotmart.com/Y94773826I?checkoutMode=10&amp;bid=1777007463025" class="book-banner__cta" target="_blank" rel="noopener">
         <span class="sr-only">Quero fazer parte agora</span>
       </a>

@@ -110,12 +110,19 @@
 
 <!-- ======================= DOBRA 01 — HERO ======================= -->
 <!-- NOTA: hero é a arte pronta que o João mandou, usada como imagem inteira
-     (não recriada em HTML/CSS). O texto do H1/parágrafo fica em sr-only pra
-     SEO/leitor de tela, e o botão real fica invisível por cima do botão
-     desenhado na imagem, na posição exata dele, pra continuar clicável. -->
+     (não recriada em HTML/CSS). Existem duas versões: uma larga pro desktop
+     e uma vertical, recortada especialmente pro mobile (o botão fica maior
+     e mais fácil de tocar) — trocadas via <picture> no breakpoint de 760px.
+     O texto do H1/parágrafo fica em sr-only pra SEO/leitor de tela, e o
+     botão real fica invisível por cima do botão desenhado em cada imagem,
+     na posição exata dele (a posição do botão muda entre as duas versões,
+     por isso o CSS reposiciona o overlay no mesmo breakpoint). -->
 <section class="lp-hero lp-hero--image">
   <div class="lp-hero-image-wrap">
-    <img src="assets/img/lp-hero-full.jpg" alt="O maior ecossistema para brasileiros que querem construir uma vida na Austrália, com Marcelo Lusardo: mentorias, imigração, carreira, networking e educação." class="lp-hero-image">
+    <picture>
+      <source media="(max-width: 760px)" srcset="assets/img/lp-hero-mobile.jpg">
+      <img src="assets/img/lp-hero-full.jpg" alt="O maior ecossistema para brasileiros que querem construir uma vida na Austrália, com Marcelo Lusardo: mentorias, imigração, carreira, networking e educação." class="lp-hero-image">
+    </picture>
     <h1 class="sr-only">O maior ecossistema para brasileiros que querem construir uma vida na Austrália.</h1>
     <p class="sr-only">Do planejamento no Brasil à construção de uma vida na Austrália: tenha acesso ao conhecimento, às conexões e aos caminhos que podem levar anos pra descobrir sozinho. Mentorias, imigração, carreira, networking e educação. Para quem quer ir, para quem já chegou, para quem decidiu ficar.</p>
     <a href="#oferta" class="lp-hero-image__cta">
@@ -439,7 +446,10 @@
     <p class="lp-book-meta lp-center">Marcelo Lusardo · Editora Filos · 296 páginas</p>
 
     <figure class="book-banner lp-book-banner">
-      <img src="assets/img/livro-oferta-ecossistema.jpg" alt="Entre para o Ecossistema Austrália Sem Fronteiras e ganhe o livro do Marcelo Lusardo autografado. Livro físico autografado, entregue em casa. Acesso completo ao ecossistema por um ano: conteúdo, direcionamento e rede de apoio. Acesso anual: R$ 1.030,00. Pagamento seguro, acesso imediato, livro enviado para todo o Brasil.">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/img/livro-oferta-mobile.jpg">
+        <img src="assets/img/livro-oferta-ecossistema.jpg" alt="Entre para o Ecossistema Austrália Sem Fronteiras e ganhe o livro do Marcelo Lusardo autografado. Livro físico autografado, entregue em casa. Acesso completo ao ecossistema por um ano: conteúdo, direcionamento e rede de apoio. Acesso anual: R$ 1.030,00. Pagamento seguro, acesso imediato, livro enviado para todo o Brasil.">
+      </picture>
       <a href="https://pay.hotmart.com/Y94773826I?checkoutMode=10&amp;bid=1777007463025" class="book-banner__cta" target="_blank" rel="noopener">
         <span class="sr-only">Quero fazer parte agora</span>
       </a>

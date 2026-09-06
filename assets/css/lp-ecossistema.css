@@ -19,14 +19,21 @@ body.lp-body{ padding-bottom:0; }
 /* -------------------- hero (arte pronta, imagem inteira) -------------------- */
 .lp-hero--image{ padding:0; line-height:0; }
 .lp-hero-image-wrap{ position:relative; width:100%; }
+.lp-hero-image-wrap picture{ display:block; }
 .lp-hero-image{ width:100%; height:auto; display:block; }
 /* botão real, invisível, sobre o botão desenhado na imagem (mesma posição
-   em %, então acompanha a imagem em qualquer largura de tela) */
+   em %, então acompanha a imagem em qualquer largura de tela). A versão
+   mobile da arte tem o botão numa posição diferente, então o overlay é
+   reposicionado no mesmo breakpoint em que a imagem troca (760px). */
 .lp-hero-image__cta{
   position:absolute; left:5.5%; top:66.7%; width:34.9%; height:8.2%;
   display:block; border-radius:4px;
 }
 .lp-hero-image__cta:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+
+@media (max-width: 760px){
+  .lp-hero-image__cta{ left:10.8%; top:43.6%; width:78.5%; height:6.25%; }
+}
 
 /* padrão de acessibilidade: visível pra leitor de tela, invisível na tela */
 .sr-only{
