@@ -1,2 +1,7 @@
 node_modules/
 .DS_Store
+
+# artes brutas enviadas pelo João pra recorte/edição — só as versões
+# finais tratadas (nomes limpos) vão pro assets/img rastreado
+assets/img/Livro.jpeg
+assets/img/Livro LP.jpeg

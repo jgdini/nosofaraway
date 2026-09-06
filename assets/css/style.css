@@ -410,7 +410,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   .beyond-grid{ grid-template-columns:1fr; }
   .analise-grid{ grid-template-columns:1fr; }
   .bio-hero-grid{ grid-template-columns:1fr; }
-  .id-card{ order:-1; max-width:220px; }
+  .id-card{ max-width:300px; }
   .hoje-grid{ grid-template-columns:1fr; }
   .timeline-item{ grid-template-columns:1fr; gap:8px; }
   .midia-grid{ grid-template-columns:1fr; }
