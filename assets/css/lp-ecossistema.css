@@ -268,7 +268,7 @@ body.lp-body{ padding-bottom:0; }
     padding-block:70px 44px;
     background:
       linear-gradient(180deg, rgba(18,23,58,.8), rgba(18,23,58,.94)),
-      url("../img/lp-hero-photo.jpg") center 12% / cover no-repeat;
+      url("../img/lp-hero-photo.jpg") 68% 30% / cover no-repeat;
   }
   .lp-hero-v2__title, .lp-hero-v2__sub{ max-width:100%; }
   /* dobra do Marcelo: mesma lógica — foto ancorada não cabe do lado do
