@@ -17,12 +17,18 @@ body.lp-body{ padding-bottom:0; }
 .lp-header .brand{ color:var(--cream); }
 
 /* -------------------- hero (dobra 01) — foto real de fundo + texto em código -------------------- */
+/* overlay uniforme (não um degradê que "revela" a foto de um lado —
+   isso criava uma separação dura entre painel de texto e painel de
+   foto). Foto cobre a seção inteira, sempre visível mas sempre escura
+   o bastante pro texto ler bem — mesmo princípio da dobra do Marcelo. */
 .lp-hero-v2{
   position:relative; padding-block:90px 60px; color:var(--cream); overflow:hidden;
+  min-height:600px; display:flex; align-items:center;
   background:
-    linear-gradient(90deg, var(--ink) 0%, rgba(18,23,58,.94) 38%, rgba(18,23,58,.55) 60%, rgba(18,23,58,.15) 78%, rgba(18,23,58,0) 92%),
-    url("../img/lp-hero-photo.jpg") right top / auto 100% no-repeat, var(--ink);
+    linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%),
+    url("../img/lp-hero-photo.jpg") right center / auto 100% no-repeat, var(--ink);
 }
+.lp-hero-v2 .wrap{ width:100%; }
 .lp-hero-v2__tags{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.08em; color:var(--gold); margin:0 0 22px; }
 .lp-hero-v2__title{ font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.2vw,3.1rem); line-height:1.15; max-width:640px; margin:0 0 22px; }
 .lp-hero-v2__sub{ font-size:1.08rem; line-height:1.6; color:#D6DCEE; max-width:520px; margin:0 0 28px; }
