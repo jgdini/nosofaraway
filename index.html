@@ -12,6 +12,33 @@
 </head>
 <body>
 
+<!-- Sprite de ícones (linha, desenhados em código) usados na dobra do
+     livro — mesmos símbolos definidos na LP. -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="ic-book" viewBox="0 0 24 24">
+      <path d="M3 5.5c2.2-1 5-1 7 0v13c-2-1-4.8-1-7 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M21 5.5c-2.2-1-5-1-7 0v13c2-1 4.8-1 7 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-crown" viewBox="0 0 24 24">
+      <path d="M3 8l4 3 5-6 5 6 4-3-2 10H5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24">
+      <rect x="5" y="11" width="14" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ic-infinity" viewBox="0 0 24 24">
+      <path d="M6.5 9a3.5 3.5 0 1 0 0 7c1.6 0 2.6-1 3.6-2.4l1.8-2.2c1-1.4 2-2.4 3.6-2.4a3.5 3.5 0 1 1 0 7c-1.6 0-2.6-1-3.6-2.4l-1.8-2.2C9.1 10 8.1 9 6.5 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-truck" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="12" height="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="6.5" cy="17.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="17" cy="17.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+  </defs>
+</svg>
+
 <!-- ======================= HEADER ======================= -->
 <header class="site-header" id="site-header">
   <div class="wrap header-inner">
@@ -148,23 +175,59 @@
 
     <!-- NOTA: recriado em HTML/CSS real (era um banner-imagem inteiro
          antes) — texto estático em imagem não é lido/indexado pelo
-         Google, e a imagem também não era de fato responsive (só
-         trocava entre 2 tamanhos fixos). Capa do livro nítida numa
-         caixa própria (sem escurecer), igual à dobra completa na LP —
-         aqui só uma versão compacta, com link pra dobra inteira. -->
-    <div class="origin-book-hero">
-      <figure class="origin-book-hero__photo">
+         Google, e a imagem também não era de fato responsive. Mesmo
+         card de oferta usado na LP (dizeres, preço e botões idênticos
+         à arte de referência), reaproveitando os componentes .lp-book-*
+         compartilhados em style.css. -->
+    <p class="eyebrow eyebrow--dark origin-book-eyebrow">Essa travessia também virou livro</p>
+    <h3 class="section-title origin-book-title">"Austrália Sem Fronteiras" também é um livro real, escrito por quem atravessou.</h3>
+    <p class="section-lead origin-book-lead">E quem entra pro ecossistema leva o livro de graça.</p>
+
+    <div class="lp-book-offer">
+      <figure class="lp-book-offer__photo">
         <img src="assets/img/livro-foto.jpg" alt="Livro Austrália Sem Fronteiras: Do Zero à Residência, de Marcelo Lusardo, ao lado de globo e passaporte">
       </figure>
-      <div class="origin-book-hero__copy">
-        <p class="eyebrow">Essa travessia também virou livro</p>
-        <h3>"Austrália Sem Fronteiras: Do Zero à Residência", de Marcelo Lusardo</h3>
-        <p>E quem entra pro ecossistema leva o livro de graça. Compre a versão física em separado ou conheça o ecossistema completo.</p>
-        <a href="ecossistema-australia.html#livro" class="btn btn-ticket">
-          <span>Conhecer o livro e o ecossistema</span>
+      <div class="lp-book-offer__panel">
+        <div class="lp-book-offer__brand">
+          <img src="assets/img/kangaroo-icon.png" alt="" class="lp-book-offer__brand-icon">
+          <span>Ecossistema<br>Austrália Sem Fronteiras</span>
+        </div>
+        <p class="lp-book-offer__tagline">Planejamento | Estratégia | Liberdade</p>
+        <h3 class="lp-book-offer__title">Entre para o nosso ecossistema e ganhe o livro do Marcelo Lusardo autografado.</h3>
+        <p class="lp-book-offer__sub">Planeje. Prepare-se. Viva a sua realidade na Austrália.</p>
+
+        <div class="lp-book-offer__features">
+          <div>
+            <svg class="lp-icon" aria-hidden="true"><use href="#ic-book"/></svg>
+            <div><strong>Livro físico autografado</strong><span>Receba na sua casa</span></div>
+          </div>
+          <div>
+            <svg class="lp-icon" aria-hidden="true"><use href="#ic-crown"/></svg>
+            <div><strong>Acesso completo ao ecossistema</strong><span>Um ano de conteúdo, direcionamento e rede de apoio</span></div>
+          </div>
+        </div>
+
+        <p class="lp-book-offer__price-label">Acesso anual</p>
+        <p class="lp-book-offer__price">R$ 1.030<span>,00</span></p>
+
+        <a href="https://pay.hotmart.com/Y94773826I?checkoutMode=10&amp;bid=1777007463025" class="btn btn-ticket btn-large" target="_blank" rel="noopener">
+          <span>Quero fazer parte agora</span>
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+
+        <div class="lp-book-offer__trust">
+          <span><svg class="lp-icon" aria-hidden="true"><use href="#ic-lock"/></svg>Pagamento seguro</span>
+          <span><svg class="lp-icon" aria-hidden="true"><use href="#ic-infinity"/></svg>Acesso imediato</span>
+          <span><svg class="lp-icon" aria-hidden="true"><use href="#ic-truck"/></svg>Livro enviado pra todo o Brasil</span>
+        </div>
       </div>
+    </div>
+
+    <p class="lp-book-cta-label origin-book-cta-label">Prefere comprar só o livro, sem o ecossistema?</p>
+    <div class="lp-book-links origin-book-links">
+      <a href="https://loja.umlivro.com.br/australia-sem-fronteiras--do-zero-a-residencia---a-travessia-real-para-viver-na-australia-8503483/p" class="lp-book-link" target="_blank" rel="noopener">Umlivro</a>
+      <a href="https://www.mercadolivre.com.br/australia-sem-fronteiras-do-zero-a-residencia--a-travessia-real-para-viver-na-australia/up/MLBU4930825072" class="lp-book-link" target="_blank" rel="noopener">Mercado Livre</a>
+      <a href="https://www.estantevirtual.com.br/livro/australia-sem-fronteiras-do-zero-a-residencia-a-travessia-real-para-viver-na-australia-S7U-2175-000" class="lp-book-link" target="_blank" rel="noopener">Estante Virtual</a>
     </div>
   </div>
 </section>

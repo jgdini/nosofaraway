@@ -174,45 +174,9 @@ body.lp-body{ padding-bottom:0; }
 .lp-marcelo-photo img{ width:100%; height:100%; object-fit:cover; }
 
 /* -------------------- o livro (dobra 08.5) -------------------- */
-.lp-book-meta{ font-family:var(--font-mono); font-size:.78rem; color:#8A90B8; margin:0 0 34px; }
-.lp-book-cta-label{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; color:var(--gold); margin:32px 0 10px; }
-.lp-book-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
-.lp-book-link{
-  display:inline-flex; align-items:center; padding:9px 16px; border-radius:20px;
-  border:1px solid rgba(74,168,216,.4); background:rgba(74,168,216,.1);
-  color:var(--cream); font-family:var(--font-mono); font-size:.8rem; text-decoration:none;
-  transition:background .18s ease, border-color .18s ease;
-}
-.lp-book-link:hover{ background:rgba(74,168,216,.22); border-color:var(--gold); }
-
-/* card da oferta: capa do livro nítida (numa caixa própria, sem
-   escurecer) + painel de texto/preço/botão real ao lado — segue os
-   dizeres exatos da arte de referência que o João mandou. */
-.lp-book-offer{
-  display:grid; grid-template-columns:.85fr 1fr; max-width:1000px; margin:44px auto 0;
-  border-radius:14px; overflow:hidden; box-shadow:0 30px 60px rgba(0,0,0,.35); text-align:left;
-}
-.lp-book-offer__photo{ margin:0; aspect-ratio:860/1254; }
-.lp-book-offer__photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-.lp-book-offer__panel{ background:var(--ink); padding:40px 36px; display:flex; flex-direction:column; }
-.lp-book-offer__brand{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-.lp-book-offer__brand-icon{ width:28px; height:auto; flex:none; }
-.lp-book-offer__brand span{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); line-height:1.3; }
-.lp-book-offer__tagline{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:#8A90B8; margin:0 0 22px; }
-.lp-book-offer__title{ font-family:var(--font-display); font-weight:700; font-size:1.5rem; line-height:1.3; color:var(--cream); margin:0 0 12px; }
-.lp-book-offer__sub{ font-family:var(--font-mono); font-size:.8rem; color:#B9BEDD; margin:0 0 26px; }
-.lp-book-offer__features{ display:flex; flex-direction:column; gap:18px; margin-bottom:28px; padding-bottom:28px; border-bottom:1px solid rgba(255,255,255,.14); }
-.lp-book-offer__features > div{ display:flex; align-items:flex-start; gap:14px; }
-.lp-book-offer__features .lp-icon{ width:1.8rem; height:1.8rem; color:var(--gold); flex:none; margin-top:2px; }
-.lp-book-offer__features strong{ display:block; color:var(--cream); font-size:.96rem; margin-bottom:2px; }
-.lp-book-offer__features span{ color:#A8AFCC; font-size:.85rem; }
-.lp-book-offer__price-label{ font-family:var(--font-mono); font-size:.75rem; letter-spacing:.05em; color:var(--gold); text-transform:uppercase; margin:0 0 6px; }
-.lp-book-offer__price{ font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cream); margin:0 0 22px; }
-.lp-book-offer__price span{ font-size:1.3rem; font-weight:700; }
-.lp-book-offer__panel .btn{ align-self:stretch; justify-content:center; margin-bottom:22px; }
-.lp-book-offer__trust{ display:flex; flex-wrap:wrap; gap:16px; font-family:var(--font-mono); font-size:.68rem; color:#8A90B8; }
-.lp-book-offer__trust span{ display:flex; align-items:center; gap:6px; }
-.lp-book-offer__trust .lp-icon{ width:1rem; height:1rem; color:#8A90B8; }
+/* NOTA: os componentes .lp-book-* moraram pro CSS compartilhado
+   (style.css) porque agora o mesmo card de oferta do livro aparece
+   tanto na LP quanto no site (index.html). */
 
 /* -------------------- offer grid (dobra 09) -------------------- */
 .lp-offer-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
@@ -281,9 +245,6 @@ body.lp-body{ padding-bottom:0; }
   .lp-pain-grid{ grid-template-columns:repeat(2,1fr); }
   .lp-journey-compare{ grid-template-columns:1fr; }
   .lp-marcelo-grid{ grid-template-columns:1fr; }
-  .lp-book-offer{ grid-template-columns:1fr; max-width:420px; }
-  .lp-book-offer__photo{ aspect-ratio:860/700; }
-  .lp-book-offer__photo img{ object-position:top; }
   .lp-marcelo-photo{ max-width:240px; margin-inline:auto; }
   .lp-offer-grid{ grid-template-columns:repeat(2,1fr); }
   .lp-moment-grid{ grid-template-columns:1fr; }
