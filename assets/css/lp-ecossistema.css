@@ -26,7 +26,7 @@ body.lp-body{ padding-bottom:0; }
   min-height:600px; display:flex; align-items:center;
   background:
     linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%),
-    url("../img/lp-hero-photo.jpg") right center / auto 100% no-repeat, var(--ink);
+    url("../img/lp-hero-photo.jpg") right 22% / cover no-repeat, var(--ink);
 }
 .lp-hero-v2 .wrap{ width:100%; }
 .lp-hero-v2__mobile-photo{ display:none; }
