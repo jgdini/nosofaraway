@@ -12,6 +12,33 @@
 </head>
 <body>
 
+<!-- Sprite de ícones (linha, desenhados em código — nada de emoji/imagem
+     estática, pra não perder texto/indexação em conteúdo visual). -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="mv-ic-people" viewBox="0 0 24 24">
+      <circle cx="8.3" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="17" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M2.5 19.5c.4-3.4 2.9-5.8 5.8-5.8s5.4 2.4 5.8 5.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M14.8 14c2.2.5 3.9 2.6 4.2 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="mv-ic-play" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M10 8.3l6 3.7-6 3.7z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="mv-ic-star" viewBox="0 0 24 24">
+      <path d="M12 3.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6-4.5-4.2 6.1-.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="mv-ic-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M3 12h18M12 3c2.8 2.6 2.8 15.4 0 18M12 3c-2.8 2.6-2.8 15.4 0 18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="mv-ic-plane" viewBox="0 0 24 24">
+      <path d="M2 21L23 12L2 3L2 10L17 12L2 14Z" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
 <!-- =====================================================================
      NOTA PRA REVISÃO DO CLIENTE (remover antes de subir pro WordPress):
      Todo o texto abaixo usa só o que já está documentado publicamente
@@ -59,25 +86,27 @@
 <main id="top">
 
 <!-- ======================= HERO ======================= -->
+<!-- NOTA: redesenhado com base na arte de referência que o João mandou
+     ("Quem é o Marcelo Modelo.jpeg"), mas TODO o conteúdo aqui é texto
+     e SVG reais em HTML/CSS — nada de imagem com escrito embutido, pra
+     o Google conseguir ler e indexar o texto normalmente. A foto é só
+     foto (sem nenhum texto desenhado nela). -->
 <section class="bio-hero">
-  <div class="wrap bio-hero-grid">
+  <div class="wrap mv-hero-grid">
+    <figure class="mv-hero-photo">
+      <img src="assets/img/marcelo-youtube-award.jpg" alt="Marcelo Lusardo em frente ao letreiro neon No So Far Away, segurando a placa comemorativa de 100 mil inscritos do YouTube">
+      <span class="mv-hero-badge">
+        <svg class="mv-hero-badge__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 8.3l6 3.7-6 3.7z" fill="currentColor"/><rect x="2" y="5" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span><strong>131 mil</strong> inscritos<br>Austrália Sem Fronteiras</span>
+      </span>
+    </figure>
+
     <div class="bio-hero-copy">
-      <p class="eyebrow">Quem está do outro lado da mentoria</p>
-
-      <div class="board" aria-hidden="true">
-        <span class="board__label">PRÓXIMO DESTINO</span>
-        <span class="board__word-wrap"><span class="board__word" id="board-word">ESTUDAR</span></span>
-      </div>
-
-      <h1 class="hero-title">Marcelo Lusardo não vende um sonho que não viveu.</h1>
-      <p class="hero-sub">
-        Criador do <strong>Austrália Sem Fronteiras</strong>, Marcelo passou pela mesma travessia que hoje ajuda outros brasileiros a fazer, só que sem ninguém segurando a mão dele. Foi dali que nasceu o método que virou mentoria, o canal e a comunidade que já chegam a milhares de brasileiros todo santo dia.
-      </p>
-      <ul class="hero-trust">
-        <li>131 mil inscritos acompanham o canal No So Far Away</li>
-        <li>Quase 400 vídeos documentando a travessia, sem edição de vitrine</li>
-        <li>Convidado em podcasts externos pra falar sobre migração</li>
-      </ul>
+      <p class="eyebrow">História · Propósito · Resultados</p>
+      <h1 class="hero-title">Quem é <span class="mv-accent">Marcelo Lusardo?</span></h1>
+      <p class="mv-hero-lead">Ele não apenas fala sobre recomeçar na Austrália. Ele fez isso.</p>
+      <p class="hero-sub">Marcelo Lusardo deixou para trás uma carreira estável no Brasil pra começar do zero do outro lado do mundo. Com família, filho pequeno e os mesmos medos de quem decide mudar de país, viveu na prática os desafios de construir uma nova trajetória na Austrália.</p>
+      <p class="mv-hero-callout">O que começou como um recomeço se transformou numa história que inspira milhares de brasileiros.</p>
       <div class="hero-actions">
         <a href="index.html#analise" class="btn btn-ticket">
           <span>Quero que ele me ajude a traçar meu plano</span>
@@ -85,17 +114,96 @@
         </a>
       </div>
     </div>
+  </div>
+</section>
 
-    <figure class="id-card">
-      <div class="id-card__photo id-card__photo--real">
-        <img src="assets/img/marcelo-lusardo.jpg" alt="Marcelo Lusardo, criador do Austrália Sem Fronteiras">
+<!-- ======================= NÚMEROS (count-up ao rolar, igual à LP) ======================= -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="mv-stat-grid">
+      <div class="lp-stat-card mv-stat-card">
+        <svg class="mv-stat-icon" aria-hidden="true"><use href="#mv-ic-people"/></svg>
+        <strong><span class="lp-count" data-target="131" data-decimals="0">0</span> mil</strong>
+        <span>Inscritos no YouTube</span>
       </div>
-      <div class="id-card__row"><span class="bp-label">NOME</span><strong class="bp-value">Marcelo Lusardo</strong></div>
-      <div class="id-card__row"><span class="bp-label">FUNÇÃO</span><strong class="bp-value">Fundador, Austrália Sem Fronteiras</strong></div>
-      <div class="id-card__row"><span class="bp-label">PROGRAMA</span><strong class="bp-value">Austrália Sem Fronteiras</strong></div>
-      <div class="id-card__row"><span class="bp-label">AUTOR</span><strong class="bp-value">Livro "Austrália Sem Fronteiras"</strong></div>
-      <div class="id-card__row"><span class="bp-label">BASE</span><strong class="bp-value">Austrália</strong></div>
-    </figure>
+      <div class="lp-stat-card mv-stat-card">
+        <svg class="mv-stat-icon" aria-hidden="true"><use href="#mv-ic-play"/></svg>
+        <strong>+<span class="lp-count" data-target="395" data-decimals="0">0</span></strong>
+        <span>Vídeos publicados</span>
+      </div>
+      <div class="lp-stat-card mv-stat-card">
+        <svg class="mv-stat-icon" aria-hidden="true"><use href="#mv-ic-star"/></svg>
+        <strong><span class="lp-count" data-target="23" data-decimals="0">0</span> anos</strong>
+        <span>De história da Expert Education</span>
+      </div>
+      <div class="lp-stat-card mv-stat-card">
+        <svg class="mv-stat-icon" aria-hidden="true"><use href="#mv-ic-people"/></svg>
+        <strong>Uma grande comunidade</strong>
+        <span>De brasileiros conectados pelo sonho da Austrália</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EXPERT EDUCATION (autoridade) ======================= -->
+<section class="section section--ink">
+  <div class="wrap mv-expert-grid">
+    <div class="mv-expert-card">
+      <img src="assets/img/logo-expert-education.png" alt="Expert Education &amp; Visa Services" class="mv-expert-logo">
+    </div>
+    <div>
+      <p class="eyebrow">Diretor e sócio da</p>
+      <h2 class="section-title section-title--light">Expert Education</h2>
+      <p class="section-lead section-lead--light">Uma das principais agências de educação internacional do Brasil, com mais de 23 anos de atuação, ajudando milhares de estudantes a realizarem o sonho de estudar e viver no exterior.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="mv-mini-stats">
+      <div class="mv-mini-stat">
+        <svg class="mv-mini-icon" aria-hidden="true"><use href="#mv-ic-star"/></svg>
+        <strong><span class="lp-count" data-target="23" data-decimals="0">0</span>+</strong>
+        <span>Anos de atuação</span>
+      </div>
+      <div class="mv-mini-stat">
+        <svg class="mv-mini-icon" aria-hidden="true"><use href="#mv-ic-people"/></svg>
+        <strong>+<span class="lp-count" data-target="100" data-decimals="0">0</span> mil</strong>
+        <span>Estudantes</span>
+      </div>
+      <div class="mv-mini-stat">
+        <svg class="mv-mini-icon" aria-hidden="true"><use href="#mv-ic-globe"/></svg>
+        <strong>Presença</strong>
+        <span>Global</span>
+      </div>
+      <div class="mv-mini-stat">
+        <svg class="mv-mini-icon" aria-hidden="true"><use href="#mv-ic-plane"/></svg>
+        <strong>Austrália</strong>
+        <span>E diversos países</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MISSÃO ======================= -->
+<section class="section section--eucalyptus">
+  <div class="wrap mv-mission-grid">
+    <h2 class="section-title section-title--light">Mais que conteúdo.<br>Uma missão.</h2>
+    <div>
+      <p class="section-lead section-lead--light">Marcelo criou o <a href="index.html" class="link-inline link-inline--light">Austrália Sem Fronteiras</a> pra compartilhar aquilo que gostaria de ter encontrado quando começou sua própria jornada: direção, conhecimento, conexões e o caminho das pedras.</p>
+      <p class="section-lead section-lead--light">Além do canal, ele também é autor do livro <em>"Austrália Sem Fronteiras: Do Zero à Residência"</em>, onde conta essa travessia sem filtro.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="mv-mission-callout">
+      <p>Ele levou anos para construir o caminho.<br><strong>Agora você pode aprender com quem já atravessou.</strong></p>
+    </div>
+    <p class="mv-mission-cta-wrap">
+      <a href="index.html#analise" class="btn btn-ticket btn-large">
+        <span>Quero ter Marcelo como meu mentor</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </p>
   </div>
 </section>
 

@@ -50,7 +50,7 @@
   // Count-up numbers + growing bars (LP stat sections), triggered once on scroll into view.
   // NOTE: we observe the *row/card* container, not the bar-fill itself — a bar-fill starts
   // at width:0, and a zero-area element never satisfies an IntersectionObserver threshold.
-  var statCards = document.querySelectorAll('.lp-stat-card');
+  var statCards = document.querySelectorAll('.lp-stat-card, .mv-mini-stat');
   var barRows = document.querySelectorAll('.lp-bar-row');
 
   function formatCount(value, decimals) {

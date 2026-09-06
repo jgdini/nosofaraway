@@ -319,24 +319,55 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   background:radial-gradient(120% 140% at 85% 0%, var(--ink-soft) 0%, var(--ink) 60%);
   padding-block:80px 66px; color:var(--cream);
 }
-.bio-hero-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:56px; align-items:center; }
 .bio-hero-copy .hero-title{ font-size:clamp(2rem, 3.6vw, 2.9rem); margin-bottom:20px; }
 .bio-hero-copy .hero-sub{ max-width:560px; margin-bottom:28px; }
 .bio-hero-copy .hero-trust{ margin-bottom:30px; }
 
-.id-card{ margin:0; background:var(--cream); border-radius:10px; padding:26px; box-shadow:0 22px 50px rgba(0,0,0,.28); justify-self:center; width:100%; max-width:280px; }
-.id-card__photo{
-  aspect-ratio:3/4; width:100%; border:1.5px dashed var(--rust); border-radius:4px;
-  display:flex; align-items:center; justify-content:center; margin-bottom:18px;
-  background:repeating-linear-gradient(135deg, rgba(91,95,196,.06) 0 10px, transparent 10px 20px);
+/* hero "Quem é Marcelo" — foto real (sem texto desenhado nela) + badge
+   real em HTML/CSS por cima, texto todo indexável pelo Google. */
+.mv-hero-grid{ display:grid; grid-template-columns:.75fr 1fr; gap:56px; align-items:center; }
+.mv-hero-photo{ position:relative; margin:0; border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,.35); aspect-ratio:25/39; }
+.mv-hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.mv-hero-badge{
+  position:absolute; left:14px; bottom:14px; right:14px;
+  display:flex; align-items:center; gap:10px;
+  background:rgba(12,16,48,.85); backdrop-filter:blur(3px);
+  border:1px solid rgba(74,168,216,.4); border-radius:8px; padding:10px 14px;
+  color:var(--cream); font-size:.82rem; line-height:1.35;
 }
-.id-card__photo span{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; color:var(--rust); }
-.id-card__photo--real{ border-style:solid; border-color:var(--gold); padding:0; overflow:hidden; background:none; }
-.id-card__photo--real img{ width:100%; height:100%; object-fit:cover; display:block; }
-.id-card__row{ display:flex; flex-direction:column; gap:2px; padding:9px 0; border-top:1px dashed #DCE3F2; }
-.id-card__row:first-of-type{ border-top:none; }
-.id-card .bp-label{ color:var(--rust); margin-top:0; }
-.id-card .bp-value{ color:var(--ink); font-size:1rem; }
+.mv-hero-badge__icon{ width:26px; height:26px; flex:none; color:var(--gold); }
+.mv-hero-badge strong{ color:var(--gold); font-family:var(--font-display); }
+.mv-accent{ color:var(--gold); }
+.mv-hero-lead{ font-family:var(--font-display); font-weight:600; font-size:1.3rem; color:var(--cream); margin:0 0 18px; }
+.mv-hero-callout{ font-family:var(--font-display); font-weight:600; font-size:1.1rem; color:var(--cream); border-left:3px solid var(--gold); padding-left:16px; margin-bottom:28px; }
+
+/* números (count-up ao rolar — JS genérico em main.js já detecta .lp-stat-card
+   e .lp-count em qualquer página; reaproveitado aqui igual à LP) */
+.lp-stat-card{ background:var(--cream); border:1px solid #DCE3F2; border-radius:8px; padding:26px 16px; text-align:center; }
+.lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:700; font-size:1.7rem; color:var(--rust); margin-bottom:8px; }
+.lp-stat-card span{ font-family:var(--font-mono); font-size:.72rem; color:#4A4F70; letter-spacing:.02em; }
+.mv-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
+.mv-stat-icon{ width:1.9rem; height:1.9rem; color:var(--rust); display:block; margin:0 auto 12px; }
+
+/* Expert Education (autoridade) */
+.mv-expert-grid{ display:grid; grid-template-columns:.5fr 1fr; gap:44px; align-items:center; margin-bottom:36px; }
+.mv-expert-card{ background:var(--cream); border-radius:10px; padding:24px; display:flex; align-items:center; justify-content:center; }
+.mv-expert-logo{ width:100%; height:auto; display:block; }
+.mv-mini-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1000px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(74,168,216,.25); }
+.mv-mini-stat{ text-align:center; }
+.mv-mini-icon{ width:1.6rem; height:1.6rem; color:var(--gold); display:block; margin:0 auto 10px; }
+.mv-mini-stat strong{ display:block; font-family:var(--font-display); font-weight:700; font-size:1.2rem; color:var(--cream); margin-bottom:4px; }
+.mv-mini-stat span{ font-family:var(--font-mono); font-size:.7rem; color:#B9BEDD; letter-spacing:.02em; }
+
+/* missão */
+.mv-mission-grid{ display:grid; grid-template-columns:.8fr 1fr; gap:48px; align-items:start; margin-bottom:40px; }
+.mv-mission-grid .section-title{ margin:0; }
+.mv-mission-callout{
+  max-width:640px; margin:0 auto 28px; text-align:center; background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2); border-radius:10px; padding:22px 26px;
+  font-family:var(--font-display); font-size:1.1rem; color:var(--cream); line-height:1.5;
+}
+.mv-mission-cta-wrap{ text-align:center; margin:0; }
 
 /* timeline */
 .timeline{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0; max-width:760px; }
@@ -417,8 +448,13 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
   .boarding-pass__perf{ display:none; }
   .beyond-grid{ grid-template-columns:1fr; }
   .analise-grid{ grid-template-columns:1fr; }
-  .bio-hero-grid{ grid-template-columns:1fr; }
-  .id-card{ max-width:300px; }
+  .mv-hero-grid{ grid-template-columns:1fr; }
+  .mv-hero-photo{ max-width:340px; margin-inline:auto; }
+  .mv-stat-grid{ grid-template-columns:repeat(2,1fr); }
+  .mv-expert-grid{ grid-template-columns:1fr; text-align:center; }
+  .mv-expert-card{ max-width:280px; margin-inline:auto; }
+  .mv-mini-stats{ grid-template-columns:repeat(2,1fr); row-gap:24px; }
+  .mv-mission-grid{ grid-template-columns:1fr; }
   .hoje-grid{ grid-template-columns:1fr; }
   .timeline-item{ grid-template-columns:1fr; gap:8px; }
   .midia-grid{ grid-template-columns:1fr; }
