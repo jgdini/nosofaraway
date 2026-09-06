@@ -153,20 +153,26 @@ body.lp-body{ padding-bottom:0; }
 .lp-steps4-closing{ margin-top:36px; }
 
 /* -------------------- Marcelo authority (dobra 08) -------------------- */
-/* primeira parte: foto real de fundo (Marcelo no escritório em Sydney)
-   com gradiente escuro — mesmo padrão do fechamento (.lp-closing) */
+/* primeira parte: foto real de fundo (Marcelo no escritório em Sydney),
+   ancorada à direita — mesmo padrão do hero da Dobra 01 — pra manter o
+   Marcelo visível, com o texto num bloco à esquerda (não centralizado
+   por cima da foto). Degradê suave, nunca muito perto de 0% nem 100%
+   de opacidade, pra não criar uma separação dura entre texto e foto. */
 .lp-marcelo-hero{
-  position:relative; padding-block:100px;
+  position:relative; padding-block:100px; color:var(--cream); overflow:hidden;
   background:
-    linear-gradient(180deg, rgba(14,17,46,.72), rgba(14,17,46,.9)),
-    url("../img/marcelo-lp-office.jpg") center 22% / cover no-repeat;
-  color:var(--cream);
+    linear-gradient(90deg, rgba(18,23,58,.94) 0%, rgba(18,23,58,.82) 38%, rgba(18,23,58,.6) 68%, rgba(18,23,58,.4) 100%),
+    url("../img/marcelo-lp-office.jpg") right center / auto 100% no-repeat, var(--ink);
 }
-.lp-marcelo-hero-inner{ max-width:640px; margin:0 auto; }
-.lp-marcelo-story{ list-style:none; margin:22px 0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:1.02rem; color:#2A2E4C; }
-.lp-marcelo-story li::before{ content:'— '; color:var(--rust); }
+.lp-marcelo-hero-inner{ max-width:560px; margin:0; }
+.lp-marcelo-story{
+  list-style:none; margin:22px 0; padding:0; display:grid; grid-template-columns:1fr 1fr;
+  gap:10px 22px; font-size:.95rem; color:#2A2E4C;
+}
+.lp-marcelo-story li{ display:flex; align-items:flex-start; gap:9px; line-height:1.4; }
+.lp-marcelo-story .lp-icon{ width:1.05rem; height:1.05rem; flex:none; margin-top:2px; color:var(--rust); }
 .lp-marcelo-story--light{ color:var(--cream); }
-.lp-marcelo-story--light li::before{ color:var(--gold); }
+.lp-marcelo-story--light .lp-icon{ color:var(--gold); }
 
 /* segunda parte (depois da Expert Education): foto lado a lado */
 .lp-marcelo-grid{ display:grid; grid-template-columns:.55fr 1fr; gap:52px; align-items:center; }
@@ -265,6 +271,16 @@ body.lp-body{ padding-bottom:0; }
       url("../img/lp-hero-photo.jpg") center 12% / cover no-repeat;
   }
   .lp-hero-v2__title, .lp-hero-v2__sub{ max-width:100%; }
+  /* dobra do Marcelo: mesma lógica — foto ancorada não cabe do lado do
+     texto numa tela estreita, então vira fundo cheio e mais apagado. */
+  .lp-marcelo-hero{
+    padding-block:70px;
+    background:
+      linear-gradient(180deg, rgba(18,23,58,.8), rgba(18,23,58,.94)),
+      url("../img/marcelo-lp-office.jpg") center 22% / cover no-repeat;
+  }
+  .lp-marcelo-hero-inner{ max-width:100%; }
+  .lp-marcelo-story{ grid-template-columns:1fr; }
   .lp-stat-grid{ grid-template-columns:1fr 1fr; gap:12px; }
   .lp-pain-grid{ grid-template-columns:1fr; }
   .lp-offer-grid{ grid-template-columns:1fr; }
