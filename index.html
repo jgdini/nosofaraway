@@ -146,22 +146,21 @@
 
     <p class="origin-more"><a href="marcelo-lusardo.html" class="link-inline">Leia a história completa de Marcelo Lusardo →</a></p>
 
-    <!-- NOTA: banner pronto que o João mandou (oferta com preço e CTA já
-         desenhados), usado inteiro. Existe uma versão vertical recortada
-         pro mobile, trocada via <picture> no breakpoint de 760px. Botão
-         real invisível por cima do botão desenhado em cada imagem,
-         apontando pro checkout real da Hotmart.
-         ATENÇÃO: essa arte mostra o preço "R$ 1.030,00" (acesso anual). -->
-    <p class="origin-book-lead">Essa travessia também virou livro, e quem entra pro ecossistema leva ele de graça:</p>
-    <figure class="book-banner origin-book-banner">
-      <picture>
-        <source media="(max-width: 760px)" srcset="assets/img/livro-oferta-mobile.jpg">
-        <img src="assets/img/livro-oferta-ecossistema.jpg" alt="Entre para o Ecossistema Austrália Sem Fronteiras e ganhe o livro do Marcelo Lusardo autografado. Livro físico autografado, entregue em casa. Acesso completo ao ecossistema por um ano: conteúdo, direcionamento e rede de apoio. Acesso anual: R$ 1.030,00. Pagamento seguro, acesso imediato, livro enviado para todo o Brasil.">
-      </picture>
-      <a href="https://pay.hotmart.com/Y94773826I?checkoutMode=10&amp;bid=1777007463025" class="book-banner__cta" target="_blank" rel="noopener">
-        <span class="sr-only">Quero fazer parte agora</span>
+    <!-- NOTA: recriado em HTML/CSS real (era um banner-imagem inteiro
+         antes) — texto estático em imagem não é lido/indexado pelo
+         Google, e a imagem também não era de fato responsive (só
+         trocava entre 2 tamanhos fixos). Fundo real é só a foto do
+         livro (sem nenhum texto/botão desenhado nela), com gradiente
+         escuro por cima — mesmo padrão da home/hero. -->
+    <div class="origin-book-hero">
+      <p class="eyebrow">Essa travessia também virou livro</p>
+      <h3>"Austrália Sem Fronteiras: Do Zero à Residência", de Marcelo Lusardo</h3>
+      <p>E quem entra pro ecossistema leva o livro de graça. Compre a versão física em separado ou conheça o ecossistema completo.</p>
+      <a href="ecossistema-australia.html#livro" class="btn btn-ticket">
+        <span>Conhecer o livro e o ecossistema</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-    </figure>
+    </div>
   </div>
 </section>
 
