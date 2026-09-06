@@ -84,6 +84,10 @@
     <symbol id="ic-plane" viewBox="0 0 24 24">
       <path d="M2 21L23 12L2 3L2 10L17 12L2 14Z" fill="currentColor" stroke="none"/>
     </symbol>
+    <symbol id="ic-book" viewBox="0 0 24 24">
+      <path d="M3 5.5c2.2-1 5-1 7 0v13c-2-1-4.8-1-7 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M21 5.5c-2.2-1-5-1-7 0v13c2-1 4.8-1 7 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -109,25 +113,29 @@
 <main id="top">
 
 <!-- ======================= DOBRA 01 — HERO ======================= -->
-<!-- NOTA: hero é a arte pronta que o João mandou, usada como imagem inteira
-     (não recriada em HTML/CSS). Existem duas versões: uma larga pro desktop
-     e uma vertical, recortada especialmente pro mobile (o botão fica maior
-     e mais fácil de tocar) — trocadas via <picture> no breakpoint de 760px.
-     O texto do H1/parágrafo fica em sr-only pra SEO/leitor de tela, e o
-     botão real fica invisível por cima do botão desenhado em cada imagem,
-     na posição exata dele (a posição do botão muda entre as duas versões,
-     por isso o CSS reposiciona o overlay no mesmo breakpoint). -->
-<section class="lp-hero lp-hero--image">
-  <div class="lp-hero-image-wrap">
-    <picture>
-      <source media="(max-width: 760px)" srcset="assets/img/lp-hero-mobile.jpg">
-      <img src="assets/img/lp-hero-full.jpg" alt="O maior ecossistema para brasileiros que querem construir uma vida na Austrália, com Marcelo Lusardo: mentorias, imigração, carreira, networking e educação." class="lp-hero-image">
-    </picture>
-    <h1 class="sr-only">O maior ecossistema para brasileiros que querem construir uma vida na Austrália.</h1>
-    <p class="sr-only">Do planejamento no Brasil à construção de uma vida na Austrália: tenha acesso ao conhecimento, às conexões e aos caminhos que podem levar anos pra descobrir sozinho. Mentorias, imigração, carreira, networking e educação. Para quem quer ir, para quem já chegou, para quem decidiu ficar.</p>
-    <a href="#oferta" class="lp-hero-image__cta">
-      <span class="sr-only">Quero construir meu caminho na Austrália</span>
+<!-- NOTA: recriado em HTML/CSS real (era imagem inteira antes) — texto
+     estático em imagem não é lido/indexado pelo Google. Foto de fundo
+     real (recorte só da parte fotográfica da arte original, sem nenhum
+     texto desenhado nela), com gradiente escuro da esquerda pra dar
+     contraste ao texto de verdade por cima. -->
+<section class="lp-hero-v2">
+  <div class="wrap">
+    <p class="lp-hero-v2__tags">Mentorias · Imigração · Carreira · Networking · Educação</p>
+    <h1 class="lp-hero-v2__title">O maior ecossistema para brasileiros que querem construir uma vida na <span class="mv-accent">Austrália.</span></h1>
+    <p class="lp-hero-v2__sub">Do planejamento no Brasil à construção de uma vida na Austrália: tenha acesso ao conhecimento, às conexões e aos caminhos que podem levar anos pra descobrir sozinho.</p>
+    <a href="#oferta" class="btn btn-ticket btn-large">
+      <span>Quero construir meu caminho na Austrália</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+    <p class="lp-hero-v2__note">Para quem quer ir. Para quem já chegou. Para quem decidiu ficar.</p>
+
+    <div class="lp-hero-v2__icons">
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-cap"/></svg><span>Mentorias</span></div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-passport"/></svg><span>Imigração</span></div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-briefcase"/></svg><span>Carreira</span></div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-people"/></svg><span>Networking</span></div>
+      <div><svg class="lp-icon" aria-hidden="true"><use href="#ic-book"/></svg><span>Educação</span></div>
+    </div>
   </div>
 </section>
 

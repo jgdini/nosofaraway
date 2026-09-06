@@ -16,24 +16,21 @@ body.lp-body{ padding-bottom:0; }
 .lp-header-inner{ display:flex; align-items:center; justify-content:space-between; padding-block:14px; color:var(--cream); }
 .lp-header .brand{ color:var(--cream); }
 
-/* -------------------- hero (arte pronta, imagem inteira) -------------------- */
-.lp-hero--image{ padding:0; line-height:0; }
-.lp-hero-image-wrap{ position:relative; width:100%; }
-.lp-hero-image-wrap picture{ display:block; }
-.lp-hero-image{ width:100%; height:auto; display:block; }
-/* botão real, invisível, sobre o botão desenhado na imagem (mesma posição
-   em %, então acompanha a imagem em qualquer largura de tela). A versão
-   mobile da arte tem o botão numa posição diferente, então o overlay é
-   reposicionado no mesmo breakpoint em que a imagem troca (760px). */
-.lp-hero-image__cta{
-  position:absolute; left:5.5%; top:66.7%; width:34.9%; height:8.2%;
-  display:block; border-radius:4px;
+/* -------------------- hero (dobra 01) — foto real de fundo + texto em código -------------------- */
+.lp-hero-v2{
+  position:relative; padding-block:90px 60px; color:var(--cream); overflow:hidden;
+  background:
+    linear-gradient(90deg, var(--ink) 0%, rgba(18,23,58,.94) 38%, rgba(18,23,58,.55) 60%, rgba(18,23,58,.15) 78%, rgba(18,23,58,0) 92%),
+    url("../img/lp-hero-photo.jpg") right top / auto 100% no-repeat, var(--ink);
 }
-.lp-hero-image__cta:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
-
-@media (max-width: 760px){
-  .lp-hero-image__cta{ left:10.8%; top:43.6%; width:78.5%; height:6.25%; }
-}
+.lp-hero-v2__tags{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.08em; color:var(--gold); margin:0 0 22px; }
+.lp-hero-v2__title{ font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.2vw,3.1rem); line-height:1.15; max-width:640px; margin:0 0 22px; }
+.lp-hero-v2__sub{ font-size:1.08rem; line-height:1.6; color:#D6DCEE; max-width:520px; margin:0 0 28px; }
+.lp-hero-v2__note{ font-family:var(--font-mono); font-size:.78rem; color:#8A90B8; margin:16px 0 40px; }
+.lp-hero-v2__icons{ display:flex; flex-wrap:wrap; gap:28px 34px; max-width:620px; }
+.lp-hero-v2__icons > div{ display:flex; flex-direction:column; align-items:center; gap:8px; width:76px; text-align:center; }
+.lp-hero-v2__icons .lp-icon{ width:1.7rem; height:1.7rem; color:var(--gold); }
+.lp-hero-v2__icons span{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.02em; color:#B9BEDD; }
 
 /* padrão de acessibilidade: visível pra leitor de tela, invisível na tela */
 .sr-only{
@@ -260,6 +257,16 @@ body.lp-body{ padding-bottom:0; }
 }
 
 @media (max-width: 640px){
+  /* hero: em vez de foto ancorada à direita (não cabe do lado do texto
+     numa tela estreita), a foto vira um fundo cheio e mais apagado
+     atrás de todo o texto — mesmo padrão da dobra do Marcelo. */
+  .lp-hero-v2{
+    padding-block:70px 44px;
+    background:
+      linear-gradient(180deg, rgba(18,23,58,.8), rgba(18,23,58,.94)),
+      url("../img/lp-hero-photo.jpg") center 12% / cover no-repeat;
+  }
+  .lp-hero-v2__title, .lp-hero-v2__sub{ max-width:100%; }
   .lp-stat-grid{ grid-template-columns:1fr 1fr; gap:12px; }
   .lp-pain-grid{ grid-template-columns:1fr; }
   .lp-offer-grid{ grid-template-columns:1fr; }
