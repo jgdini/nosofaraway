@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nosofaraway-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "8793"],
+      "port": 8793
+    }
+  ]
+}
