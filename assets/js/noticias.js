@@ -1,6 +1,9 @@
-// Página Notícias: lê assets/data/noticias.json (gerado automaticamente por
-// scripts/build-noticias.mjs, via GitHub Action) e monta os cards. Sem
-// chamada externa nenhuma no navegador — evita CORS e mantém a página rápida.
+// Lê assets/data/noticias.json (gerado automaticamente por
+// scripts/build-noticias.mjs, via GitHub Action) e monta os cards de notícia
+// e de vídeo. Sem chamada externa nenhuma no navegador — evita CORS e mantém
+// a página rápida. Usado tanto na página Notícias quanto na seção "Estamos
+// no YouTube" da home — qualquer elemento com [data-videos-grid] na página
+// recebe os vídeos (com [data-limit] opcional pra mostrar só os N primeiros).
 (function () {
   const DATA_URL = 'assets/data/noticias.json';
 
@@ -49,8 +52,10 @@
 
   async function init() {
     const newsGrid = document.getElementById('noticias-grid');
-    const videosGrid = document.getElementById('videos-grid');
+    const videoGrids = document.querySelectorAll('[data-videos-grid]');
     const updatedEl = document.getElementById('noticias-updated');
+
+    if (!newsGrid && !videoGrids.length) return; // página sem nenhum bloco de notícias/vídeo
 
     try {
       const res = await fetch(DATA_URL, { cache: 'no-store' });
@@ -70,18 +75,22 @@
         }
       }
 
-      if (videosGrid) {
-        videosGrid.innerHTML = '';
-        if (data.videos && data.videos.length) {
-          data.videos.forEach((item) => videosGrid.appendChild(videoCard(item)));
+      videoGrids.forEach((grid) => {
+        const limit = parseInt(grid.getAttribute('data-limit'), 10);
+        const items = Number.isFinite(limit) ? (data.videos || []).slice(0, limit) : (data.videos || []);
+        grid.innerHTML = '';
+        if (items.length) {
+          items.forEach((item) => grid.appendChild(videoCard(item)));
         } else {
-          videosGrid.innerHTML = '<p class="noticias-empty noticias-empty--light">Nenhum vídeo encontrado no momento.</p>';
+          grid.innerHTML = '<p class="noticias-empty noticias-empty--light">Nenhum vídeo encontrado no momento.</p>';
         }
-      }
+      });
     } catch (err) {
       console.error('Falha ao carregar notícias:', err);
       if (newsGrid) newsGrid.innerHTML = '<p class="noticias-empty">Não foi possível carregar as notícias agora. Tente novamente mais tarde.</p>';
-      if (videosGrid) videosGrid.innerHTML = '<p class="noticias-empty noticias-empty--light">Não foi possível carregar os vídeos agora.</p>';
+      videoGrids.forEach((grid) => {
+        grid.innerHTML = '<p class="noticias-empty noticias-empty--light">Não foi possível carregar os vídeos agora.</p>';
+      });
     }
   }
 

@@ -309,7 +309,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .video-card__iframe{ width:100%; aspect-ratio:16/9; border:none; display:block; }
 .video-card__title{ color:var(--cream); font-size:.96rem; line-height:1.35; margin:14px 18px 6px; }
 .video-card__date{ display:block; font-family:var(--font-mono); font-size:.72rem; color:#8790BD; margin:0 18px 18px; }
-.videos-cta{ margin-top:8px; }
+.videos-cta{ margin-top:8px; display:flex; flex-wrap:wrap; align-items:center; gap:22px; }
 
 @media (max-width:960px){
   .noticias-grid, .videos-grid{ grid-template-columns:repeat(2,1fr); }
