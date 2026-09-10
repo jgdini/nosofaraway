@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-09-10T16:10:06.826Z",
+  "updated_at": "2026-09-10T20:41:29.324Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "New doco reveals how John Howard looks back on Tampa turning point",
+      "link": "https://www.abc.net.au/news/2026-09-11/what-to-watch-on-tv-in-september/107136492",
+      "description": "Twenty-five years on and the hundreds of asylum seekers saved from drowning by the Tampa freighter still linger in the Australian memory.",
+      "pubDate": "Thu, 10 Sep 2026 18:30:00 +0000"
+    },
     {
       "source": "SBS News",
       "title": "Trump's visa crackdown plan could affect thousands seeking asylum in the US",
