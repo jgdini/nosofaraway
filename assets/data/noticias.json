@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-09-11T16:13:43.435Z",
+  "updated_at": "2026-09-11T20:47:10.027Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "We put 165 years of migration data into four charts. Here's what we learned",
+      "link": "https://www.abc.net.au/news/2026-09-12/australian-migration-numbers-history-comparison/106396624",
+      "description": "The story of Australia is a story of migration, and the country's immigration system is once more at the centre of heated political debate.",
+      "pubDate": "Fri, 11 Sep 2026 18:42:20 +0000"
+    },
     {
       "source": "SBS News",
       "title": "Trump's visa crackdown plan could affect thousands seeking asylum in the US",
