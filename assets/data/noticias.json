@@ -1,6 +1,20 @@
 {
-  "updated_at": "2026-09-12T20:23:58.801Z",
+  "updated_at": "2026-09-13T04:14:34.523Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "Immigrants wary of becoming political fodder as migration debate heats up",
+      "link": "https://www.abc.net.au/news/2026-09-13/migration-debate-heats-up/107143444",
+      "description": "An expert argues the migration debate is fixated on the wrong number, while regional Australia calls for a national settlement strategy.",
+      "pubDate": "Sun, 13 Sep 2026 01:28:49 +0000"
+    },
+    {
+      "source": "ABC News",
+      "title": "Love when you don't know when you'll meet again",
+      "link": "https://www.abc.net.au/news/2026-09-13/love-story-mo-fereshteh-iran-bordertown/107065158",
+      "description": "Mohammad never expected that a simple Instagram message would lead to a love story shaped by distance, war and agonising immigration struggles.",
+      "pubDate": "Sat, 12 Sep 2026 23:00:00 +0000"
+    },
     {
       "source": "SBS News · Austrália",
       "title": "Fixing Australia's immigration system is not just about cutting migrants",
@@ -23,48 +37,5 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": [
-    {
-      "videoId": "RAjJHADf7gU",
-      "title": "Tudo sobre Testes de Proficiência",
-      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
-      "published": "2026-07-30T12:54:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
-    },
-    {
-      "videoId": "eQGTpmB6ilU",
-      "title": "O que acontece depois do curso de ingês?",
-      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
-      "published": "2026-07-23T13:03:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
-    },
-    {
-      "videoId": "MvYE3Oc74iE",
-      "title": "Análises de perfis para a Austrália",
-      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
-      "published": "2026-07-20T18:46:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
-    },
-    {
-      "videoId": "o0UnGkzzCp0",
-      "title": "Planejamento antes de sair do Brasil",
-      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
-      "published": "2026-07-20T18:45:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
-    },
-    {
-      "videoId": "vkteoMKBYIs",
-      "title": "Cursos que aumentam a empregabilidade",
-      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
-      "published": "2026-07-20T18:44:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
-    },
-    {
-      "videoId": "--3pQB2ad14",
-      "title": "Como criar um networking inteligente na Austrália",
-      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
-      "published": "2026-07-20T18:40:49+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
-    }
-  ]
+  "videos": []
 }
