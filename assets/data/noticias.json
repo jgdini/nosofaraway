@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-09-14T12:22:18.671Z",
+  "updated_at": "2026-09-14T21:41:44.227Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "Uni sector says campuses will shut under One Nation plan",
+      "link": "https://www.abc.net.au/news/2026-09-15/one-nation-immigration-plan-universities-react/107152086",
+      "description": "One Nation has released a plan to slash immigration by 750,000 people over three years, with international students targeted.",
+      "pubDate": "Mon, 14 Sep 2026 20:01:36 +0000"
+    },
     {
       "source": "SBS News · Austrália",
       "title": "Why fixing Australia's immigration system is not just about cutting migrants",
