@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-15T21:05:35.442Z",
+  "updated_at": "2026-09-16T04:17:22.416Z",
   "news": [
     {
       "source": "SBS News · Austrália",
-      "title": "Why fixing Australia's immigration system is not just about cutting migrants",
-      "link": "https://www.sbs.com.au/news/article/australias-debate-over-net-overseas-migration/kobvomk3g",
-      "description": "Australians want immigration changes to improve the country, but they need to be done the right way.",
-      "pubDate": "Fri, 11 Sep 2026 20:48:10 +0000"
+      "title": "Tony Burke set to unveil Labor's new migration plan amid working holiday visa concerns",
+      "link": "https://www.sbs.com.au/news/article/tony-burke-set-to-unveil-labors-new-migration-plan/2i8jfzfdq",
+      "description": "The expected announcement comes after delays which the government has attributed to the Opposition.",
+      "pubDate": "Wed, 16 Sep 2026 00:36:01 +0000"
     },
     {
       "source": "SBS News",
@@ -23,48 +23,5 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": [
-    {
-      "videoId": "RAjJHADf7gU",
-      "title": "Tudo sobre Testes de Proficiência",
-      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
-      "published": "2026-07-30T12:54:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
-    },
-    {
-      "videoId": "eQGTpmB6ilU",
-      "title": "O que acontece depois do curso de ingês?",
-      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
-      "published": "2026-07-23T13:03:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
-    },
-    {
-      "videoId": "MvYE3Oc74iE",
-      "title": "Análises de perfis para a Austrália",
-      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
-      "published": "2026-07-20T18:46:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
-    },
-    {
-      "videoId": "o0UnGkzzCp0",
-      "title": "Planejamento antes de sair do Brasil",
-      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
-      "published": "2026-07-20T18:45:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
-    },
-    {
-      "videoId": "vkteoMKBYIs",
-      "title": "Cursos que aumentam a empregabilidade",
-      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
-      "published": "2026-07-20T18:44:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
-    },
-    {
-      "videoId": "--3pQB2ad14",
-      "title": "Como criar um networking inteligente na Austrália",
-      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
-      "published": "2026-07-20T18:40:49+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
-    }
-  ]
+  "videos": []
 }
