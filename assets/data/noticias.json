@@ -1,6 +1,27 @@
 {
-  "updated_at": "2026-09-16T16:34:24.850Z",
+  "updated_at": "2026-09-16T21:07:16.247Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "Woman's dying wish to see brother denied amid visa dispute",
+      "link": "https://www.abc.net.au/news/2026-09-17/critically-ill-woman-denied-reunion-with-brother/107138342",
+      "description": "Anna Rochford lives with a rare and debilitating condition and her greatest wish is to see her brother one last time, but applications for a sponsored visa have been repeatedly denied.",
+      "pubDate": "Wed, 16 Sep 2026 20:04:06 +0000"
+    },
+    {
+      "source": "SBS News · Austrália",
+      "title": "'Mobilisation of fear': The deeper strategy behind One Nation's immigration policy",
+      "link": "https://www.sbs.com.au/news/article/temporary-migrants-cuts-voting-rights-one-nation/97u096arb",
+      "description": "For temporary migrants, the rise of One Nation is raising an urgent question: how secure is their future?",
+      "pubDate": "Wed, 16 Sep 2026 19:41:41 +0000"
+    },
+    {
+      "source": "ABC News",
+      "title": "Labor's long-awaited migration overhaul targets temporary visas",
+      "link": "https://www.abc.net.au/news/2026-09-17/labor-to-unveil-delayed-migration-overhaul/107161834",
+      "description": "Labor will tighten rules for temporary migrants bringing family members, switching visas and extending their stays as it seeks to cut net overseas migration.",
+      "pubDate": "Wed, 16 Sep 2026 19:32:17 +0000"
+    },
     {
       "source": "SBS News · Austrália",
       "title": "Tony Burke set to unveil Labor's new migration plan amid working holiday visa concerns",
