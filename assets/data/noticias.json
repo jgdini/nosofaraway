@@ -1,12 +1,33 @@
 {
-  "updated_at": "2026-09-17T16:39:59.585Z",
+  "updated_at": "2026-09-17T21:09:53.742Z",
   "news": [
     {
+      "source": "SBS News · Austrália",
+      "title": "'Can't quarantine any sector': Tony Burke warns migration overhaul carries economic risks",
+      "link": "https://www.sbs.com.au/news/article/cant-quarantine-any-sector-tony-burke-warns-migration-overhaul-carries-economic-risks/we523xexs",
+      "description": "The minister also insists there will still be demand for international student places.",
+      "pubDate": "Thu, 17 Sep 2026 19:45:47 +0000"
+    },
+    {
+      "source": "SBS News · Austrália",
+      "title": "'A struggle every day': There's a hidden side to Australia's student visa debate",
+      "link": "https://www.sbs.com.au/news/article/a-struggle-every-day-theres-a-hidden-side-to-australias-student-visa-debate/sc7i1c266",
+      "description": "Australia is tightening its migration system, with new rules targeting visa-hopping and some international students.",
+      "pubDate": "Thu, 17 Sep 2026 19:41:10 +0000"
+    },
+    {
       "source": "ABC News",
-      "title": "Universities and students alarmed by immigration crackdown on families",
-      "link": "https://www.abc.net.au/news/2026-09-17/universities-students-respond-to-move-to-bar-student-families/107163192",
-      "description": "Higher education stakeholders say sweeping migration changes will jeopardise an export industry worth $55 billion, with international students likely to choose other destinations.",
-      "pubDate": "Thu, 17 Sep 2026 06:32:16 +0000"
+      "title": "Republican breaks with Trump over immigration crackdown ahead of US midterms",
+      "link": "https://www.abc.net.au/news/2026-09-18/brk-us-congresswoman-breaks-with-trump/107166918",
+      "description": "A Latina Republican lawmaker facing a competitive re-election race in Florida has warned Donald Trump that his immigration enforcement agenda has overreached.",
+      "pubDate": "Thu, 17 Sep 2026 18:42:39 +0000"
+    },
+    {
+      "source": "ABC News",
+      "title": "Minister says detaining visa overstayers will not lead to ICE-style raids",
+      "link": "https://www.abc.net.au/news/2026-09-18/visa-overstayers-enforcement-not-like-ice/107164600",
+      "description": "Migration experts slap down a Greens claim that the Border Force crackdown on visa overstayers will be akin to ICE raids in the United States, saying it was an uncontroversial procedure that occurred regularly until 2015",
+      "pubDate": "Thu, 17 Sep 2026 18:41:21 +0000"
     },
     {
       "source": "SBS News · Austrália",
