@@ -1,12 +1,19 @@
 {
-  "updated_at": "2026-09-16T21:07:16.247Z",
+  "updated_at": "2026-09-17T04:23:56.488Z",
   "news": [
     {
       "source": "ABC News",
-      "title": "Woman's dying wish to see brother denied amid visa dispute",
-      "link": "https://www.abc.net.au/news/2026-09-17/critically-ill-woman-denied-reunion-with-brother/107138342",
-      "description": "Anna Rochford lives with a rare and debilitating condition and her greatest wish is to see her brother one last time, but applications for a sponsored visa have been repeatedly denied.",
-      "pubDate": "Wed, 16 Sep 2026 20:04:06 +0000"
+      "title": "Book highlights abuse UK child migrants endured in WA",
+      "link": "https://www.abc.net.au/news/2026-09-17/johno-kathleen-reilly-johnston-book-child-migrants/107055326",
+      "description": "A new book by a Wheatbelt author shines a spotlight on the abuse endured by WA's child migrants at the hands of the Christian Brothers and others.",
+      "pubDate": "Thu, 17 Sep 2026 00:12:28 +0000"
+    },
+    {
+      "source": "SBS News · Austrália",
+      "title": "Live updates: Major migration changes unveiled as Burke rejects Albanese speech claim",
+      "link": "https://www.sbs.com.au/news/live-blog/australia-migration-overhaul-tony-burke-live-updates/g70aegsau",
+      "description": "Stricter visa rules and new migration measures have been announced, as Tony Burke rejects reports the PM opposed his speech.",
+      "pubDate": "Wed, 16 Sep 2026 23:27:13 +0000"
     },
     {
       "source": "SBS News · Austrália",
@@ -14,13 +21,6 @@
       "link": "https://www.sbs.com.au/news/article/temporary-migrants-cuts-voting-rights-one-nation/97u096arb",
       "description": "For temporary migrants, the rise of One Nation is raising an urgent question: how secure is their future?",
       "pubDate": "Wed, 16 Sep 2026 19:41:41 +0000"
-    },
-    {
-      "source": "ABC News",
-      "title": "Labor's long-awaited migration overhaul targets temporary visas",
-      "link": "https://www.abc.net.au/news/2026-09-17/labor-to-unveil-delayed-migration-overhaul/107161834",
-      "description": "Labor will tighten rules for temporary migrants bringing family members, switching visas and extending their stays as it seeks to cut net overseas migration.",
-      "pubDate": "Wed, 16 Sep 2026 19:32:17 +0000"
     },
     {
       "source": "SBS News · Austrália",
@@ -44,48 +44,5 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": [
-    {
-      "videoId": "RAjJHADf7gU",
-      "title": "Tudo sobre Testes de Proficiência",
-      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
-      "published": "2026-07-30T12:54:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
-    },
-    {
-      "videoId": "eQGTpmB6ilU",
-      "title": "O que acontece depois do curso de ingês?",
-      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
-      "published": "2026-07-23T13:03:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
-    },
-    {
-      "videoId": "MvYE3Oc74iE",
-      "title": "Análises de perfis para a Austrália",
-      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
-      "published": "2026-07-20T18:46:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
-    },
-    {
-      "videoId": "o0UnGkzzCp0",
-      "title": "Planejamento antes de sair do Brasil",
-      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
-      "published": "2026-07-20T18:45:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
-    },
-    {
-      "videoId": "vkteoMKBYIs",
-      "title": "Cursos que aumentam a empregabilidade",
-      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
-      "published": "2026-07-20T18:44:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
-    },
-    {
-      "videoId": "--3pQB2ad14",
-      "title": "Como criar um networking inteligente na Austrália",
-      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
-      "published": "2026-07-20T18:40:49+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
-    }
-  ]
+  "videos": []
 }
