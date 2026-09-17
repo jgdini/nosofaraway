@@ -1,18 +1,25 @@
 {
-  "updated_at": "2026-09-17T04:23:56.488Z",
+  "updated_at": "2026-09-17T11:22:35.618Z",
   "news": [
     {
       "source": "ABC News",
-      "title": "Book highlights abuse UK child migrants endured in WA",
-      "link": "https://www.abc.net.au/news/2026-09-17/johno-kathleen-reilly-johnston-book-child-migrants/107055326",
-      "description": "A new book by a Wheatbelt author shines a spotlight on the abuse endured by WA's child migrants at the hands of the Christian Brothers and others.",
-      "pubDate": "Thu, 17 Sep 2026 00:12:28 +0000"
+      "title": "Universities and students alarmed by immigration crackdown on families",
+      "link": "https://www.abc.net.au/news/2026-09-17/universities-students-respond-to-move-to-bar-student-families/107163192",
+      "description": "Higher education stakeholders say sweeping migration changes will jeopardise an export industry worth $55 billion, with international students likely to choose other destinations.",
+      "pubDate": "Thu, 17 Sep 2026 06:32:16 +0000"
+    },
+    {
+      "source": "ABC News",
+      "title": "Labor unveils migration cuts targeting students, backpackers and overstayers",
+      "link": "https://www.abc.net.au/news/2026-09-17/labor-immigration-crackdown-students-backpackers-overstay-visa/107164354",
+      "description": "Labor will restrict international student families, cap longer backpacker stays and target visa overstayers as it seeks greater control over migration.",
+      "pubDate": "Thu, 17 Sep 2026 05:49:10 +0000"
     },
     {
       "source": "SBS News · Austrália",
-      "title": "Live updates: Major migration changes unveiled as Burke rejects Albanese speech claim",
+      "title": "Tony Burke unveils major migration changes to tighten Australia's visa system — as it happened",
       "link": "https://www.sbs.com.au/news/live-blog/australia-migration-overhaul-tony-burke-live-updates/g70aegsau",
-      "description": "Stricter visa rules and new migration measures have been announced, as Tony Burke rejects reports the PM opposed his speech.",
+      "description": "Tougher visa rules, lower migration and a focus on skilled workers underpin the government's new plan.",
       "pubDate": "Wed, 16 Sep 2026 23:27:13 +0000"
     },
     {
@@ -44,5 +51,48 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "videoId": "RAjJHADf7gU",
+      "title": "Tudo sobre Testes de Proficiência",
+      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
+      "published": "2026-07-30T12:54:28+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
+    },
+    {
+      "videoId": "eQGTpmB6ilU",
+      "title": "O que acontece depois do curso de ingês?",
+      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
+      "published": "2026-07-23T13:03:58+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
+    },
+    {
+      "videoId": "MvYE3Oc74iE",
+      "title": "Análises de perfis para a Austrália",
+      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
+      "published": "2026-07-20T18:46:41+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
+    },
+    {
+      "videoId": "o0UnGkzzCp0",
+      "title": "Planejamento antes de sair do Brasil",
+      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
+      "published": "2026-07-20T18:45:42+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
+    },
+    {
+      "videoId": "vkteoMKBYIs",
+      "title": "Cursos que aumentam a empregabilidade",
+      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
+      "published": "2026-07-20T18:44:32+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
+    },
+    {
+      "videoId": "--3pQB2ad14",
+      "title": "Como criar um networking inteligente na Austrália",
+      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
+      "published": "2026-07-20T18:40:49+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
+    }
+  ]
 }
