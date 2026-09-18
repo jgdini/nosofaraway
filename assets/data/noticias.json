@@ -1,13 +1,6 @@
 {
-  "updated_at": "2026-09-18T16:10:59.158Z",
+  "updated_at": "2026-09-18T20:42:34.110Z",
   "news": [
-    {
-      "source": "ABC News",
-      "title": "Regional businesses alarmed as Australia limits working holiday visas",
-      "link": "https://www.abc.net.au/news/2026-09-18/working-holiday-visa-shake-up-alarms-qld-s-regional-businesses/107167986",
-      "description": "The tourism, hospitality and agriculture sectors in regional Queensland say changes to Australia's migration system, including introducing a ballot system for working holiday makers, will have devastating impacts.",
-      "pubDate": "Fri, 18 Sep 2026 08:15:55 +0000"
-    },
     {
       "source": "SBS News · Austrália",
       "title": "ICE enforcement in Australia? Burke quizzed over US-style detention concerns",
@@ -63,6 +56,13 @@
       "link": "https://www.sbs.com.au/news/article/visa-crackdown-us-affect-seeking-asylum/bpyklwd1m",
       "description": "The US state department has declined to comment on the number of visas that may be revoked.",
       "pubDate": "Tue, 25 Aug 2026 01:05:03 +0000"
+    },
+    {
+      "source": "SBS News",
+      "title": "Enosh has a $600,000 deadline. The clock is ticking",
+      "link": "https://www.sbs.com.au/news/insight/article/building-wealth-without-the-bank-of-mum-and-dad/uzvr4xxqc",
+      "description": "The 23-year-old migrant has already bought a property. His next goal is even bigger.",
+      "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
   "videos": [
