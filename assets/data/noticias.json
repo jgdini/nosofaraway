@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-17T21:09:53.742Z",
+  "updated_at": "2026-09-18T04:07:56.340Z",
   "news": [
     {
       "source": "SBS News · Austrália",
-      "title": "'Can't quarantine any sector': Tony Burke warns migration overhaul carries economic risks",
+      "title": "Burke's pitch to worried farmers as he warns of migration overhaul risk",
       "link": "https://www.sbs.com.au/news/article/cant-quarantine-any-sector-tony-burke-warns-migration-overhaul-carries-economic-risks/we523xexs",
-      "description": "The minister also insists there will still be demand for international student places.",
+      "description": "Home Affairs Minister Tony Burke said he can't quarantine any sector of the economy from the impacts of the migration shake-up.",
       "pubDate": "Thu, 17 Sep 2026 19:45:47 +0000"
     },
     {
@@ -14,20 +14,6 @@
       "link": "https://www.sbs.com.au/news/article/a-struggle-every-day-theres-a-hidden-side-to-australias-student-visa-debate/sc7i1c266",
       "description": "Australia is tightening its migration system, with new rules targeting visa-hopping and some international students.",
       "pubDate": "Thu, 17 Sep 2026 19:41:10 +0000"
-    },
-    {
-      "source": "ABC News",
-      "title": "Republican breaks with Trump over immigration crackdown ahead of US midterms",
-      "link": "https://www.abc.net.au/news/2026-09-18/brk-us-congresswoman-breaks-with-trump/107166918",
-      "description": "A Latina Republican lawmaker facing a competitive re-election race in Florida has warned Donald Trump that his immigration enforcement agenda has overreached.",
-      "pubDate": "Thu, 17 Sep 2026 18:42:39 +0000"
-    },
-    {
-      "source": "ABC News",
-      "title": "Minister says detaining visa overstayers will not lead to ICE-style raids",
-      "link": "https://www.abc.net.au/news/2026-09-18/visa-overstayers-enforcement-not-like-ice/107164600",
-      "description": "Migration experts slap down a Greens claim that the Border Force crackdown on visa overstayers will be akin to ICE raids in the United States, saying it was an uncontroversial procedure that occurred regularly until 2015",
-      "pubDate": "Thu, 17 Sep 2026 18:41:21 +0000"
     },
     {
       "source": "SBS News · Austrália",
@@ -65,48 +51,5 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": [
-    {
-      "videoId": "RAjJHADf7gU",
-      "title": "Tudo sobre Testes de Proficiência",
-      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
-      "published": "2026-07-30T12:54:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
-    },
-    {
-      "videoId": "eQGTpmB6ilU",
-      "title": "O que acontece depois do curso de ingês?",
-      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
-      "published": "2026-07-23T13:03:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
-    },
-    {
-      "videoId": "MvYE3Oc74iE",
-      "title": "Análises de perfis para a Austrália",
-      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
-      "published": "2026-07-20T18:46:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
-    },
-    {
-      "videoId": "o0UnGkzzCp0",
-      "title": "Planejamento antes de sair do Brasil",
-      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
-      "published": "2026-07-20T18:45:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
-    },
-    {
-      "videoId": "vkteoMKBYIs",
-      "title": "Cursos que aumentam a empregabilidade",
-      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
-      "published": "2026-07-20T18:44:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
-    },
-    {
-      "videoId": "--3pQB2ad14",
-      "title": "Como criar um networking inteligente na Austrália",
-      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
-      "published": "2026-07-20T18:40:49+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
-    }
-  ]
+  "videos": []
 }
