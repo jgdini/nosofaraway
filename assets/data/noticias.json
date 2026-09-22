@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-09-22T16:40:34.117Z",
+  "updated_at": "2026-09-22T21:06:35.324Z",
   "news": [
+    {
+      "source": "ABC News",
+      "title": "NT mango farmers raise alarm on cuts to working holiday visa program",
+      "link": "https://www.abc.net.au/news/2026-09-23/nt-mango-farmers-concerned-working-holiday-visa-program-cuts/107180926",
+      "description": "Northern Territory mango farmers have raised the alarm about the federal government's cuts to the working holiday visa program, arguing they could have a devastating impact on the industry.",
+      "pubDate": "Tue, 22 Sep 2026 20:28:46 +0000"
+    },
     {
       "source": "SBS News · Austrália",
       "title": "Australia's migration tightening is part of a bigger shift. Here's what other nations are doing",
@@ -14,13 +21,6 @@
       "link": "https://www.sbs.com.au/news/article/tony-burke-australia-ice-detention-migration-plans/tiwlbupj8",
       "description": "Labor was accused of following in Donald Trump's footsteps, but the home affairs minister says that's a misrepresentation.",
       "pubDate": "Fri, 18 Sep 2026 05:56:12 +0000"
-    },
-    {
-      "source": "SBS News · Austrália",
-      "title": "The competing visions for Australia's migration system",
-      "link": "https://www.sbs.com.au/news/article/labor-and-one-nation-migration-policy-explainer/k0fdkgdfa",
-      "description": "From migration caps to visa changes, here's where the parties stand.",
-      "pubDate": "Fri, 18 Sep 2026 05:26:36 +0000"
     },
     {
       "source": "SBS News",
