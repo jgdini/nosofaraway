@@ -357,7 +357,13 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 .hero-trust--onrust{ color:rgba(18,23,58,.75); }
 .hero-trust--onrust li::before{ color:var(--ink); }
 
-.checkin-card{ background:var(--cream); border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(18,23,58,.28); position:relative; }
+/* Fundo do cartão é escuro (--ink) de propósito, não só estético: o corpo
+   do formulário do Zoho é transparente por dentro (deixa o fundo do site
+   hospedeiro aparecer atrás dele) e o rótulo dos campos deles vem em
+   branco fixo — em fundo claro o rótulo simplesmente some. Confirmado ao
+   vivo trocando essa cor (branco = invisível, escuro = legível), sem
+   mexer em nada do lado do Zoho. */
+.checkin-card{ background:var(--ink); border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(18,23,58,.28); position:relative; }
 .checkin-card__header{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); color:var(--gold); font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em; padding:14px 24px; border-bottom:2px dashed rgba(74,168,216,.5); }
 
 /* embed do formulário real (Zoho Forms/CRM da Expert Education) — o iframe
