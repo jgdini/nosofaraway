@@ -142,17 +142,9 @@
     updateTracker();
   }
 
-  // Lead form (check-in) — PLACEHOLDER: front-end only, no real submission yet.
-  // Wire this to a real endpoint/e-mail/CRM during the WordPress build.
-  var leadForm = document.getElementById('lead-form');
-  if (leadForm) {
-    leadForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      if (!leadForm.checkValidity()) { leadForm.reportValidity(); return; }
-      leadForm.querySelector('.checkin-card__body').hidden = true;
-      leadForm.querySelector('.checkin-card__success').hidden = false;
-    });
-  }
+  // Lead form (check-in): embed real da Expert Education (Zoho Forms), cai
+  // direto no CRM deles — o próprio script do Zoho (inline no index.html)
+  // cuida do envio e do estado de sucesso dentro do iframe.
 
   // Scroll-reveal
   var revealTargets = document.querySelectorAll(

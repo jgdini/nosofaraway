@@ -359,21 +359,11 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.08; letter-sp
 
 .checkin-card{ background:var(--cream); border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(18,23,58,.28); position:relative; }
 .checkin-card__header{ display:flex; justify-content:space-between; align-items:center; background:var(--ink); color:var(--gold); font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em; padding:14px 24px; border-bottom:2px dashed rgba(74,168,216,.5); }
-.checkin-card__body{ display:grid; gap:16px; padding:28px 26px 24px; }
-.checkin-card__body[hidden]{ display:none; }
-.checkin-card label{ display:flex; flex-direction:column; gap:6px; font-family:var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:#6E76A0; }
-.checkin-card input, .checkin-card select{
-  font-family:var(--font-body); font-size:.98rem; color:var(--ink-text);
-  padding:12px 14px; border:1.5px solid #DCE3F2; border-radius:4px; background:#fff;
-}
-.checkin-card input:focus, .checkin-card select:focus{ outline:2px solid var(--rust); outline-offset:1px; border-color:var(--rust); }
-.checkin-submit{ width:100%; justify-content:center; margin-top:6px; }
-.checkin-note{ margin:0; text-align:center; font-size:.76rem; color:#6E76A0; }
 
-.checkin-card__success{ padding:60px 30px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; color:var(--eucalyptus); }
-.checkin-card__success[hidden]{ display:none; }
-.checkin-card__success strong{ font-family:var(--font-display); font-size:1.3rem; color:var(--ink); }
-.checkin-card__success p{ color:#4A4F70; margin:0; max-width:34ch; }
+/* embed do formulário real (Zoho Forms/CRM da Expert Education) — o iframe
+   ajusta a própria altura via postMessage, então só damos o respiro em volta. */
+.checkin-card__zoho{ padding:14px 14px 4px; }
+.checkin-card__zoho iframe{ display:block; }
 
 /* -------------------- bio page (Marcelo Lusardo) -------------------- */
 .bio-hero{

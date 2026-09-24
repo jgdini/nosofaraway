@@ -367,9 +367,10 @@
 </section>
 
 <!-- ======================= CTA FINAL ======================= -->
-<!-- NOTA PRA MIGRAÇÃO WORDPRESS: formulário é só front-end nesta fase de protótipo
-     (mostra estado de sucesso via JS, mas não envia dado nenhum de verdade).
-     Precisa ser conectado a e-mail/CRM real na hora do tema WP, igual ao Hanaoka. -->
+<!-- Formulário real da Expert Education (Zoho Forms, form "NSFA - Website Home BR"),
+     enviado pelo João em 2026-09-24 — cai direto no CRM deles. Substitui o
+     formulário front-end-only do protótipo (não mexer nos dizeres/ids do
+     script, é o embed oficial deles). -->
 <section class="section section--rust" id="analise">
   <div class="wrap analise-grid">
     <div class="analise-copy">
@@ -383,44 +384,124 @@
       </ul>
     </div>
 
-    <form class="checkin-card" id="lead-form" novalidate>
+    <div class="checkin-card">
       <div class="checkin-card__header">
         <span>CARTÃO DE CHECK-IN</span>
         <span>Nº 001</span>
       </div>
 
-      <div class="checkin-card__body">
-        <label>Nome completo
-          <input required name="nome" type="text" placeholder="Seu nome" autocomplete="name">
-        </label>
-        <label>WhatsApp
-          <input required name="whatsapp" type="tel" placeholder="(11) 91234-5678" autocomplete="tel">
-        </label>
-        <label>E-mail
-          <input required name="email" type="email" placeholder="voce@email.com" autocomplete="email">
-        </label>
-        <label>Seu objetivo
-          <select name="objetivo">
-            <option>Estudar na Austrália</option>
-            <option>Trabalhar na Austrália</option>
-            <option>Morar / residência permanente</option>
-            <option>Ainda não sei, quero entender as opções</option>
-          </select>
-        </label>
+      <div class="checkin-card__zoho">
+        <div id="zf_div_L7I4t8jq2GmgsRSpIoupXtdrqT10mvPCm_c5w6fFSZQ"></div>
+        <script type="text/javascript">
+        (function() {
+          try{
+            var f = document.createElement("iframe");
 
-        <button type="submit" class="btn btn-ticket btn-large checkin-submit">
-          <span>Confirmar check-in</span>
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <p class="checkin-note">Zero spam. Só a equipe do Marcelo entra em contato.</p>
-      </div>
+              var ifrmSrc = 'https://forms.zohopublic.com/experteducation/form/NSFAWebsiteHome/formperma/L7I4t8jq2GmgsRSpIoupXtdrqT10mvPCm_c5w6fFSZQ?zf_rszfm=1';
 
-      <div class="checkin-card__success" hidden>
-        <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 24l7 7 13-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <strong>Check-in confirmado!</strong>
-        <p>Em breve alguém do time chama você no WhatsApp pra mapear sua travessia.</p>
+
+            try{
+              if ( typeof ZFAdvLead != "undefined" && typeof zfutm_zfAdvLead != "undefined" ) {
+                for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+                    var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+                    utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
+                    var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+                    if ( typeof utmVal !== "undefined" ) {
+                      if ( utmVal != "" ) {
+                        if(ifrmSrc.indexOf('?') > 0){
+                             ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
+                        }else{
+                            ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
+                        }
+                      }
+                    }
+                }
+              }
+              if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
+                for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+                    var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+                    var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+                    if ( typeof utmVal !== "undefined" ) {
+                      if ( utmVal != "" ){
+                        if(ifrmSrc.indexOf('?') > 0){
+                          ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;//No I18N
+                        }else{
+                          ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;//No I18N
+                        }
+                      }
+                    }
+                }
+              }
+              if (!((new RegExp("[?&]referrername=")).test(ifrmSrc))) {
+            var rfr = window.location.href;
+
+            try {
+                rfr = window.self !== window.top ?
+                    window.top.location.href :
+                    (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
+            } catch (e) {}
+
+            if (rfr && rfr !== "") {
+                if (rfr.length > 1800) {
+                    var queryIndex = rfr.indexOf('?');
+                    if (queryIndex > -1) {
+                        rfr = rfr.substring(0, queryIndex);
+                    }
+                    if (rfr.length > 1800) {
+                        rfr = rfr.substring(0, 1800);
+                    }
+                }
+                ifrmSrc += ((ifrmSrc.indexOf('?') > 0) ? '&' : '?') + 'referrername=' + encodeURIComponent(rfr);
+            }
+        }
+            }catch(e){}
+
+
+            f.src = ifrmSrc;
+            f.style.border="none";
+            f.style.height="403px";
+            f.style.width="99%";
+            f.style.transition="all 0.5s ease";
+            f.setAttribute("aria-label", 'NSFA \- Website Home BR');
+            f.setAttribute("allow","geolocation;");
+            var d = document.getElementById("zf_div_L7I4t8jq2GmgsRSpIoupXtdrqT10mvPCm_c5w6fFSZQ");
+            d.appendChild(f);
+            window.addEventListener('message', function (){
+                var evntData = event.data;
+                if( evntData && evntData.constructor == String ){
+                    var zf_ifrm_data = evntData.split("|");
+                    if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                        var zf_perma = zf_ifrm_data[0];
+                        var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                        var iframe = document.getElementById("zf_div_L7I4t8jq2GmgsRSpIoupXtdrqT10mvPCm_c5w6fFSZQ").getElementsByTagName("iframe")[0];
+                        if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                            var prevIframeHeight = iframe.style.height;
+                            var zf_tout = false;
+                            if( zf_ifrm_data.length == 3 ) {
+                                iframe.scrollIntoView();
+                                zf_tout = true;
+                            }
+
+                            if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                                if( zf_tout ) {
+                                    setTimeout(function(){
+                                        iframe.style.height = zf_ifrm_ht_nw;
+                                    },500);
+                                } else {
+                                    iframe.style.height = zf_ifrm_ht_nw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }, false);
+        }catch(e){}
+
+
+        })();
+        </script>
       </div>
-    </form>
+    </div>
   </div>
 </section>
 
