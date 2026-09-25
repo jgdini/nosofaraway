@@ -50,7 +50,28 @@
     return card;
   }
 
+  // Vídeos fixados manualmente direto no HTML (não vêm do noticias.json) —
+  // usado pra destacar vídeos específicos escolhidos à mão, ex: entrevistas.
+  // Precisa só de [data-video-id] (+ [data-video-title] opcional) no botão.
+  function wireStaticVideoCards() {
+    document.querySelectorAll('.video-card__thumb[data-video-id]').forEach((btn) => {
+      const videoId = btn.getAttribute('data-video-id');
+      const title = btn.getAttribute('data-video-title') || 'Vídeo';
+      btn.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'video-card__iframe';
+        btn.replaceWith(iframe);
+      }, { once: true });
+    });
+  }
+
   async function init() {
+    wireStaticVideoCards();
+
     const newsGrid = document.getElementById('noticias-grid');
     const videoGrids = document.querySelectorAll('[data-videos-grid]');
     const updatedEl = document.getElementById('noticias-updated');
