@@ -24,8 +24,16 @@
   --cta-green:      #22C55E;
   --cta-green-dark: #16A34A;
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Tipografia trocada a pedido do João (2026-09-25): nada de fonte
+     decorativa (era Fraunces) — ele não gostava de como o F ficava.
+     Foi pro estilo do site da Apple: como a fonte deles (San Francisco)
+     é proprietária e só existe no macOS/iOS, usamos a stack de "system
+     font" — em vez de baixar um arquivo de fonte, pedimos pro navegador
+     usar a fonte nativa do sistema. Em Mac/iPhone isso é a San Francisco
+     de verdade (sem distribuir nada da Apple); em Windows vira Segoe UI;
+     no resto, cai pro Inter que já carregamos. */
+  --font-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif;
   --font-mono: 'Space Mono', 'Courier New', monospace;
 
   --wrap: 1180px;
