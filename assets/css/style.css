@@ -473,7 +473,10 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 /* números (count-up ao rolar — JS genérico em main.js já detecta .lp-stat-card
    e .lp-count em qualquer página; reaproveitado aqui igual à LP) */
 .lp-stat-card{ background:var(--cream); border:1px solid #DCE3F2; border-radius:8px; padding:26px 16px; text-align:center; }
-.lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:700; font-size:1.7rem; color:var(--rust); margin-bottom:8px; }
+/* Dourado escuro (não o #E8BE6E vivo) porque esse card tem fundo branco —
+   o dourado claro perde contraste em cima de branco. Mesma família de
+   cor, só calibrada pra continuar legível. */
+.lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:2.4rem; letter-spacing:-.02em; color:#B8963E; margin-bottom:8px; }
 .lp-stat-card span{ font-family:var(--font-mono); font-size:.72rem; color:#4A4F70; letter-spacing:.02em; }
 .mv-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
 .mv-stat-icon{ width:1.9rem; height:1.9rem; color:var(--rust); display:block; margin:0 auto 12px; }
@@ -485,7 +488,7 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .mv-mini-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1000px; margin:0 auto; padding-top:30px; border-top:1px solid rgba(74,168,216,.25); }
 .mv-mini-stat{ text-align:center; }
 .mv-mini-icon{ width:1.6rem; height:1.6rem; color:var(--gold); display:block; margin:0 auto 10px; }
-.mv-mini-stat strong{ display:block; font-family:var(--font-display); font-weight:700; font-size:1.2rem; color:var(--cream); margin-bottom:4px; }
+.mv-mini-stat strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:1.9rem; letter-spacing:-.02em; color:#E8BE6E; margin-bottom:6px; }
 .mv-mini-stat span{ font-family:var(--font-mono); font-size:.7rem; color:#B9BEDD; letter-spacing:.02em; }
 
 /* missão */

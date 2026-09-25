@@ -60,7 +60,10 @@ body.lp-body{ padding-bottom:0; }
 /* -------------------- stat grid (dobra 02) -------------------- */
 .lp-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin:0 auto 8px; max-width:1000px; }
 .lp-stat-card{ background:var(--cream); border:1px solid #DCE3F2; border-radius:8px; padding:26px 16px; text-align:center; }
-.lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:700; font-size:1.7rem; color:var(--rust); margin-bottom:8px; }
+/* mesmo ajuste do style.css: dourado escurecido (#B8963E) pra manter
+   contraste em cima do fundo branco do card — o #E8BE6E vivo é só pra
+   cards de fundo escuro. */
+.lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:2.4rem; letter-spacing:-.02em; color:#B8963E; margin-bottom:8px; }
 .lp-stat-card strong span{ font-size:1rem; font-weight:500; color:var(--ink); }
 .lp-stat-card span{ font-family:var(--font-mono); font-size:.72rem; color:#4A4F70; letter-spacing:.02em; }
 
