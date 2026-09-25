@@ -24,11 +24,18 @@ body.lp-body{ padding-bottom:0; }
 .lp-hero-v2{
   position:relative; padding-block:90px 60px; color:var(--cream); overflow:hidden;
   min-height:600px; display:flex; align-items:center;
-  background:
-    linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%),
-    url("../img/lp-hero-photo.jpg") right 22% / cover no-repeat, var(--ink);
+  background:var(--ink); /* cor sólida de base — o vídeo/gradiente entram por cima, como elementos reais */
 }
-.lp-hero-v2 .wrap{ width:100%; }
+.lp-hero-v2__video-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.lp-hero-v2__video-bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%);
+}
+.lp-hero-v2__video-bg iframe{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:100%; height:100%; border:0;
+}
+.lp-hero-v2 .wrap{ position:relative; z-index:1; width:100%; }
 .lp-hero-v2__mobile-photo{ display:none; }
 .lp-hero-v2__tags{ font-family:var(--font-mono); font-size:.78rem; letter-spacing:.08em; color:var(--gold); margin:0 0 22px; }
 .lp-hero-v2__title{ font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.2vw,3.1rem); line-height:1.15; max-width:640px; margin:0 0 22px; }
@@ -274,6 +281,9 @@ body.lp-body{ padding-bottom:0; }
     padding-block:0 44px; display:block; min-height:0;
     background:var(--ink);
   }
+  /* sem vídeo de fundo no mobile — pesado/instável em dado de celular,
+     e é lá que está a maior parte das vendas, não vale o risco */
+  .lp-hero-v2__video-bg{ display:none; }
   .lp-hero-v2__mobile-photo{
     display:block; width:100%; height:auto; aspect-ratio:1/1;
     object-fit:cover; object-position:68% 40%; margin-bottom:28px;

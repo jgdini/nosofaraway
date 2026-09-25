@@ -133,14 +133,20 @@
 <main id="top">
 
 <!-- ======================= DOBRA 01 — HERO ======================= -->
-<!-- NOTA: recriado em HTML/CSS real (era imagem inteira antes) — texto
-     estático em imagem não é lido/indexado pelo Google. No desktop a
-     foto fica de fundo, ancorada à direita, com gradiente escuro da
-     esquerda pra dar contraste ao texto. No mobile ela vira um bloco
-     de verdade ACIMA do texto (não mais atrás dele) — mesmo padrão do
-     site de referência que o João mandou — pra ficar nítida, já que
-     é no mobile que a maior parte das vendas acontece. -->
+<!-- NOTA: recriado em HTML/CSS real — texto estático em imagem não é
+     lido/indexado pelo Google. No desktop o fundo agora é um vídeo real
+     (mudo, em loop, sem controles) — pedido do João depois de ver o
+     efeito na referência da Júlia Saraiva. Por enquanto reaproveita o
+     vídeo "A Travessia" que já existe no canal, como placeholder/
+     referência do efeito (ele topou usar assim por ora, pode trocar
+     depois — troca o videoId no data-video-id aqui embaixo). No mobile
+     continua a foto estática de sempre (mesma lógica de sempre: vídeo
+     de fundo autoplay é pesado/instável em conexão de celular, e é lá
+     que está a maior parte das vendas — não vale o risco). -->
 <section class="lp-hero-v2">
+  <div class="lp-hero-v2__video-bg" aria-hidden="true" data-bg-video data-video-id="RauCPm8Gfc4">
+    <iframe src="https://www.youtube.com/embed/RauCPm8Gfc4?autoplay=1&mute=1&loop=1&playlist=RauCPm8Gfc4&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&disablekb=1" title="" frameborder="0" allow="autoplay; encrypted-media" tabindex="-1"></iframe>
+  </div>
   <img src="assets/img/lp-hero-photo.jpg" alt="Marcelo Lusardo com a Sydney Harbour Bridge, a Opera House, um coala e um canguru ao fundo" class="lp-hero-v2__mobile-photo">
   <div class="wrap">
     <p class="lp-hero-v2__tags">Mentorias · Imigração · Carreira · Networking · Educação</p>

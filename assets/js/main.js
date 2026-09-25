@@ -146,6 +146,34 @@
   // direto no CRM deles — o próprio script do Zoho (inline no index.html)
   // cuida do envio e do estado de sucesso dentro do iframe.
 
+  // Vídeo de fundo (hero da LP): faz o iframe do YouTube cobrir a seção
+  // inteira sem sobrar tarja preta, tipo "background-size:cover" pra
+  // vídeo — mede o próprio container (não a viewport), porque a altura
+  // do hero muda com o conteúdo.
+  var bgVideoBoxes = document.querySelectorAll('[data-bg-video]');
+  if (bgVideoBoxes.length) {
+    var fitBgVideos = function () {
+      bgVideoBoxes.forEach(function (box) {
+        var iframe = box.querySelector('iframe');
+        var host = box.parentElement;
+        if (!iframe || !host) return;
+        var cw = host.clientWidth, ch = host.clientHeight;
+        if (!cw || !ch) return;
+        var videoRatio = 16 / 9;
+        if (cw / ch > videoRatio) {
+          iframe.style.width = cw + 'px';
+          iframe.style.height = Math.ceil(cw / videoRatio) + 'px';
+        } else {
+          iframe.style.height = ch + 'px';
+          iframe.style.width = Math.ceil(ch * videoRatio) + 'px';
+        }
+      });
+    };
+    fitBgVideos();
+    window.addEventListener('resize', fitBgVideos);
+    window.addEventListener('load', fitBgVideos);
+  }
+
   // Scroll-reveal
   var revealTargets = document.querySelectorAll(
     '.origin-card, .stamp-card, .boarding-pass, .faq-item, .beyond-note'
