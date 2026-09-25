@@ -524,8 +524,8 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .pillars{ background:var(--ink-soft); border:1px solid rgba(74,168,216,.3); border-radius:var(--radius); padding:28px; }
 .pillars-label{ font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; color:var(--gold); text-transform:uppercase; margin:0 0 18px; }
 .pillars ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px; }
-.pillars li{ display:flex; align-items:center; gap:14px; font-family:var(--font-display); font-size:1.2rem; color:var(--cream); }
-.pillars li span{ font-family:var(--font-mono); font-size:.9rem; color:var(--rust); background:var(--cream); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex:none; }
+.pillars li{ display:flex; align-items:center; gap:18px; font-family:var(--font-display); font-weight:800; font-size:1.2rem; color:var(--cream); }
+.pillars li span{ font-family:var(--font-display); font-weight:800; font-size:2.1rem; line-height:1; letter-spacing:-.02em; color:#E8BE6E; flex:none; }
 
 /* -------------------- footer -------------------- */
 .site-footer{ background:var(--ink); padding-block:34px; }
