@@ -478,6 +478,13 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
    cor, só calibrada pra continuar legível. */
 .lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:2.4rem; letter-spacing:-.02em; color:#B8963E; margin-bottom:8px; }
 .lp-stat-card span{ font-family:var(--font-mono); font-size:.72rem; color:#4A4F70; letter-spacing:.02em; }
+/* a regra genérica ".lp-stat-card span" acima é pra legenda pequena
+   embaixo do número (ex: "Salário mínimo nacional*"), mas ".lp-count"
+   (o próprio número que conta crescendo) também é um <span>, então
+   caía nessa regra e ficava pequeno de novo mesmo com o <strong> já
+   grande. Aqui ele herda do <strong> em vez de ter tamanho próprio —
+   fica sempre igual ao redor, não importa onde for usado. */
+.lp-stat-card strong .lp-count{ font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; letter-spacing:inherit; }
 .mv-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1080px; margin:0 auto; }
 .mv-stat-icon{ width:1.9rem; height:1.9rem; color:var(--rust); display:block; margin:0 auto 12px; }
 
@@ -490,6 +497,9 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .mv-mini-icon{ width:1.6rem; height:1.6rem; color:var(--gold); display:block; margin:0 auto 10px; }
 .mv-mini-stat strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:1.9rem; letter-spacing:-.02em; color:#E8BE6E; margin-bottom:6px; }
 .mv-mini-stat span{ font-family:var(--font-mono); font-size:.7rem; color:#B9BEDD; letter-spacing:.02em; }
+/* mesmo problema do .lp-stat-card acima: ".lp-count" também pegava a
+   regra genérica de span e ficava pequeno de novo. */
+.mv-mini-stat strong .lp-count{ font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; letter-spacing:inherit; }
 
 /* missão */
 .mv-mission-grid{ display:grid; grid-template-columns:.8fr 1fr; gap:48px; align-items:start; margin-bottom:40px; }

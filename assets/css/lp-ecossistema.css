@@ -72,6 +72,11 @@ body.lp-body{ padding-bottom:0; }
    cards de fundo escuro. */
 .lp-stat-card strong{ display:block; font-family:var(--font-display); font-weight:800; font-size:2.4rem; letter-spacing:-.02em; color:#B8963E; margin-bottom:8px; }
 .lp-stat-card strong span{ font-size:1rem; font-weight:500; color:var(--ink); }
+/* a regra acima é pro sufixo de unidade (tipo "/h" em "AUD 26,44/h"),
+   mas ".lp-count" (o número que conta crescendo) também é um <span>
+   dentro do <strong>, então caía nela e ficava pequeno/escuro de novo.
+   Essa aqui é mais específica e vence, devolvendo o tamanho/cor grande. */
+.lp-stat-card strong .lp-count{ font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; letter-spacing:inherit; }
 .lp-stat-card span{ font-family:var(--font-mono); font-size:.72rem; color:#4A4F70; letter-spacing:.02em; }
 
 /* -------------------- broken journey (dobra 03) -------------------- */
