@@ -1,20 +1,6 @@
 {
-  "updated_at": "2026-09-24T21:22:10.782Z",
+  "updated_at": "2026-09-25T04:23:16.239Z",
   "news": [
-    {
-      "source": "ABC News",
-      "title": "$500m Adelaide University merger squeezed by international student cuts",
-      "link": "https://www.abc.net.au/news/2026-09-25/adelaide-university-off-international-student-targets/107190580",
-      "description": "The new Adelaide University is not on track to meet its international student targets and is staring down tens of millions in lost revenue, with the federal government's migration clampdown squeezing the business case fo",
-      "pubDate": "Thu, 24 Sep 2026 20:14:24 +0000"
-    },
-    {
-      "source": "ABC News",
-      "title": "Sun, sand and headphones: new show extols ocean's healing power",
-      "link": "https://www.abc.net.au/news/2026-09-25/new-annual-newcastle-sea-stories-roslyn-oades/107184130",
-      "description": "A palliative care nurse who conquered her fear of the ocean and an Afghan refugee who had never seen the sea before boarding a boat to Australia appear in Sea Stories at New Annual.",
-      "pubDate": "Thu, 24 Sep 2026 18:30:00 +0000"
-    },
     {
       "source": "SBS News · Austrália",
       "title": "Melbourne man accused of spreading propaganda for Islamic State group arrested",
@@ -37,48 +23,5 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": [
-    {
-      "videoId": "RAjJHADf7gU",
-      "title": "Tudo sobre Testes de Proficiência",
-      "link": "https://www.youtube.com/watch?v=RAjJHADf7gU",
-      "published": "2026-07-30T12:54:28+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/RAjJHADf7gU/hqdefault.jpg"
-    },
-    {
-      "videoId": "eQGTpmB6ilU",
-      "title": "O que acontece depois do curso de ingês?",
-      "link": "https://www.youtube.com/watch?v=eQGTpmB6ilU",
-      "published": "2026-07-23T13:03:58+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/eQGTpmB6ilU/hqdefault.jpg"
-    },
-    {
-      "videoId": "MvYE3Oc74iE",
-      "title": "Análises de perfis para a Austrália",
-      "link": "https://www.youtube.com/watch?v=MvYE3Oc74iE",
-      "published": "2026-07-20T18:46:41+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/MvYE3Oc74iE/hqdefault.jpg"
-    },
-    {
-      "videoId": "o0UnGkzzCp0",
-      "title": "Planejamento antes de sair do Brasil",
-      "link": "https://www.youtube.com/watch?v=o0UnGkzzCp0",
-      "published": "2026-07-20T18:45:42+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/o0UnGkzzCp0/hqdefault.jpg"
-    },
-    {
-      "videoId": "vkteoMKBYIs",
-      "title": "Cursos que aumentam a empregabilidade",
-      "link": "https://www.youtube.com/watch?v=vkteoMKBYIs",
-      "published": "2026-07-20T18:44:32+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/vkteoMKBYIs/hqdefault.jpg"
-    },
-    {
-      "videoId": "--3pQB2ad14",
-      "title": "Como criar um networking inteligente na Austrália",
-      "link": "https://www.youtube.com/watch?v=--3pQB2ad14",
-      "published": "2026-07-20T18:40:49+00:00",
-      "thumbnail": "https://i.ytimg.com/vi/--3pQB2ad14/hqdefault.jpg"
-    }
-  ]
+  "videos": []
 }
