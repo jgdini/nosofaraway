@@ -99,11 +99,136 @@
 .v2-hero__content .hero-sub{ color:rgba(255,255,255,.82); }
 .v2-hero__placeholder-note{ font-family:var(--font-mono); font-size:.7rem; color:rgba(255,255,255,.55); margin-top:18px; }
 
+/* -------------------- LP: método Líder de Travessias -------------------- */
+.v2-method{ display:grid; grid-template-columns:repeat(5,1fr); gap:24px; }
+.v2-method__step{ padding-top:24px; border-top:2px solid var(--ink-v2); }
+.v2-method__step strong{ display:block; font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+.v2-method__step h3{ font-size:1.1rem; margin:0 0 8px; }
+.v2-method__step p{ font-size:.88rem; color:var(--ink-v2-soft); margin:0; line-height:1.55; }
+
+/* -------------------- LP: pra quem é (3 momentos) -------------------- */
+.v2-audience{ display:grid; grid-template-columns:repeat(3,1fr); gap:48px; }
+.v2-audience__item{ border-left:1px solid var(--rule); padding-left:22px; }
+.v2-audience__item strong{ display:block; font-size:1.15rem; margin-bottom:10px; }
+.v2-audience__item p{ color:var(--ink-v2-soft); font-size:.95rem; line-height:1.65; margin:0; }
+
+/* -------------------- LP: bio Marcelo -------------------- */
+.v2-bio{ display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:center; }
+.v2-bio img{ width:100%; display:block; border-radius:2px; }
+.v2-bio__kicker{ font-size:.85rem; letter-spacing:.01em; color:var(--ink-v2-soft); margin:0 0 4px; }
+.v2-bio__name{ font-size:1.6rem; margin:0 0 18px; }
+
+/* -------------------- LP: oferta -------------------- */
+.v2-offer{ border:1px solid var(--rule); padding:48px 40px; max-width:520px; margin-inline:auto; text-align:center; background:var(--cream-v2); }
+.v2-offer__price{ font-size:3rem; font-weight:700; letter-spacing:-.02em; margin:6px 0 6px; }
+.v2-offer__cycle{ font-family:var(--font-mono); font-size:.78rem; color:var(--ink-v2-soft); margin:0 0 28px; }
+.v2-offer ul{ list-style:none; padding:0; margin:0 0 32px; text-align:left; }
+.v2-offer li{ padding:10px 0; border-bottom:1px solid var(--rule); font-size:.94rem; }
+.v2-offer li:last-child{ border-bottom:none; }
+
+/* -------------------- LP: FAQ sem acordeão em card -------------------- */
+.v2-faq details{ border-bottom:1px solid var(--rule); padding:22px 0; }
+.v2-faq details:first-child{ border-top:1px solid var(--rule); }
+.v2-faq summary{ cursor:pointer; font-weight:600; font-size:1.02rem; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.v2-faq summary::-webkit-details-marker{ display:none; }
+.v2-faq p{ margin:14px 0 0; color:var(--ink-v2-soft); line-height:1.6; }
+
+/* =============================================================
+   Overrides pros componentes específicos da LP antiga (lp-ecossistema.css)
+   — não reescrevemos o HTML de cada dobra, só a pele. Objetivo: sair do
+   "card colorido lado a lado" pro editorial (fundo marfim, linha fina,
+   sem gradiente, sem ícone genérico colorido).
+   ============================================================= */
+.v2 .lp-header{ background:var(--ivory); border-bottom:1px solid var(--rule); backdrop-filter:none; }
+.v2 .lp-h2{ color:var(--ink-v2); font-weight:700; }
+.v2 .lp-h2--light{ color:var(--ink-v2); }
+.v2 .lp-lead{ color:var(--ink-v2-soft); }
+.v2 .lp-lead--light{ color:var(--ink-v2-soft); }
+.v2 .lp-callout{ color:var(--ink-v2); }
+.v2 .section--ink, .v2 .section--paper, .v2 .section--rust, .v2 .lp-marcelo-hero, .v2 .lp-closing{
+  background:var(--ivory); color:var(--ink-v2);
+}
+.v2 .lp-marcelo-hero{ background-image:none !important; padding-block:80px; }
+.v2 .lp-marcelo-hero-inner{ max-width:640px; }
+
+/* números da economia: de card branco com borda pra número cru + linha fina
+   (mesmo princípio da barra de autoridade da home) */
+.v2 .lp-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.v2 .lp-stat-card{ background:none; border:none; border-left:1px solid var(--rule); border-radius:0; padding:0 20px; text-align:left; }
+.v2 .lp-stat-card:first-child{ border-left:none; padding-left:0; }
+.v2 .lp-fx-card{ border:1px solid var(--rule); background:transparent; }
+
+/* listas quebradas / dor: de "pill colorida" pra lista com linha fina */
+.v2 .lp-broken-journey, .v2 .lp-pain-grid{ list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:0; padding:0; margin:0; }
+.v2 .lp-broken-journey li, .v2 .lp-pain-grid > *{
+  display:flex; align-items:center; gap:14px; padding:16px 0; border-bottom:1px solid var(--rule);
+  background:none; color:var(--ink-v2); font-size:1rem;
+}
+.v2 .lp-bj-icon, .v2 .lp-flag-chip, .v2 .lp-x{ color:var(--accent); background:none; }
+.v2 .lp-x{ font-weight:700; }
+
+/* comparação Brasil x Austrália: mantém a barra, tira o gradiente do preenchimento */
+.v2 .lp-bar-fill--br, .v2 .lp-bar-fill--au{ background:var(--accent); }
+.v2 .lp-bar-track{ background:var(--ivory-dim); }
+
+/* fluxo / pilares (dobra a ser substituída pelo Método — override defensivo) */
+.v2 .lp-flow span{ background:none; border:1px solid var(--rule); color:var(--ink-v2); }
+.v2 .lp-pillars-row > *{ color:var(--ink-v2-soft); }
+
+/* antes/depois */
+.v2 .lp-journey-col--chaos, .v2 .lp-journey-col--clear{ background:none; border:1px solid var(--rule); }
+.v2 .lp-journey-final{ color:var(--accent) !important; }
+
+/* stack Expert/ASF */
+.v2 .lp-stack-tier{ background:var(--cream-v2); border:1px solid var(--rule); }
+.v2 .lp-stack-tier--expert{ background:var(--ink-v2); }
+
+/* cards de oferta ("o que você recebe") */
+.v2 .lp-offer-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.v2 .lp-offer-card{
+  background:none; border:none; border-top:2px solid var(--ink-v2); border-radius:0; padding:22px 18px 0; box-shadow:none;
+}
+.v2 .lp-offer-icon{ color:var(--accent); }
+
+/* 3 momentos */
+.v2 .lp-moment-card{ background:var(--cream-v2); border:1px solid var(--rule); box-shadow:none; }
+.v2 .lp-moment-flag{ background:none; color:var(--accent); border:1px solid var(--accent); }
+
+/* prova social / vídeo */
+.v2 .stamp-tag{ background:none; border:1px solid var(--rule); color:var(--ink-v2-soft); }
+.v2 .lp-proof-card{ background:var(--cream-v2); border:1px solid var(--rule); box-shadow:none; }
+
+/* livro */
+.v2 .lp-book-offer__panel{ background:var(--ink-v2); }
+.v2 .lp-book-offer__brand-icon{ display:none; } /* sem ícone de canguru — texto só */
+
+/* preço/oferta final */
+.v2 .lp-pricing-card{ background:var(--cream-v2); color:var(--ink-v2); border:1px solid var(--rule); box-shadow:none; }
+.v2 .lp-pricing-value, .v2 .lp-pricing-name, .v2 .lp-pricing-installment, .v2 .lp-pricing-note{ color:var(--ink-v2); }
+.v2 .lp-pricing-checklist li{ border-bottom:1px solid var(--rule); color:var(--ink-v2-soft); }
+
+/* FAQ: usa o mesmo componente .v2-faq */
+.v2 .faq-item{ background:none; border:none; border-bottom:1px solid var(--rule); border-radius:0; }
+.v2 .faq-item summary{ color:var(--ink-v2); }
+.v2 .faq-item p{ color:var(--ink-v2-soft); }
+
+.v2 .lp-closing{ background:var(--ink-v2) !important; color:#fff; padding-block:100px; }
+.v2 .lp-closing .lp-h2, .v2 .lp-closing .lp-lead{ color:#fff; }
+.v2 .lp-closing .lp-callout{ color:var(--accent); }
+
+.v2 .lp-sticky-cta{ background:var(--ivory); border-top:1px solid var(--rule); }
+
 @media (max-width:900px){
   .v2-authority-bar{ grid-template-columns:repeat(2,1fr); row-gap:32px; }
+  .v2-method{ grid-template-columns:repeat(2,1fr); row-gap:32px; }
+  .v2-audience{ grid-template-columns:1fr; gap:32px; }
+  .v2-bio{ grid-template-columns:1fr; gap:28px; }
+  .v2 .lp-broken-journey, .v2 .lp-pain-grid, .v2 .lp-offer-grid{ grid-template-columns:1fr; }
 }
 @media (max-width:640px){
   .v2 section{ padding-block:64px; }
   .v2-authority-bar{ grid-template-columns:1fr; }
   .v2-hero__media{ min-height:520px; }
+  .v2-method{ grid-template-columns:1fr; }
+  .v2-offer{ padding:32px 24px; }
 }
