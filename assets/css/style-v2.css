@@ -1,0 +1,109 @@
+/* =============================================================
+   AUSTRÁLIA SEM FRONTEIRAS — Design system v2 ("/new")
+   Direção pedida pelo Marcelo (documento de 2026-09-27): editorial,
+   internacional, evidência > adjetivo. Referências: Monocle (identidade
+   internacional/lifestyle), Harvard Business Review (autoridade
+   editorial, tipografia, espaço em branco), National Geographic
+   (fotografia documental real), MasterClass (o especialista como
+   centro, pouca palavra, imagem forte).
+
+   Continua carregando style.css primeiro (reaproveita fontes, reset,
+   e o .btn-ticket verde — cor de conversão intocável) e SOBRESCREVE
+   só o que muda pra essa nova linguagem visual. Não existe mais tema
+   "documento de viagem" aqui: sem carimbo de passaporte, sem ticket-
+   divider, sem cartão de embarque, sem crachá redondo.
+
+   Princípios (direto do documento):
+   - Uma ideia principal por tela.
+   - Mostrar evidência, não usar adjetivo.
+   - Poucas cores, muito espaço negativo, sem gradiente forte.
+   - Fotografia documental real, nunca montagem (sem canguru+coala+
+     Opera House juntos).
+   ============================================================= */
+
+:root{
+  --ivory:      #F6F3EC;
+  --ivory-dim:  #EFEAE0;
+  --ink-v2:     #14161F;
+  --ink-v2-soft:#3A3D4A;
+  --rule:       rgba(20,22,31,.14);
+  --accent:     #A85A34; /* terracota — "red centre" australiano, única cor de destaque editorial */
+  --accent-dim: #8C4A2A;
+  --cream-v2:   #FFFFFF;
+}
+
+.v2{ background:var(--ivory); color:var(--ink-v2); }
+.v2 body{ background:var(--ivory); }
+
+/* -------------------- estrutura base -------------------- */
+.v2 .wrap{ max-width:1120px; }
+.v2 section{ padding-block:96px; }
+.v2 section + section{ border-top:1px solid var(--rule); }
+.v2 .section--ink, .v2 .section--paper, .v2 .section--rust, .v2 .section--eucalyptus{
+  background:var(--ivory); color:var(--ink-v2);
+}
+
+/* -------------------- header -------------------- */
+.v2 .site-header{ background:var(--ivory); border-bottom:1px solid var(--rule); backdrop-filter:none; box-shadow:none; }
+.v2 .main-nav a{ color:var(--ink-v2); font-family:var(--font-mono); font-size:.76rem; letter-spacing:.06em; text-transform:uppercase; }
+.v2 .main-nav a[aria-current="page"]{ color:var(--accent); }
+.v2 .fx-badge{ border-color:var(--rule); background:transparent; color:var(--ink-v2); }
+.v2 .fx-badge__label{ color:var(--ink-v2-soft); }
+
+/* -------------------- eyebrow / labels editoriais -------------------- */
+.v2 .eyebrow, .v2 .eyebrow--dark, .v2 .eyebrow--onrust{
+  font-family:var(--font-mono); font-size:.7rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent); margin:0 0 22px; display:flex; align-items:center; gap:12px;
+}
+.v2 .eyebrow::before{ content:""; width:28px; height:1px; background:var(--accent); display:inline-block; }
+
+/* -------------------- tipografia -------------------- */
+.v2 h1, .v2 h2, .v2 h3, .v2 .section-title, .v2 .hero-title{
+  color:var(--ink-v2); font-weight:700; letter-spacing:-.02em;
+}
+.v2 .section-title, .v2 .section-title--light{ color:var(--ink-v2); font-size:clamp(1.9rem, 3.2vw, 2.6rem); font-weight:700; }
+.v2 .section-lead, .v2 .section-lead--light{ color:var(--ink-v2-soft); font-size:1.1rem; line-height:1.65; max-width:640px; }
+.v2 .hero-title{ font-size:clamp(2.4rem, 5vw, 4.2rem); line-height:1.05; }
+.v2 .hero-sub{ color:var(--ink-v2-soft); }
+
+/* -------------------- thin rule (substitui ticket-divider) -------------------- */
+.v2 .ticket-divider, .v2 .ticket-divider--paper{ display:none; }
+.v2-rule{ border:0; border-top:1px solid var(--rule); margin:0; }
+
+/* -------------------- botões: CTA verde intocável, resto sóbrio -------------------- */
+.v2 .btn-ticket{ border-radius:2px; border:none; box-shadow:none; animation:none; }
+.v2 .btn-ticket::before, .v2 .btn-ticket::after{ display:none; }
+.v2 .link-inline, .v2 .link-inline--light{ color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px; }
+
+/* -------------------- authority bar: número plano, sem card/caixa -------------------- */
+.v2-authority-bar{ display:grid; grid-template-columns:repeat(4,1fr); gap:40px; }
+.v2-authority-item{ border-left:1px solid var(--rule); padding-left:20px; }
+.v2-authority-item strong{ display:block; font-size:2.4rem; font-weight:700; letter-spacing:-.02em; color:var(--ink-v2); line-height:1; margin-bottom:10px; }
+.v2-authority-item span{ font-family:var(--font-mono); font-size:.78rem; color:var(--ink-v2-soft); letter-spacing:.02em; }
+.v2-authority-item a{ color:var(--accent); }
+
+/* -------------------- manifesto: texto grande, centralizado, respiro -------------------- */
+.v2-manifesto{ max-width:760px; margin-inline:auto; text-align:center; }
+.v2-manifesto p{ font-size:clamp(1.4rem,2.6vw,1.9rem); line-height:1.5; color:var(--ink-v2); font-weight:500; margin:0 0 .3em; }
+.v2-manifesto .v2-manifesto__accent{ color:var(--accent); }
+
+/* -------------------- hero: foto documental real, texto por cima, sem badge circular -------------------- */
+.v2-hero{ position:relative; overflow:hidden; padding-block:0; border-top:none; }
+.v2-hero__media{ position:relative; min-height:640px; display:flex; align-items:flex-end; background:var(--ink-v2); }
+.v2-hero__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.v2-hero__media::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,22,31,.92) 0%, rgba(20,22,31,.35) 55%, rgba(20,22,31,.05) 100%); }
+.v2-hero__content{ position:relative; z-index:1; padding:64px 0 56px; color:#fff; }
+.v2-hero__content .eyebrow{ color:var(--ivory); }
+.v2-hero__content .eyebrow::before{ background:var(--ivory); }
+.v2-hero__content .hero-title{ color:#fff; }
+.v2-hero__content .hero-sub{ color:rgba(255,255,255,.82); }
+.v2-hero__placeholder-note{ font-family:var(--font-mono); font-size:.7rem; color:rgba(255,255,255,.55); margin-top:18px; }
+
+@media (max-width:900px){
+  .v2-authority-bar{ grid-template-columns:repeat(2,1fr); row-gap:32px; }
+}
+@media (max-width:640px){
+  .v2 section{ padding-block:64px; }
+  .v2-authority-bar{ grid-template-columns:1fr; }
+  .v2-hero__media{ min-height:520px; }
+}

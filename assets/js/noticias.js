@@ -5,7 +5,15 @@
 // no YouTube" da home — qualquer elemento com [data-videos-grid] na página
 // recebe os vídeos (com [data-limit] opcional pra mostrar só os N primeiros).
 (function () {
-  const DATA_URL = 'assets/data/noticias.json';
+  // Resolve o caminho do JSON relativo ao PRÓPRIO SCRIPT (não à página que
+  // o carrega) — assim funciona igual em index.html (na raiz) e em
+  // new/index.html (uma pasta mais funda), sem precisar de duas versões
+  // do arquivo. document.currentScript só existe de forma confiável
+  // enquanto o script roda de forma síncrona (é o nosso caso aqui).
+  var scriptEl = document.currentScript;
+  var DATA_URL = scriptEl
+    ? new URL('../data/noticias.json', scriptEl.src).href
+    : 'assets/data/noticias.json'; // fallback (não deveria ser usado)
 
   function formatDate(iso) {
     if (!iso) return '';
