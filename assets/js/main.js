@@ -58,10 +58,15 @@
   }
 
   function animateCount(el) {
+    // O HTML já traz o valor real e formatado (pra quem não roda JS: robô de
+    // preview do WhatsApp, crawler, navegador lento etc. — nunca deve
+    // aparecer "0,00" pra ninguém). O JS só reseta pra 0 e recria a contagem
+    // como efeito visual puro, por cima do valor que já está certo.
     var target = parseFloat(el.getAttribute('data-target'));
     var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
     var duration = 1400;
     var startTime = null;
+    el.textContent = formatCount(0, decimals);
     function step(ts) {
       if (!startTime) startTime = ts;
       var progress = Math.min((ts - startTime) / duration, 1);
