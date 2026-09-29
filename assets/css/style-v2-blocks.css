@@ -1,0 +1,126 @@
+/* =============================================================
+   TESTE — layout "em blocos", inspirado na referência que o João
+   mandou (juliasaraiva.com.br/bio-grupo-pro-2026): cada dobra vira
+   um cartão flutuante de cantos arredondados, com cor própria,
+   sobre um fundo escuro (o "gutter" entre os cartões). No mobile
+   isso fica ainda mais claro — um cartão de cada vez, com margem
+   visível em volta, então a divisão entre seções é óbvia mesmo
+   rolando rápido. Pedido do João em 2026-09-29, com a paleta
+   oficial do brandbook (style-v2-brand.css, carregado antes deste).
+
+   Não reescreve style-v2.css nem style-v2-brand.css — só adiciona o
+   cartão por cima (raio, margem, overflow) e recolore blocos
+   específicos. Onde um bloco volta a ficar escuro/roxo (em vez do
+   marfim/branco achatado que style-v2.css usa), preciso reverter as
+   regras de texto que style-v2.css e o fix de contraste de
+   2026-09-29 escureceram — aquelas regras assumiam fundo claro, e
+   aqui o fundo volta a ser escuro. Cada reversão está comentada.
+   ============================================================= */
+
+/* -------------------- fundo entre os cartões -------------------- */
+.v2-blocks{ background:#150F3D; }
+.v2-blocks body, .v2-blocks .site-footer{ background:transparent; }
+.v2-blocks .lp-sticky-cta{ background:var(--cream-v2); }
+
+/* -------------------- mecânica do cartão -------------------- */
+.v2-blocks main{ display:block; padding-block:14px; }
+.v2-blocks main > section{
+  position:relative; margin:0 14px 14px; border-radius:20px; overflow:hidden;
+}
+.v2-blocks main > section .wrap{ position:relative; z-index:1; }
+@media (min-width:900px){
+  .v2-blocks main{ padding-block:24px; }
+  .v2-blocks main > section{
+    margin:0 auto 24px; max-width:1200px; border-radius:28px;
+  }
+}
+
+/* -------------------- cores de bloco -------------------- */
+.v2-blocks .blk-light{ background:var(--cream-v2); }
+.v2-blocks .blk-blue{ background:var(--accent-onink); }
+.v2-blocks .blk-dark{ background:var(--ink-v2); }
+.v2-blocks .blk-purple{ background:var(--accent); }
+
+/* foto do Marcelo (dobra 08) — a v2 apagou a foto de fundo
+   (".v2 .lp-marcelo-hero{background-image:none!important}") pra
+   funcionar achatada; aqui ela volta, porque o bloco é escuro de
+   propósito */
+.v2-blocks .blk-dark--photo{
+  background-image:
+    linear-gradient(90deg, rgba(20,22,31,.94) 0%, rgba(20,22,31,.8) 40%, rgba(20,22,31,.5) 75%, rgba(20,22,31,.25) 100%),
+    url("../img/marcelo-lp-office.jpg") !important;
+  background-position:right center !important; background-size:auto 100% !important; background-repeat:no-repeat !important;
+}
+@media (max-width:900px){
+  .v2-blocks .blk-dark--photo{ background-position:65% center !important; }
+}
+
+/* -------------------- texto claro nos blocos escuros/roxos -------------------- */
+/* style-v2.css escureceu ".lp-h2--light"/".lp-lead--light" assumindo
+   fundo --ivory (ver linhas 144/146 de style-v2.css). Aqui, dentro
+   de um bloco escuro/roxo, o fundo não é mais --ivory — o texto
+   precisa voltar a ser claro. */
+.v2-blocks .blk-dark .lp-h2--light,
+.v2-blocks .blk-purple .lp-h2--light{ color:#fff; }
+.v2-blocks .blk-dark .lp-lead--light,
+.v2-blocks .blk-purple .lp-lead--light{ color:rgba(255,255,255,.82); }
+.v2-blocks .blk-dark .lp-lead--light.lp-callout,
+.v2-blocks .blk-purple .lp-lead--light.lp-callout{ color:var(--accent-onink); }
+.v2-blocks .blk-purple .lp-lead--light.lp-callout{ color:#fff; font-weight:700; }
+.v2-blocks .blk-dark .eyebrow,
+.v2-blocks .blk-purple .eyebrow{ color:var(--accent-onink); }
+.v2-blocks .blk-purple .eyebrow{ color:rgba(255,255,255,.85); }
+.v2-blocks .blk-dark .eyebrow::before,
+.v2-blocks .blk-purple .eyebrow::before{ background:currentColor; }
+
+/* dobra 03/05 (.lp-broken-journey / .lp-pain-grid) ficam no flavor
+   "light" (não escurecidas de novo) de propósito — reescrever esses
+   ~13 itens pra várias cores custaria mais do que vale agora. Só o
+   antes/depois (dobra 07) e o livro (dobra 08.5) valem o trabalho
+   de reversão, por serem blocos mais simples e mais "hero". */
+
+/* dobra 07 — antes/depois, agora roxo */
+.v2-blocks .blk-purple .lp-journey-col--chaos,
+.v2-blocks .blk-purple .lp-journey-col--clear{
+  background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.3);
+}
+.v2-blocks .blk-purple .lp-journey-title{ color:#fff; }
+.v2-blocks .blk-purple .lp-journey-chain li{ color:rgba(255,255,255,.85); border-left-color:rgba(255,255,255,.35); }
+.v2-blocks .blk-purple .lp-journey-chain li::before{ color:#fff; }
+.v2-blocks .blk-purple .lp-journey-final{ color:#fff !important; border-left-color:#fff !important; }
+
+/* dobra 08.5 — livro, agora roxo. O painel (.lp-book-offer__panel)
+   continua --ink-v2 sólido por conta própria (style-v2.css linha
+   202, não depende do fundo da section) — só o que fica FORA do
+   painel, direto no roxo, precisa de texto claro. */
+.v2-blocks .blk-purple .lp-book-meta{ color:rgba(255,255,255,.75); }
+.v2-blocks .blk-purple .lp-book-cta-label{ color:#fff; }
+.v2-blocks .blk-purple .lp-book-link{ color:#fff; border-color:rgba(255,255,255,.4); background:rgba(0,0,0,.22); }
+.v2-blocks .blk-purple .lp-book-link:hover{ background:rgba(0,0,0,.34); border-color:#fff; }
+
+/* dobra 09 — "o que você recebe", agora escura. os 8 cards usam
+   <h3>/<p> puros (sem classe), que herdam da regra genérica
+   ".v2 h1,h2,h3{color:ink-v2}" — precisam de versão clara aqui */
+.v2-blocks .blk-dark .lp-offer-card h3{ color:#fff; }
+.v2-blocks .blk-dark .lp-offer-card p{ color:rgba(255,255,255,.75); }
+.v2-blocks .blk-dark .lp-offer-icon{ color:var(--accent-onink); }
+
+/* dobra "do plano à execução", agora azul-claro. ".lp-hop__a" foi
+   fixado pra roxo (--accent) pensando em fundo --ivory; roxo sobre
+   azul-claro tem contraste baixo demais (as duas cores são
+   próximas/saturadas) — aqui fica escuro puro, igual ao resto do
+   texto do bloco */
+.v2-blocks .blk-blue .lp-hop__a{ color:var(--ink-v2); }
+
+/* dobra 13 — oferta, agora roxo. ".lp-pricing-card" já é um cartão
+   branco sólido por conta própria (style-v2.css linha 206), então só
+   o texto ao redor dele (título/lead da dobra) precisa da reversão
+   acima — nada extra aqui. */
+
+/* dobra "mentoria com Marcelo" (.lp-marcelo-grid) — agora escura.
+   ".lp-marcelo-photo" é uma foto normal dentro do card, não depende
+   do fundo da section — sem ajuste extra. */
+
+@media (max-width:640px){
+  .v2-blocks main > section{ margin:0 12px 12px; border-radius:16px; }
+}
