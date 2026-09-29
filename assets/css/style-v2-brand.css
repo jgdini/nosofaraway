@@ -1,0 +1,29 @@
+/* =============================================================
+   TESTE — paleta oficial do brandbook (Arquivos/NOSOFARAWAY
+   Identidade Visual.pdf) aplicada em cima da estrutura editorial
+   da v2. Não mexe em layout/hierarquia, só troca os tokens de cor
+   de style-v2.css (que já é todo baseado em custom properties).
+
+   Cores do brandbook:
+   - Pantone 173938 "Confidence"  #615ADE (roxo/azul escuro)
+   - Pantone 144809 "Care"        #93D7EF (azul-claro)
+   - Branco                       #FFFFFF
+   - Gradiente do logo            #615ADE → #322C86
+
+   Só pra comparação (2026-09-29) — ver com o João se essa é a
+   direção ou se fica marfim/terracota (style-v2.css original).
+   ============================================================= */
+
+.v2-brand{
+  --ivory:      #F1F0FA;   /* antes marfim quente; agora cinza levemente lilás, neutro e no clima do branco/roxo oficiais */
+  --ivory-dim:  #E4E1F5;
+  --ink-v2:     #241F5C;   /* deriva do gradiente oficial (#322C86), mais legível em texto de corpo */
+  --ink-v2-soft:#4A4570;
+  --rule:       rgba(36,31,92,.16);
+  --accent:     #615ADE;   /* Pantone 173938 — "Confidence" */
+  --accent-dim: #4A44B5;
+  --accent-onink:#93D7EF;  /* Pantone 144809 — "Care", já pensada pra contraste sobre fundo escuro */
+  --cream-v2:   #FFFFFF;
+}
+
+/* -------------------- hero: vídeo/foto continua com overlay --ink normal (fora do escopo da troca de paleta) -------------------- */
