@@ -29,6 +29,7 @@
   --rule:       rgba(20,22,31,.14);
   --accent:     #A85A34; /* terracota — "red centre" australiano, única cor de destaque editorial */
   --accent-dim: #8C4A2A;
+  --accent-onink:#D9895E; /* mesma família, mais clara — só pra texto de destaque sobre fundo --ink-v2 (closing, hero) */
   --cream-v2:   #FFFFFF;
 }
 
@@ -214,9 +215,83 @@
 
 .v2 .lp-closing{ background:var(--ink-v2) !important; color:#fff; padding-block:100px; }
 .v2 .lp-closing .lp-h2, .v2 .lp-closing .lp-lead{ color:#fff; }
-.v2 .lp-closing .lp-callout{ color:var(--accent); }
+.v2 .lp-closing .lp-callout{ color:var(--accent-onink); }
 
 .v2 .lp-sticky-cta{ background:var(--ivory); border-top:1px solid var(--rule); }
+
+/* =============================================================
+   FIX DE CONTRASTE (reportado pelo João em 2026-09-29: "muitas
+   letras na mesma cor do fundo"). Vários componentes de
+   lp-ecossistema.css/style.css foram desenhados com texto claro
+   pra ficar sobre fundo --ink (escuro) ou sobre o card branco
+   original. A v2 achatou a maioria das sections pra --ivory e
+   trocou vários cards de escuro pra branco/transparente (ver
+   .lp-stat-card, .lp-fx-card, .lp-proof-card, .lp-stack-tier,
+   .lp-journey-col--chaos/--clear acima) — o texto ficou órfão da
+   cor de fundo que ele precisava pra ser legível.
+   ============================================================= */
+
+/* pergunta/resposta ("do plano à execução") — sem override nenhum
+   antes, herdava --cream/--gold pensado pro .section--ink escuro */
+.v2 .lp-hop__q{ color:var(--ink-v2); }
+.v2 .lp-hop__a{ color:var(--accent); }
+
+/* números grandes (economia, cotação) — o card branco/escuro que
+   dava contraste ao dourado virou "background:none/transparent" */
+.v2 .lp-stat-card strong,
+.v2 .lp-stat-card strong .lp-count,
+.v2 .mv-mini-stat strong,
+.v2 .mv-mini-stat strong .lp-count{ color:var(--ink-v2); }
+.v2 .lp-fx-card__label{ color:var(--ink-v2-soft); }
+.v2 .lp-fx-card__value{ color:var(--ink-v2); }
+.v2 .lp-fx-card__value strong{ color:var(--accent); }
+
+/* antes/depois (jornada com e sem ecossistema) — o card tintado
+   que dava contraste virou "background:none" */
+.v2 .lp-journey-title{ color:var(--accent); }
+.v2 .lp-journey-chain li{ color:var(--ink-v2-soft); border-left-color:var(--rule); }
+.v2 .lp-journey-chain li::before{ color:var(--accent); }
+.v2 .lp-journey-final{ color:var(--ink-v2) !important; border-left-color:var(--accent) !important; }
+
+/* stack Expert/ASF — antes um card era escuro (texto claro) e o
+   outro branco; a v2 deixou os dois claros mas só recolori um */
+.v2 .lp-stack-tier__name{ color:var(--ink-v2); }
+.v2 .lp-stack-tier__role{ color:var(--accent); }
+.v2 .lp-stack-tier--expert .lp-stack-tier__role{ color:var(--accent-dim); }
+.v2 .lp-stack-tier__items,
+.v2 .lp-stack-tier--expert .lp-stack-tier__items{ color:var(--ink-v2-soft); }
+.v2 .lp-stack-tier--expert{ background:var(--ivory-dim); }
+
+/* prova social — card virou branco, "Rodrigo & Gabriel" continuou
+   branco (--cream) e sumiu */
+.v2 .lp-proof-card strong{ color:var(--ink-v2); }
+
+/* livro — o painel continua escuro de propósito (é o único bloco
+   de contraste forte da página), mas o título herdava a regra
+   genérica ".v2 h3{color:var(--ink-v2)}" (mais específica que a
+   regra original ".lp-book-offer__title{color:var(--cream)}") e
+   ficava escuro sobre escuro */
+.v2 .lp-book-offer__title{ color:var(--cream-v2); }
+
+/* hero da LP (vídeo/foto real de fundo, ainda escuro de propósito) —
+   mesmo problema do título do livro: a regra genérica ".v2 h1{color:
+   ink-v2}" é mais específica que a cor herdada de ".lp-hero-v2{color:
+   cream}" e apagava o H1 por cima do vídeo */
+.v2 .lp-hero-v2__title{ color:var(--cream-v2); }
+
+/* cotação AUD no header — mesmo problema do lp-fx-card: fundo escuro
+   que dava contraste ao azul virou --ivory */
+.v2 .fx-badge strong{ color:var(--ink-v2); }
+
+/* cards "o que você recebe" — texto claro órfão do card escuro */
+.v2 .lp-offer-card p{ color:var(--ink-v2-soft); }
+
+/* ficha técnica do livro e links "comprar só o livro" — ficam FORA do
+   painel escuro (.lp-book-offer__panel), direto na section achatada */
+.v2 .lp-book-meta{ color:var(--ink-v2-soft); }
+.v2 .lp-book-cta-label{ color:var(--accent); }
+.v2 .lp-book-link{ color:var(--ink-v2); border-color:var(--rule); background:transparent; }
+.v2 .lp-book-link:hover{ background:var(--ivory-dim); border-color:var(--ink-v2); }
 
 @media (max-width:900px){
   .v2-authority-bar{ grid-template-columns:repeat(2,1fr); row-gap:32px; }
