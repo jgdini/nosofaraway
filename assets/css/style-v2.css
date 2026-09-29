@@ -155,8 +155,8 @@
 /* números da economia: de card branco com borda pra número cru + linha fina
    (mesmo princípio da barra de autoridade da home) */
 .v2 .lp-stat-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
-.v2 .lp-stat-card{ background:none; border:none; border-left:1px solid var(--rule); border-radius:0; padding:0 20px; text-align:left; }
-.v2 .lp-stat-card:first-child{ border-left:none; padding-left:0; }
+.v2 .lp-stat-card{ background:none; border:none; border-left:1px solid var(--rule); border-radius:0; padding:0 28px; text-align:left; }
+.v2 .lp-stat-card:first-child{ border-left:none; }
 .v2 .lp-fx-card{ border:1px solid var(--rule); background:transparent; }
 
 /* listas quebradas / dor: de "pill colorida" pra lista com linha fina */
