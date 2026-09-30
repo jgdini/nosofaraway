@@ -196,7 +196,28 @@
 .v2 .lp-moment-flag{ background:none; color:var(--accent); border:1px solid var(--accent); }
 
 /* prova social / vídeo */
-.v2 .stamp-tag{ background:none; border:1px solid var(--rule); color:var(--ink-v2-soft); }
+/* .stamp-card (home/index.html) continua escuro de propósito, mas a
+   regra genérica ".v2 h1,h2,h3{color:ink-v2}" (mais específica que
+   ".stamp-card h3{color:cream}" de style.css) escurecia o nome —
+   mesmo bug de "escuro sobre escuro" encontrado antes na LP, achado
+   aqui pela auditoria de 2026-09-30 */
+.v2 .stamp-card h3{ color:var(--cream); }
+.v2 .video-card__title{ color:var(--cream); }
+
+/* era pensado como um véu translúcido por cima de --section-eucalyptus
+   sólido; a v2 achata essa section pra --ivory, e o véu de 25% de preto
+   em cima de bege quase não escurece nada — texto branco ficava quase
+   ilegível (achado na auditoria de 2026-09-30, não é regressão de hoje) */
+.v2 .beyond-note{ background:var(--ink-v2); border-color:rgba(255,255,255,.2); }
+
+/* só dentro do .lp-proof-card (a v2 achata ele pra branco) — .stamp-tag
+   também é reusado dentro de .stamp-card (home/index.html), que continua
+   escuro de propósito e não deve virar --ink-v2-soft (bug achado na
+   auditoria de contraste de 2026-09-30, não causado pela troca de
+   paleta, só exposto por ela: ficava quase invisível em qualquer
+   variação de roxo escuro, antes ou depois) */
+.v2 .lp-proof-card .stamp-tag,
+.v2 .lp-success-card .stamp-tag{ background:none; border:1px solid var(--rule); color:var(--ink-v2-soft); }
 .v2 .lp-proof-card{ background:var(--cream-v2); border:1px solid var(--rule); box-shadow:none; }
 
 /* histórias reais em destaque (Rodrigo, Gabriel Sedlak) — card com foto

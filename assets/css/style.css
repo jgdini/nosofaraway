@@ -11,16 +11,26 @@
    ============================================================= */
 
 :root{
-  --ink:        #12173A;
-  --ink-soft:   #1C2158;
+  /* Paleta trocada pra identidade oficial No So Far Away (brandbook,
+     Arquivos/NOSOFARAWAY Identidade Visual.pdf) a pedido do João em
+     2026-09-30 ("o site não está com a identidade que conversamos").
+     Antes vivia na família azul/índigo extraída do logo antigo
+     (Austrália Sem Fronteiras); agora é o roxo/azul-claro oficiais.
+     --ink não usa o roxo vivo (#615ADE) puro porque ele é claro demais
+     pra servir de fundo escuro/texto principal — uso a mesma variação
+     escurecida já validada na LP (style-v2-brand.css, --ink-v2). Nomes
+     de variável antigos (--gold/--rust/--eucalyptus) continuam só por
+     não valer o risco de renomear; o que importa é o valor. */
+  --ink:        #241F5C;
+  --ink-soft:   #342C7A;
   --paper:      #F3F6FB;
   --paper-dim:  #E3EAF6;
-  --rust:       #5B5FC4;
-  --rust-dark:  #484CA6;
-  --gold:       #4AA8D8;
-  --eucalyptus: #2E3B8C;
+  --rust:       #615ADE;
+  --rust-dark:  #4A44B5;
+  --gold:       #93D7EF;
+  --eucalyptus: #4A44B5;
   --cream:      #FFFFFF;
-  --ink-text:   #171B3E;
+  --ink-text:   #241F5C;
   --cta-green:      #22C55E;
   --cta-green-dark: #16A34A;
 
@@ -79,7 +89,12 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
   margin:0 0 18px;
 }
 .eyebrow--dark{ color:var(--rust); }
-.eyebrow--onrust{ color:var(--ink); }
+/* era var(--ink) — com a paleta oficial (2026-09-30) --ink e --rust
+   ficaram parecidos demais (os dois na família roxo), então o eyebrow
+   escuro sumia em cima do fundo --rust. --gold (azul-claro oficial)
+   ainda fica abaixo de 4.5:1 nesse fundo (~3.3:1) — branco puro
+   garante o contraste. */
+.eyebrow--onrust{ color:#fff; }
 
 .section-title{ font-size:clamp(2.1rem, 4vw, 3.2rem); font-weight:800; color:var(--ink); margin-bottom:20px; }
 .section-title--light{ color:var(--cream); }
@@ -461,8 +476,10 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .faq-item[open] summary::after{ transform:rotate(45deg); }
 .faq-item p{ color:#BEC5E0; margin:14px 0 0; font-size:.95rem; }
 
-/* final cta / check-in form */
-.section--rust .eyebrow{ color:var(--ink); }
+/* final cta / check-in form — mesmo motivo do .eyebrow--onrust acima:
+   --ink e --rust ficaram parecidos demais na paleta oficial */
+.section--rust .eyebrow{ color:#fff; }
+.section--rust .section-lead--light{ color:#fff; }
 
 .analise-grid{ display:grid; grid-template-columns:1fr .95fr; gap:56px; align-items:start; }
 .analise-copy .section-lead{ margin-bottom:32px; }
