@@ -61,3 +61,19 @@
 .v2-site .fx-badge{ background:rgba(74,168,216,.12); border-color:rgba(74,168,216,.35); color:inherit; }
 .v2-site .fx-badge__label{ color:#7A81A8; }
 .v2-site .fx-badge strong{ color:var(--gold); }
+
+/* números + manifesto: o "ivory" ficava claro demais logo depois do
+   hero — mesmo sendo um tom parecido com --paper, ao lado das seções
+   roxas vivas ele lia como "branco" (João, 2026-09-30, segunda rodada
+   de feedback: "essa home continua destoando"). Em vez de tentar
+   manter uma seção clara aqui, unifica com o roxo escuro do resto do
+   site — sem trecho claro nenhum entre o hero e o #ecossistema. */
+.v2-site #numeros,
+.v2-site #numeros + section{ background:var(--ink); }
+.v2-site #numeros .eyebrow--dark{ color:var(--gold); }
+.v2-site .v2-authority-item{ border-left-color:rgba(255,255,255,.25); }
+.v2-site .v2-authority-item strong{ color:var(--cream); }
+.v2-site .v2-authority-item span{ color:#D6DCEE; }
+.v2-site .v2-authority-item a{ color:var(--accent-onink); }
+.v2-site .v2-manifesto p{ color:var(--cream); }
+.v2-site .v2-manifesto .v2-manifesto__accent{ color:var(--accent-onink); }
