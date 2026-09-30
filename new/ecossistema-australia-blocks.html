@@ -147,27 +147,23 @@
 
 <!-- ======================= DOBRA 01 — HERO ======================= -->
 <!-- NOTA: recriado em HTML/CSS real — texto estático em imagem não é
-     lido/indexado pelo Google. No desktop o fundo agora é um vídeo real
-     (mudo, em loop, sem controles) — pedido do João depois de ver o
-     efeito na referência da Júlia Saraiva. Primeiro teste usou "A
-     Travessia", mas o João achou o Marcelo pequeno/distante demais no
-     enquadramento; trocado por "Qual é a melhor idade pra vir pra
-     Austrália?" (YcFaAass5nY) — filmado no escritório, bem iluminado,
-     Marcelo em plano mais fechado. Troca fácil depois: só mudar o
-     videoId no data-video-id e na URL do iframe aqui embaixo. No mobile
-     continua a foto estática de sempre (mesma lógica de sempre: vídeo
-     de fundo autoplay é pesado/instável em conexão de celular, e é lá
-     que está a maior parte das vendas — não vale o risco). -->
+     lido/indexado pelo Google. Fundo é o Reels que o João jogou em
+     Arquivos/ ("Vídeo do Reels no hero.mp4", 2026-09-30) — vídeo
+     vertical (720x1280) com legendas queimadas que contam uma história
+     (embarque → evento → depoimentos → Expert → brinde), auto-hospedado
+     em assets/videos/hero-reels.mp4 (o Instagram não deixa baixar via
+     embed oficial, o João exportou direto do app). Como é vertical E as
+     legendas fazem parte do conteúdo, NÃO uso object-fit:cover (cortaria
+     a legenda nas laterais em tela larga) — o vídeo aparece inteiro,
+     centralizado, com barras escuras nas laterais no desktop (mesmo
+     princípio de assistir Reels/TikTok embedado num site). Um único
+     <video>, sem duplicar decodificação. -->
 <section class="lp-hero-v2 blk-dark">
-  <div class="lp-hero-v2__video-bg" aria-hidden="true" data-bg-video data-video-id="YcFaAass5nY">
-    <iframe src="https://www.youtube.com/embed/YcFaAass5nY?autoplay=1&mute=1&loop=1&playlist=YcFaAass5nY&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&disablekb=1" title="" frameborder="0" allow="autoplay; encrypted-media" tabindex="-1"></iframe>
+  <div class="lp-hero-v2__video-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline poster="../assets/img/hero-reels-poster.jpg">
+      <source src="../assets/videos/hero-reels.mp4" type="video/mp4">
+    </video>
   </div>
-  <!-- Placeholder: mesma foto real usada no hero do site institucional
-       (sem montagem/canguru/coala), só até vir a foto/vídeo dedicado que
-       o Marcelo pediu. É a imagem que MAIS gente vê (mobile = maior
-       canal de venda), então essa troca era mais urgente que a do
-       desktop. -->
-  <img src="../assets/img/marcelo-mentor.jpg" alt="Marcelo Lusardo em seu escritório" class="lp-hero-v2__mobile-photo">
   <div class="wrap">
     <p class="lp-hero-v2__tags">Ecossistema Austrália Sem Fronteiras</p>
     <h1 class="lp-hero-v2__title">Um plano real pra sua travessia até a Austrália.</h1>
@@ -190,12 +186,12 @@
       <div class="lp-stat-card">
         <strong>AUD <span class="lp-count" data-target="26.44" data-decimals="2">26,44</span><span>/h</span></strong>
         <span>Salário mínimo nacional*</span>
-        <span class="lp-fx-convert" data-fx-convert="26.44">≈ R$ —</span>
+        <span class="lp-fx-convert" data-fx-convert="26.44">≈ R$ 95,18 convertidos</span>
       </div>
       <div class="lp-stat-card">
         <strong>AUD <span class="lp-count" data-target="1004.90" data-decimals="2">1.004,90</span></strong>
         <span>Por semana no mínimo nacional*</span>
-        <span class="lp-fx-convert" data-fx-convert="1004.90">≈ R$ —</span>
+        <span class="lp-fx-convert" data-fx-convert="1004.90">≈ R$ 3.617,64 convertidos</span>
       </div>
       <div class="lp-stat-card">
         <strong><span class="lp-count" data-target="329500" data-decimals="0">329.500</span></strong>
@@ -204,10 +200,10 @@
       <div class="lp-stat-card">
         <strong>AUD <span class="lp-count" data-target="2083.70" data-decimals="2">2.083,70</span></strong>
         <span>Média semanal de adultos full-time*</span>
-        <span class="lp-fx-convert" data-fx-convert="2083.70">≈ R$ —</span>
+        <span class="lp-fx-convert" data-fx-convert="2083.70">≈ R$ 7.501,32 convertidos</span>
       </div>
     </div>
-    <p class="lp-footnote lp-center">*Dados oficiais australianos, 2026: <a href="https://www.fairwork.gov.au/pay-and-wages/minimum-wages" target="_blank" rel="noopener">Fair Work Ombudsman</a> e <a href="https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/latest-release" target="_blank" rel="noopener">ABS</a>. Valores e condições variam conforme vínculo, ocupação, award, experiência e elegibilidade. Conversão em reais é aproximada, calculada com a cotação do dólar australiano no momento em que você está vendo esta página.</p>
+    <p class="lp-footnote lp-center">*Dados oficiais australianos, 2026: <a href="https://www.fairwork.gov.au/pay-and-wages/minimum-wages" target="_blank" rel="noopener">Fair Work Ombudsman</a> e <a href="https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/latest-release" target="_blank" rel="noopener">ABS</a>. Valores e condições variam conforme vínculo, ocupação, award, experiência e elegibilidade. Conversão em reais convertidos com cotação de referência de 30/09/2026 (AUD 1 = R$ 3,60); atualiza sozinha se a cotação ao vivo carregar.</p>
 
     <p class="lp-lead lp-center">Tem oportunidade na Austrália. Mas quem chega sem plano costuma gastar tempo e dinheiro antes de encontrá-la.</p>
   </div>
@@ -262,14 +258,16 @@
         <div class="lp-bar-row">
           <div class="lp-bar-label">Salário mínimo nacional<strong>AUD <span class="lp-count" data-target="4354.57" data-decimals="2">4.354,57</span><span>/mês</span></strong></div>
           <div class="lp-bar-track"><div class="lp-bar-fill lp-bar-fill--au" data-target-width="48"></div></div>
+          <span class="lp-fx-convert lp-fx-convert--bar" data-fx-convert="4354.57">≈ R$ 15.676,45 convertidos</span>
         </div>
         <div class="lp-bar-row">
           <div class="lp-bar-label">Média mensal full-time<strong>AUD <span class="lp-count" data-target="9029.37" data-decimals="2">9.029,37</span><span>/mês*</span></strong></div>
           <div class="lp-bar-track"><div class="lp-bar-fill lp-bar-fill--au" data-target-width="100"></div></div>
+          <span class="lp-fx-convert lp-fx-convert--bar" data-fx-convert="9029.37">≈ R$ 32.505,73 convertidos</span>
         </div>
       </div>
     </div>
-    <p class="lp-footnote lp-center">Dados brasileiros: <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2025-12/novo-salario-minimo-sera-de-r-1621-em-2026" target="_blank" rel="noopener">Agência Brasil / IBGE</a> (salário mínimo 2026) e IBGE/PNAD Contínua (rendimento médio real habitual, 1º tri/2026). Dados australianos: Fair Work Commission e ABS, valores semanais oficiais convertidos para base mensal (semana × 52 ÷ 12), pra comparar na mesma unidade que o brasileiro usa no dia a dia. Moedas não convertidas de propósito: é uma comparação de escala, não de poder de compra equivalente.</p>
+    <p class="lp-footnote lp-center">Dados brasileiros: <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2025-12/novo-salario-minimo-sera-de-r-1621-em-2026" target="_blank" rel="noopener">Agência Brasil / IBGE</a> (salário mínimo 2026) e IBGE/PNAD Contínua (rendimento médio real habitual, 1º tri/2026). Dados australianos: Fair Work Commission e ABS, valores semanais oficiais convertidos para base mensal (semana × 52 ÷ 12), pra comparar na mesma unidade que o brasileiro usa no dia a dia. As barras comparam escala em cada moeda local, não poder de compra equivalente; o valor em reais ao lado do AUD é só uma referência de conversão, cotação de 30/09/2026 (AUD 1 = R$ 3,60), atualiza sozinha se a cotação ao vivo carregar.</p>
 
     <p class="lp-lead lp-center"><strong>A oportunidade existe, e quem se prepara melhor aproveita mais.</strong></p>
   </div>

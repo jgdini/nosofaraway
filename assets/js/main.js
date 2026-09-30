@@ -53,7 +53,12 @@
       })
       .catch(function () {
         fxEls.forEach(function (el) { el.textContent = 'indisponível'; });
-        fxConvertEls.forEach(function (el) { el.textContent = ''; });
+        // fxConvertEls NÃO é limpo aqui de propósito: o HTML já traz um
+        // valor estático correto (cotação de referência) como fallback,
+        // só sobrescrito quando a busca ao vivo dá certo (linha 48). Se
+        // a busca falhar, o valor estático correto continua na tela —
+        // bug real reportado pelo João em 2026-09-30 (a versão anterior
+        // zerava o texto no catch e a conversão em R$ sumia da página).
         document.querySelectorAll('[data-fx-status]').forEach(function (el) {
           el.textContent = 'não foi possível carregar a cotação';
         });

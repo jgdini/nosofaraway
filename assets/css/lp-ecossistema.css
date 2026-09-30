@@ -26,7 +26,7 @@ body.lp-body{ padding-bottom:0; }
   min-height:600px; display:flex; align-items:center;
   background:var(--ink); /* cor sólida de base — o vídeo/gradiente entram por cima, como elementos reais */
 }
-.lp-hero-v2__video-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.lp-hero-v2__video-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:var(--ink); }
 .lp-hero-v2__video-bg::after{
   content:""; position:absolute; inset:0;
   background:linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%);
@@ -34,6 +34,14 @@ body.lp-body{ padding-bottom:0; }
 .lp-hero-v2__video-bg iframe{
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   width:100%; height:100%; border:0;
+}
+/* vídeo próprio (Reels auto-hospedado): mostra o quadro inteiro
+   (object-fit:contain), nunca corta — é vertical e a legenda queimada
+   faz parte do conteúdo. Barra escura nas laterais no desktop é
+   esperada e ok (mesmo efeito de assistir um Reels embedado). */
+.lp-hero-v2__video-bg video{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:100%; height:100%; object-fit:contain;
 }
 .lp-hero-v2 .wrap{ position:relative; z-index:1; width:100%; }
 .lp-hero-v2__mobile-photo{ display:none; }

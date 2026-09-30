@@ -259,6 +259,7 @@
    rótulo, pra ficar claro que é uma referência aproximada, não o dado
    oficial (esse já tem fonte citada no rodapé) */
 .v2 .lp-fx-convert{ display:block; margin-top:4px; font-style:italic; color:var(--ink-v2-soft); opacity:.75; }
+.v2 .lp-fx-convert--bar{ display:block; margin-top:6px; font-size:.78rem; font-style:italic; color:var(--ink-v2-soft); opacity:.75; text-align:right; }
 .v2 .lp-fx-card__value{ color:var(--ink-v2); }
 .v2 .lp-fx-card__value strong{ color:var(--accent); }
 
