@@ -225,8 +225,14 @@
    blockquote; sobrescrevo pra caber em 3 colunas */
 .v2 .lp-instagram-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; align-items:start; }
 .v2 .lp-instagram-grid > blockquote.instagram-media{ margin:0 !important; max-width:100% !important; min-width:0 !important; width:100% !important; }
+
+/* cards de vídeo (Paulo Vieira, Joel Jota, Jacob Petry) — versão clara */
+.v2 .lp-video-card{ background:var(--cream-v2); border:1px solid var(--rule); }
+.v2 .lp-video-card__body strong{ color:var(--ink-v2); }
+.v2 .lp-video-card__body p{ color:var(--ink-v2-soft); }
 @media (max-width:900px){
   .v2 .lp-instagram-grid{ grid-template-columns:1fr; max-width:460px; }
+  .v2 .lp-video-grid{ grid-template-columns:1fr; max-width:400px; }
 }
 
 /* livro */

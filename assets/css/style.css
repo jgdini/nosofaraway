@@ -317,9 +317,20 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
    caber em 3 colunas */
 .lp-instagram-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; align-items:start; }
 .lp-instagram-grid > blockquote.instagram-media{ margin:0 !important; max-width:100% !important; min-width:0 !important; width:100% !important; }
+
+/* cards de vídeo auto-hospedado com briefing (Paulo Vieira, Joel Jota,
+   Jacob Petry) — substituem o embed do Instagram (pedido do João,
+   2026-09-30: "achei algo mais legal", vídeos brutos em vez do post) */
+.lp-video-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1000px; margin:0 auto; }
+.lp-video-card{ display:flex; flex-direction:column; background:var(--ink-soft); border:1px solid rgba(74,168,216,.25); border-radius:var(--radius); overflow:hidden; }
+.lp-video-card video{ display:block; width:100%; aspect-ratio:9/16; background:#000; object-fit:cover; }
+.lp-video-card__body{ padding:16px 18px 20px; }
+.lp-video-card__body strong{ display:block; font-size:1rem; color:var(--cream); font-family:var(--font-display); margin-bottom:6px; }
+.lp-video-card__body p{ font-size:.82rem; color:#A8AFCC; line-height:1.55; margin:0; }
 @media (max-width:900px){
   .lp-success-grid{ grid-template-columns:1fr; }
   .lp-instagram-grid{ grid-template-columns:1fr; max-width:460px; }
+  .lp-video-grid{ grid-template-columns:1fr; max-width:400px; }
 }
 .stamp-note--badge{ display:flex; align-items:center; gap:8px; font-size:.82rem; color:#5A6088; }
 .stamp-note__icon{ width:16px; height:16px; flex:none; }
