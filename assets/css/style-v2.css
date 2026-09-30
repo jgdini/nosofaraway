@@ -47,7 +47,18 @@
 /* -------------------- header -------------------- */
 .v2 .site-header{ background:var(--ivory); border-bottom:1px solid var(--rule); backdrop-filter:none; box-shadow:none; }
 .v2 .main-nav a{ color:var(--ink-v2); font-family:var(--font-mono); font-size:.76rem; letter-spacing:.06em; text-transform:uppercase; }
-.v2 .main-nav a[aria-current="page"]{ color:var(--accent); }
+/* era var(--accent) — #615ADE em cima do header --ivory dá só 2.8:1;
+   --accent-dim é mais escuro e ainda lê como "destaque" */
+.v2 .main-nav a[aria-current="page"]{ color:var(--accent-dim); }
+@media (max-width:760px){
+  /* no mobile o .main-nav vira um painel fixo com fundo --ink (escuro,
+     ver style.css); o link claro de cima ficava escuro sobre escuro —
+     achado pelo João em 2026-09-30, quando reportou a home sem a
+     mesma identidade da página "Quem é Marcelo" (essa página nem
+     carrega o v2, então não tinha esse bug) */
+  .v2 .main-nav a{ color:var(--ivory); }
+  .v2 .main-nav a[aria-current="page"]{ color:var(--accent-onink); }
+}
 .v2 .fx-badge{ border-color:var(--rule); background:transparent; color:var(--ink-v2); }
 .v2 .fx-badge__label{ color:var(--ink-v2-soft); }
 

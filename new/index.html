@@ -10,13 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/style-v2.css">
+<link rel="stylesheet" href="../assets/css/style-v2-brand.css">
 </head>
 <!-- v2 = direção editorial nova pedida pelo Marcelo em 2026-09-27 (doc
      "Documento para Website e LP"), rodando em paralelo ao site atual
      pra dar pra comparar sem perder o que já está no ar. Referências:
      Monocle + Harvard Business Review + National Geographic +
-     MasterClass. Ver assets/css/style-v2.css pros tokens/princípios. -->
-<body class="v2">
+     MasterClass. Ver assets/css/style-v2.css pros tokens/princípios.
+
+     style-v2-brand.css: sem ele, os componentes .v2 (hero, authority
+     bar etc.) usam os tokens PRÓPRIOS de dentro de style-v2.css
+     (--ink-v2, --accent terracota) em vez da paleta oficial que troquei
+     em style.css (--ink/--rust/--gold) — página ficava com duas
+     paletas diferentes ao mesmo tempo (achado pelo João, 2026-09-30). -->
+<body class="v2 v2-brand">
 
 <!-- Sprite de ícones (linha, desenhados em código) usados na dobra do
      livro — mesmos símbolos definidos na LP. -->
