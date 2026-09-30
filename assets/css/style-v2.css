@@ -253,6 +253,12 @@
 .v2 .mv-mini-stat strong,
 .v2 .mv-mini-stat strong .lp-count{ color:var(--ink-v2); }
 .v2 .lp-fx-card__label{ color:var(--ink-v2-soft); }
+
+/* conversão AUD -> R$ ao vivo nos cards de "números da Austrália"
+   (pedido do João, 2026-09-30) — fica em itálico e mais apagado que o
+   rótulo, pra ficar claro que é uma referência aproximada, não o dado
+   oficial (esse já tem fonte citada no rodapé) */
+.v2 .lp-fx-convert{ display:block; margin-top:4px; font-style:italic; color:var(--ink-v2-soft); opacity:.75; }
 .v2 .lp-fx-card__value{ color:var(--ink-v2); }
 .v2 .lp-fx-card__value strong{ color:var(--accent); }
 

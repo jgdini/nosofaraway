@@ -26,21 +26,34 @@
     });
   }
 
-  // Live AUD -> BRL exchange rate (AwesomeAPI, free, no key, CORS-open)
+  // Live AUD -> BRL exchange rate (AwesomeAPI, free, no key, CORS-open).
+  // Além do valor cru (data-fx-value, ex: fx-badge do header), também
+  // converte valores em AUD pra R$ aproximado onde marcado com
+  // data-fx-convert="<valor em AUD>" — usado nos cards de "Alguns
+  // números da Austrália" pra não deixar uma cotação fixa (que fica
+  // desatualizada) misturada com dados oficiais sourced.
   var fxEls = document.querySelectorAll('[data-fx-value]');
-  if (fxEls.length) {
+  var fxConvertEls = document.querySelectorAll('[data-fx-convert]');
+  if (fxEls.length || fxConvertEls.length) {
     fetch('https://economia.awesomeapi.com.br/last/AUD-BRL')
       .then(function (r) { if (!r.ok) throw new Error('fx fetch failed'); return r.json(); })
       .then(function (data) {
         var rate = parseFloat(data.AUDBRL.bid);
         var formatted = rate.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         fxEls.forEach(function (el) { el.textContent = 'R$ ' + formatted; });
+        fxConvertEls.forEach(function (el) {
+          var aud = parseFloat(el.getAttribute('data-fx-convert'));
+          if (!isFinite(aud)) return;
+          var brl = (aud * rate).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+          el.textContent = '≈ R$ ' + brl;
+        });
         document.querySelectorAll('[data-fx-status]').forEach(function (el) {
           el.textContent = '';
         });
       })
       .catch(function () {
         fxEls.forEach(function (el) { el.textContent = 'indisponível'; });
+        fxConvertEls.forEach(function (el) { el.textContent = ''; });
         document.querySelectorAll('[data-fx-status]').forEach(function (el) {
           el.textContent = 'não foi possível carregar a cotação';
         });
