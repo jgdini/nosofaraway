@@ -288,8 +288,11 @@
    (pedido do João, 2026-09-30) — fica em itálico e mais apagado que o
    rótulo, pra ficar claro que é uma referência aproximada, não o dado
    oficial (esse já tem fonte citada no rodapé) */
-.v2 .lp-fx-convert{ display:block; margin-top:4px; font-style:italic; color:var(--ink-v2-soft); opacity:.75; }
-.v2 .lp-fx-convert--bar{ display:block; margin-top:6px; font-size:.78rem; font-style:italic; color:var(--ink-v2-soft); opacity:.75; text-align:right; }
+/* dourado escurecido (#B8963E), mesmo ajuste do .lp-stat-card strong
+   acima — fica sobre fundo claro (blk-light), o #E8BE6E vivo estouraria
+   o contraste. Pedido do João (2026-09-30): "maior e dourado". */
+.v2 .lp-fx-convert{ display:block; margin-top:6px; font-size:1rem; font-weight:700; font-style:normal; color:#B8963E; }
+.v2 .lp-fx-convert--bar{ display:block; margin-top:6px; font-size:.95rem; font-weight:700; font-style:normal; color:#B8963E; text-align:right; }
 .v2 .lp-fx-card__value{ color:var(--ink-v2); }
 .v2 .lp-fx-card__value strong{ color:var(--accent); }
 

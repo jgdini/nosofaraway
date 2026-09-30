@@ -560,6 +560,10 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 
 .midia-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
 .midia-grid .section-title{ margin-bottom:16px; }
+.midia-video-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px; max-width:1100px; margin:40px auto 0; }
+@media (max-width:900px){
+  .midia-video-grid{ grid-template-columns:1fr; max-width:460px; }
+}
 
 /* hoje / pillars */
 .hoje-grid{ display:grid; grid-template-columns:1.3fr .8fr; gap:56px; align-items:start; }
