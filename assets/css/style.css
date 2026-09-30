@@ -292,6 +292,35 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .stamp-card h3{ color:var(--cream); font-size:1.12rem; margin-bottom:10px; }
 .stamp-card p{ color:#A8AFCC; font-size:.92rem; margin:0; }
 .stamp-note{ margin-top:26px; font-size:.78rem; color:#7A81A8; font-family:var(--font-mono); }
+
+/* histórias reais em destaque (foto real do YouTube, clicável) — usado
+   na LP e em quem-e-marcelo.html. Estilo base (dark/gold); a v2
+   sobrescreve pro look editorial claro (ver style-v2.css). */
+.lp-success-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:820px; margin:0 auto 24px; }
+.lp-success-card{
+  display:flex; flex-direction:column; background:var(--ink-soft); border:1px solid rgba(74,168,216,.25);
+  border-radius:var(--radius); overflow:hidden; text-decoration:none; color:inherit; transition:border-color .18s ease;
+}
+.lp-success-card:hover{ border-color:var(--gold); }
+.lp-success-card__photo{ position:relative; display:block; aspect-ratio:16/9; overflow:hidden; background:var(--ink); }
+.lp-success-card__photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.lp-success-card__play{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem; color:#fff; background:rgba(18,23,58,.3);
+}
+.lp-success-card__body{ display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:18px 20px 22px; }
+.lp-success-card__body strong{ font-size:1.05rem; color:var(--cream); font-family:var(--font-display); }
+.lp-success-card__desc{ font-size:.86rem; color:#A8AFCC; line-height:1.5; }
+
+/* grid de posts do Instagram embedados — o embed.js do Instagram vem
+   com max-width:658px!important inline no blockquote; sobrescrevo pra
+   caber em 3 colunas */
+.lp-instagram-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; align-items:start; }
+.lp-instagram-grid > blockquote.instagram-media{ margin:0 !important; max-width:100% !important; min-width:0 !important; width:100% !important; }
+@media (max-width:900px){
+  .lp-success-grid{ grid-template-columns:1fr; }
+  .lp-instagram-grid{ grid-template-columns:1fr; max-width:460px; }
+}
 .stamp-note--badge{ display:flex; align-items:center; gap:8px; font-size:.82rem; color:#5A6088; }
 .stamp-note__icon{ width:16px; height:16px; flex:none; }
 .stamp-note--badge a{ color:var(--rust); font-weight:700; text-decoration:none; }
