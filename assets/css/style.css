@@ -509,6 +509,24 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .bio-hero-copy .hero-sub{ max-width:560px; margin-bottom:28px; }
 .bio-hero-copy .hero-trust{ margin-bottom:30px; }
 
+/* "nossas unidades" (Expert Education) — foto com o pattern da
+   identidade visual espiando atrás, pedido do João (2026-09-30) pra
+   manter a mesma linguagem visual do brandbook nas fotos */
+.unidades-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; margin-top:40px; }
+.unidade-photo{ position:relative; margin:0; }
+.unidade-photo__pattern{ position:absolute; top:-36px; right:-36px; width:160px; z-index:0; opacity:.9; }
+.unidade-photo img:not(.unidade-photo__pattern){ position:relative; z-index:1; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px; box-shadow:0 24px 50px rgba(18,23,58,.2); display:block; }
+.unidade-photo figcaption{ position:relative; z-index:1; margin-top:14px; font-family:var(--font-mono); font-size:.8rem; color:var(--ink-text); font-weight:600; }
+.unidades-list__lead{ font-size:1.02rem; color:var(--ink-text); margin:0 0 16px; }
+.unidades-list ul{ list-style:none; margin:0 0 20px; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; }
+.unidades-list li{ font-family:var(--font-mono); font-size:.88rem; color:#4A4F70; padding-left:18px; position:relative; }
+.unidades-list li::before{ content:''; position:absolute; left:0; top:.55em; width:8px; height:8px; border-radius:50%; background:var(--rust); }
+.unidades-list__note{ font-size:.8rem; color:#7A81A8; font-style:italic; margin:0; }
+@media (max-width:760px){
+  .unidades-grid{ grid-template-columns:1fr; gap:32px; }
+  .unidade-photo__pattern{ width:110px; top:-24px; right:-20px; }
+}
+
 /* foto+texto genérico pra crédito/certificação (Master Coaching
    UVision) — landscape (3/2), diferente de .mv-hero-photo/.lp-marcelo-
    photo que são portrait e cortariam mal uma foto de sala/evento */
