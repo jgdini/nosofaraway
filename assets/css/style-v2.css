@@ -208,6 +208,16 @@
 .v2 .lp-pricing-value, .v2 .lp-pricing-name, .v2 .lp-pricing-installment, .v2 .lp-pricing-note{ color:var(--ink-v2); }
 .v2 .lp-pricing-checklist li{ border-bottom:1px solid var(--rule); color:var(--ink-v2-soft); }
 
+/* "plaquinha" de reframe de valor ao lado do preço (pedido do João,
+   2026-09-30): "R$1.030 = 1,5 dia de trabalho na Austrália" */
+.v2 .lp-pricing-value-row{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+.v2 .lp-pricing-value-badge{
+  display:inline-block; max-width:190px; background:var(--accent); color:#fff;
+  font-family:var(--font-mono); font-size:.68rem; font-weight:700; line-height:1.35;
+  letter-spacing:.01em; padding:8px 12px; border-radius:14px; text-align:left;
+}
+.v2 .lp-pricing-note--tiny{ color:var(--ink-v2-soft) !important; font-size:.66rem; margin-top:6px; }
+
 /* FAQ: usa o mesmo componente .v2-faq */
 .v2 .faq-item{ background:none; border:none; border-bottom:1px solid var(--rule); border-radius:0; }
 .v2 .faq-item summary{ color:var(--ink-v2); }
