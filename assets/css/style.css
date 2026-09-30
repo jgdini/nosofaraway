@@ -141,8 +141,8 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 }
 .header-inner{ display:flex; align-items:center; gap:32px; padding-block:14px; color:var(--cream); }
 
-.brand{ display:flex; align-items:center; text-decoration:none; color:var(--cream); }
-.brand-logo{ height:46px; width:auto; display:block; }
+.brand{ display:flex; align-items:center; text-decoration:none; color:var(--cream); flex-shrink:0; }
+.brand-logo{ height:46px; width:auto; max-width:none; display:block; flex-shrink:0; }
 
 .main-nav{ display:flex; gap:26px; font-size:.92rem; font-weight:500; }
 .main-nav a{ text-decoration:none; color:#D6DCEE; transition:color .15s ease; }
@@ -706,4 +706,13 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
   .stamp-grid{ grid-template-columns:1fr; }
   .section{ padding-block:60px; }
   .hero{ padding-block:64px 50px; }
+}
+
+@media (max-width: 480px){
+  /* logo na largura real (sem distorcer) some com o espaço do header em
+     telas bem estreitas — dá uma folga escondendo o badge de câmbio,
+     que é só um extra, e encolhendo um pouco a altura do logo (achado
+     pelo João, 2026-09-30: "o logo NSFA está cortando um pouco"). */
+  .fx-badge{ display:none; }
+  .brand-logo{ height:36px; }
 }
