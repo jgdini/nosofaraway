@@ -168,32 +168,54 @@
       </figure>
     </div>
 
-    <!-- 2 pins (Brasil/Austrália agrupados), não um por cidade — a
-         versão com 7 pins individuais (um por cidade) virou uma bagunça
-         de etiquetas disputando espaço, mesmo com os pontos corretos
-         (João, 2026-09-30: "não ficou bom... coloca apenas os 2
-         países"). Mapa recortado bem mais de perto nos dois países
-         (menos oceano/áfrica no meio) pra ficarem maiores e mais
-         reconhecíveis. -->
+    <!-- 1 pin por cidade (João, 2026-09-30, 5ª rodada: "preciso do logo
+         nas cidades") — mapa recortado bem de perto no Brasil e na
+         Austrália (menos oceano/áfrica no meio) pra sobrar espaço pra
+         cada pin sem amontoar. Brisbane/Sydney/Melbourne/Adelaide ficam
+         perto uma da outra na costa leste/sul australiana, então cada
+         etiqueta aponta pra uma direção diferente (acima/direita/
+         abaixo/esquerda) pra não colidir; abaixo do tamanho máximo do
+         mapa (desktop) as etiquetas somem e vira só os pontos + legenda
+         compacta (ver CSS). -->
     <div class="expert-map">
       <img src="../assets/img/world-map-zoom.jpg" alt="Mapa com as localizações da Expert Education no Brasil e na Austrália" class="expert-map__bg">
 
-      <span class="expert-map__pin" style="left:25.98%; top:50.09%;">
+      <span class="expert-map__pin" style="left:26.8%; top:22.8%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card">
-          <strong>Brasil</strong>
-          <span>Fortaleza · São Paulo · Porto Alegre</span>
-        </span>
+        <span class="expert-map__pin-card"><strong>Fortaleza</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:24.44%; top:46.6%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card"><strong>São Paulo</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:24.27%; top:47.4%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Porto Alegre</strong></span>
       </span>
 
-      <span class="expert-map__pin expert-map__pin--flip" style="left:91.99%; top:60.07%;">
+      <span class="expert-map__pin" style="left:87.56%; top:39%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card">
-          <strong>Austrália</strong>
-          <span>Adelaide · Brisbane · Melbourne · Sydney</span>
-        </span>
+        <span class="expert-map__pin-card expert-map__pin-card--above"><strong>Brisbane</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:87.47%; top:48.4%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card"><strong>Sydney</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:84.22%; top:58%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Melbourne</strong></span>
+      </span>
+      <span class="expert-map__pin expert-map__pin--flip" style="left:80.67%; top:55%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card"><strong>Adelaide</strong></span>
       </span>
     </div>
+    <!-- só aparece em telas estreitas, quando as etiquetas do mapa
+         somem (ver CSS) -->
+    <p class="expert-map__legend">
+      <span>Fortaleza</span><span>São Paulo</span><span>Porto Alegre</span>
+      <span>Brisbane</span><span>Sydney</span><span>Melbourne</span><span>Adelaide</span>
+    </p>
   </div>
 </section>
 
