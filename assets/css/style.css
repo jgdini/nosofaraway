@@ -551,12 +551,21 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .expert-map__pin-card strong{ font-family:var(--font-mono); font-size:.64rem; font-weight:700; letter-spacing:.02em; color:var(--ink); }
 .expert-map__pin--flip .expert-map__pin-card{ left:auto; right:16px; }
 .expert-map__pin-card--below{ top:16px; left:50%; right:auto; transform:translateX(-50%); }
-@media (max-width:640px){
-  .expert-map__pin-dot{ width:16px; height:16px; padding:3px; }
-  .expert-map__pin-card{ left:11px; padding:2px 7px; }
-  .expert-map__pin--flip .expert-map__pin-card{ right:11px; }
-  .expert-map__pin-card--below{ left:50%; right:auto; top:11px; }
-  .expert-map__pin-card strong{ font-size:.56rem; }
+.expert-map__pin-card--above{ top:auto; bottom:14px; left:50%; right:auto; transform:translateX(-50%); }
+.expert-map__legend{ display:none; }
+/* Brisbane/Sydney/Melbourne/Adelaide ficam a poucos % de distância uma
+   da outra (costa leste/sul australiana) — só cabem como etiqueta sem
+   colidir no tamanho máximo do mapa (desktop, ~1120px). Abaixo disso
+   vira só os pontos no mapa + legenda compacta embaixo, em vez de ficar
+   tentando reposicionar etiqueta por etiqueta pra não colidir em cada
+   largura de tela (achado pelo João, 2026-09-30: cortava/colidia em
+   telas intermediárias e no mobile). */
+@media (max-width:1180px){
+  .expert-map__pin-dot{ width:17px; height:17px; padding:3px; }
+  .expert-map__pin-card{ display:none; }
+  .expert-map__legend{ display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; padding:0 4px; }
+  .expert-map__legend span{ display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:.72rem; color:var(--ink-text); }
+  .expert-map__legend span::before{ content:''; width:9px; height:9px; border-radius:50%; background:#fff; border:2px solid var(--rust); flex-shrink:0; }
 }
 
 /* "20 anos" (Expert Education) — placeholder com 3 fotos aleatórias da
