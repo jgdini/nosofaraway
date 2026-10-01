@@ -168,52 +168,32 @@
       </figure>
     </div>
 
+    <!-- 2 pins (Brasil/Austrália agrupados), não um por cidade — a
+         versão com 7 pins individuais (um por cidade) virou uma bagunça
+         de etiquetas disputando espaço, mesmo com os pontos corretos
+         (João, 2026-09-30: "não ficou bom... coloca apenas os 2
+         países"). Mapa recortado bem mais de perto nos dois países
+         (menos oceano/áfrica no meio) pra ficarem maiores e mais
+         reconhecíveis. -->
     <div class="expert-map">
       <img src="../assets/img/world-map-zoom.jpg" alt="Mapa com as localizações da Expert Education no Brasil e na Austrália" class="expert-map__bg">
 
-      <span class="expert-map__pin" style="left:29.26%; top:34.64%;">
+      <span class="expert-map__pin" style="left:25.98%; top:50.09%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card"><strong>Fortaleza</strong></span>
-      </span>
-      <span class="expert-map__pin" style="left:27.41%; top:47.57%;">
-        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card"><strong>São Paulo</strong></span>
-      </span>
-      <span class="expert-map__pin" style="left:27.1%; top:48.69%;">
-        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Porto Alegre</strong></span>
+        <span class="expert-map__pin-card">
+          <strong>Brasil</strong>
+          <span>Fortaleza · São Paulo · Porto Alegre</span>
+        </span>
       </span>
 
-      <!-- Brisbane/Sydney/Melbourne/Adelaide: pontos nas coordenadas reais
-           (em cima do território australiano de verdade — achado pelo
-           João, 2026-09-30: a tentativa anterior empurrou os PONTOS pro
-           oceano pra abrir espaço, o que ficou errado). Só a etiqueta de
-           texto de cada um aponta pra uma direção diferente (acima,
-           direita, abaixo) pra não colidir, já que as 4 cidades ficam a
-           poucos % de distância uma da outra na costa leste/sul. -->
-      <span class="expert-map__pin" style="left:93.64%; top:60.86%;">
+      <span class="expert-map__pin expert-map__pin--flip" style="left:91.99%; top:60.07%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card expert-map__pin-card--above"><strong>Brisbane</strong></span>
-      </span>
-      <span class="expert-map__pin" style="left:92.28%; top:68.73%;">
-        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card"><strong>Sydney</strong></span>
-      </span>
-      <span class="expert-map__pin" style="left:91.67%; top:70.22%;">
-        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Melbourne</strong></span>
-      </span>
-      <span class="expert-map__pin expert-map__pin--flip" style="left:86.3%; top:62.55%;">
-        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card"><strong>Adelaide</strong></span>
+        <span class="expert-map__pin-card">
+          <strong>Austrália</strong>
+          <span>Adelaide · Brisbane · Melbourne · Sydney</span>
+        </span>
       </span>
     </div>
-    <!-- só aparece em telas bem estreitas, quando as etiquetas do mapa
-         somem (ver CSS) -->
-    <p class="expert-map__legend">
-      <span>Fortaleza</span><span>São Paulo</span><span>Porto Alegre</span>
-      <span>Brisbane</span><span>Sydney</span><span>Melbourne</span><span>Adelaide</span>
-    </p>
   </div>
 </section>
 
