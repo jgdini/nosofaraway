@@ -294,17 +294,24 @@ body.lp-body{ padding-bottom:0; }
     padding-block:0 44px; display:block; min-height:0;
     background:var(--ink);
   }
-  /* sem vídeo de fundo no mobile — pesado/instável em dado de celular,
-     e é lá que está a maior parte das vendas, não vale o risco */
-  .lp-hero-v2__video-bg{ display:none; }
-  .lp-hero-v2__mobile-photo{
-    display:block; width:100%; height:auto; aspect-ratio:1/1;
-    object-fit:cover; object-position:68% 40%; margin-bottom:28px;
+  /* pedido do João, 2026-10-01: vídeo precisa tocar sozinho no celular
+     também (antes ficava display:none — achava mais seguro pro dado do
+     celular — e caía só na foto estática). Em vez de fundo absoluto
+     atrás do texto (ilegível numa tela estreita), vira bloco de verdade
+     ACIMA do texto, igual a foto que substituía: mesma altura 9:16,
+     mesmo lugar. autoplay+muted+playsinline (já no HTML) é o combo que
+     os navegadores mobile aceitam tocar sozinho sem gesto do usuário. */
+  .lp-hero-v2__video-bg{
+    position:static; width:100%; aspect-ratio:9/16; margin-bottom:28px;
+    border-radius:10px; overflow:hidden;
   }
-  /* poster do Reels é vertical (720x1280) com legenda queimada — mesma
-     lógica do vídeo no desktop, aspect-ratio 9:16 real pra não cortar
-     texto nenhum (ver NOTA na dobra 01 do ecossistema-australia-blocks). */
-  .lp-hero-v2__mobile-photo--reel{ aspect-ratio:9/16; object-position:center; }
+  .lp-hero-v2__video-bg::after{ display:none; }
+  .lp-hero-v2__video-bg video,
+  .lp-hero-v2__video-bg iframe{
+    position:static; top:auto; left:auto; transform:none;
+    width:100%; height:100%; object-fit:cover;
+  }
+  .lp-hero-v2__mobile-photo{ display:none; }
   .lp-hero-v2 .wrap{ padding-top:0; }
   .lp-hero-v2__tags{ margin-top:0; }
   .lp-hero-v2__title, .lp-hero-v2__sub{ max-width:100%; }

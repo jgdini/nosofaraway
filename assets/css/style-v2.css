@@ -252,6 +252,13 @@
   .v2 .lp-success-grid{ grid-template-columns:1fr; }
 }
 
+/* depoimentos menores (pedido do João, 2026-10-01) — mesma lógica de
+   override claro do .lp-success-card acima */
+.v2 .lp-mini-card{ background:var(--cream-v2); border:1px solid var(--rule); }
+.v2 .lp-mini-card:hover{ border-color:var(--accent); }
+.v2 .lp-mini-card__media{ background:var(--ink-v2); }
+.v2 .lp-mini-card__name{ color:var(--ink-v2); }
+
 /* grid de posts do Instagram embedados (Joel Jota, Jacob Petry etc.) —
    o embed.js do Instagram vem com max-width:658px!important inline no
    blockquote; sobrescrevo pra caber em 3 colunas */
@@ -294,6 +301,21 @@
 .v2 .lp-faq .faq-item{ background:none; border:none; border-bottom:1px solid var(--rule); border-radius:0; }
 .v2 .lp-faq .faq-item summary{ color:var(--ink-v2); }
 .v2 .lp-faq .faq-item p{ color:var(--ink-v2-soft); }
+
+/* mesma classe de bug: #provas (Histórias Reais, index.html) é escuro
+   e reusa .lp-success-card, mas index.html também carrega .v2 (por
+   causa do header/brand) — sem esse reforço, o card pegava o reset
+   claro pensado pra LP (2026-10-01, pedido do João de depoimentos novos
+   expôs o problema). Devolve o tema escuro original (ver style.css). */
+#provas .lp-success-grid{ margin-top:40px; }
+#provas .lp-success-card{ background:var(--ink-soft); border:1px solid rgba(74,168,216,.25); }
+#provas .lp-success-card:hover{ border-color:var(--gold); }
+#provas .lp-success-card__photo{ background:var(--ink); }
+#provas .lp-success-card__body strong{ color:var(--cream); }
+#provas .lp-success-card__desc{ color:#A8AFCC; }
+#provas .lp-success-card .stamp-tag{ background:none; border:1px solid var(--gold); color:var(--gold); }
+#provas .lp-mini-card{ background:var(--ink-soft); border:1px solid rgba(74,168,216,.2); }
+#provas .lp-mini-card__name{ color:var(--cream); }
 
 .v2 .lp-closing{ background:var(--ink-v2) !important; color:#fff; padding-block:100px; }
 .v2 .lp-closing .lp-h2, .v2 .lp-closing .lp-lead{ color:#fff; }

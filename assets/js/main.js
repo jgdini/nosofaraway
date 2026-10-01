@@ -171,16 +171,18 @@
 
   // Vídeo de fundo (hero da LP): faz o iframe do YouTube cobrir a seção
   // inteira sem sobrar tarja preta, tipo "background-size:cover" pra
-  // vídeo — mede o próprio container (não a viewport), porque a altura
-  // do hero muda com o conteúdo.
+  // vídeo — mede o próprio box (não a viewport nem o parentElement: no
+  // desktop o box é absolute/inset:0 e preenche o hero inteiro, então dá
+  // no mesmo, mas no mobile (2026-10-01) o box virou um bloco 9:16 em
+  // fluxo normal, bem menor que o hero (que tem todo o texto embaixo) —
+  // medir o parentElement ali inflava o iframe gigante por engano.
   var bgVideoBoxes = document.querySelectorAll('[data-bg-video]');
   if (bgVideoBoxes.length) {
     var fitBgVideos = function () {
       bgVideoBoxes.forEach(function (box) {
         var iframe = box.querySelector('iframe');
-        var host = box.parentElement;
-        if (!iframe || !host) return;
-        var cw = host.clientWidth, ch = host.clientHeight;
+        if (!iframe) return;
+        var cw = box.clientWidth, ch = box.clientHeight;
         if (!cw || !ch) return;
         var videoRatio = 16 / 9;
         if (cw / ch > videoRatio) {
