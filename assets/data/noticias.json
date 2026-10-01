@@ -23,5 +23,48 @@
       "pubDate": "Sun, 23 Aug 2026 19:49:06 +0000"
     }
   ],
-  "videos": []
+  "videos": [
+    {
+      "videoId": "OhqqPjRn-TY",
+      "title": "Episódio 2: \"Eu me demiti, vendi tudo no Brasil, e ganhava $400 por semana morando num quartinho\"",
+      "link": "https://www.youtube.com/watch?v=OhqqPjRn-TY",
+      "published": "2024-12-18T00:21:41-08:00",
+      "thumbnail": "https://i.ytimg.com/vi/OhqqPjRn-TY/hqdefault.jpg"
+    },
+    {
+      "videoId": "GhkpFqImqfA",
+      "title": "É uma política abusiva! Raphael Ghanem abre o jogo sobre assuntos polêmicos com muito bom humor.",
+      "link": "https://www.youtube.com/watch?v=GhkpFqImqfA",
+      "published": "2024-11-12T00:44:35-08:00",
+      "thumbnail": "https://i.ytimg.com/vi/GhkpFqImqfA/hqdefault.jpg"
+    },
+    {
+      "videoId": "APqe7lIcSDM",
+      "title": "Nunca mais eu venho para a Australia - Léo Lins fala tudo em um Podcast Exclusivo",
+      "link": "https://www.youtube.com/watch?v=APqe7lIcSDM",
+      "published": "2024-10-22T21:48:39-07:00",
+      "thumbnail": "https://i.ytimg.com/vi/APqe7lIcSDM/hqdefault.jpg"
+    },
+    {
+      "videoId": "kGnLvP6-ksU",
+      "title": "Planta e Raiz Revela Tudo! Sua Fase Gospel e Histórias Inéditas da Carreira",
+      "link": "https://www.youtube.com/watch?v=kGnLvP6-ksU",
+      "published": "2024-10-31T15:00:28-07:00",
+      "thumbnail": "https://i.ytimg.com/vi/kGnLvP6-ksU/hqdefault.jpg"
+    },
+    {
+      "videoId": "TI3c1SwTeQE",
+      "title": "Qual é a cidade IDEAL para você na Austrália? | Melbourne",
+      "link": "https://www.youtube.com/watch?v=TI3c1SwTeQE",
+      "published": "2024-04-02T16:52:26-07:00",
+      "thumbnail": "https://i.ytimg.com/vi/TI3c1SwTeQE/hqdefault.jpg"
+    },
+    {
+      "videoId": "wbFPCqPOJFY",
+      "title": "Quais foram meus PRIMEIROS PASSOS na Austrália?",
+      "link": "https://www.youtube.com/watch?v=wbFPCqPOJFY",
+      "published": "2024-06-24T18:13:11-07:00",
+      "thumbnail": "https://i.ytimg.com/vi/wbFPCqPOJFY/hqdefault.jpg"
+    }
+  ]
 }

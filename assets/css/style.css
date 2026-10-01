@@ -580,16 +580,28 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
    2026-09-30: "pega 3 fotos de cada aleatória, depois a gente altera"). */
 .anos20-note{ font-size:.8rem; color:#7A81A8; font-style:italic; margin:20px 0 0; }
 
-/* foto+texto genérico pra crédito/certificação — landscape (3/2),
-   diferente de .mv-hero-photo/.lp-marcelo-photo que são portrait e
-   cortariam mal uma foto de sala/evento */
-.credential-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-.credential-photo{ margin:0; border-radius:10px; overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,.2); aspect-ratio:3/2; }
-.credential-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-/* slot vazio enquanto o material oficial não chega (ver .anos20-note) */
-.credential-photo--empty{ display:flex; align-items:center; justify-content:center; background:var(--paper); border:2px dashed #C7CCE4; box-shadow:none; }
-.credential-photo--empty span{ color:#7A81A8; font-size:.9rem; font-style:italic; }
-@media (max-width:900px){ .credential-grid{ grid-template-columns:1fr; } }
+/* carrossel dos certificados de coaching do Marcelo (pedido do João,
+   2026-10-01: "jogue os certificados... como se fosse cards passando") —
+   faixa full-bleed (fora do .wrap) com os cards duplicados 1x na própria
+   marcação (ver HTML) pra looping contínuo sem JS: anima -50% da track. */
+.cert-marquee{ overflow:hidden; margin-top:40px; -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+.cert-marquee__track{ display:flex; width:max-content; gap:28px; padding:4px 0; animation:cert-scroll 38s linear infinite; }
+.cert-marquee:hover .cert-marquee__track{ animation-play-state:paused; }
+.cert-marquee__track img{ height:220px; width:auto; border-radius:8px; box-shadow:0 14px 30px rgba(0,0,0,.18); flex-shrink:0; }
+@keyframes cert-scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+@media (max-width:640px){ .cert-marquee__track img{ height:150px; } }
+
+/* títulos das academias de letras (pedido do João, 2026-10-01) — 3
+   imagens com proporções bem diferentes (carta em retrato, certificados
+   em paisagem); sem cortar nada (são documentos oficiais), cada uma
+   mantém a proporção natural na coluna. */
+.letras-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin:40px auto 0; max-width:1000px; align-items:start; }
+.letras-card{ margin:0; }
+.letras-card img{ width:100%; height:auto; border-radius:8px; box-shadow:0 14px 30px rgba(0,0,0,.18); display:block; }
+.letras-card figcaption{ margin-top:12px; display:flex; flex-direction:column; gap:4px; }
+.letras-card figcaption strong{ font-family:var(--font-display); font-size:.95rem; color:var(--ink); }
+.letras-card figcaption span{ font-size:.78rem; color:#6E76A0; }
+@media (max-width:900px){ .letras-grid{ grid-template-columns:1fr; max-width:420px; } }
 
 /* hero "Quem é Marcelo" — foto real (sem texto desenhado nela) + badge
    real em HTML/CSS por cima, texto todo indexável pelo Google. */
