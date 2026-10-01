@@ -56,8 +56,8 @@
    (sem isso, só a home tinha cabeçalho claro por causa do .v2 .site-header) */
 .v2-site .site-header{ background:rgba(18,23,58,.92); backdrop-filter:blur(6px); border-bottom:1px solid rgba(74,168,216,.25); box-shadow:none; }
 .v2-site .main-nav a{ color:#D6DCEE; font-family:inherit; font-size:inherit; letter-spacing:normal; text-transform:none; }
-.v2-site .main-nav a:hover,
-.v2-site .main-nav a[aria-current="page"]{ color:var(--gold); }
+.v2-site .main-nav a:hover{ color:#fff; }
+.v2-site .main-nav a[aria-current="page"]{ color:var(--ink); background:var(--gold); }
 .v2-site .fx-badge{ background:rgba(74,168,216,.12); border-color:rgba(74,168,216,.35); color:inherit; }
 .v2-site .fx-badge__label{ color:#7A81A8; }
 .v2-site .fx-badge strong{ color:var(--gold); }
@@ -77,3 +77,9 @@
 .v2-site .v2-authority-item a{ color:var(--accent-onink); }
 .v2-site .v2-manifesto p{ color:var(--cream); }
 .v2-site .v2-manifesto .v2-manifesto__accent{ color:var(--accent-onink); }
+
+/* botões com bordas redondas igual o resto do site — a home é a única
+   página que carrega o .v2 (editorial "sóbrio", 2px, intocado nas LPs
+   de propósito); pedido do João (2026-09-30): "todos botões do site
+   deixar com bordas redondas". */
+.v2-site .btn-ticket{ border-radius:10px; }

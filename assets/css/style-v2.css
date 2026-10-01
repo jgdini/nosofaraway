@@ -102,8 +102,8 @@
 /* -------------------- hero: foto documental real, texto por cima, sem badge circular -------------------- */
 .v2-hero{ position:relative; overflow:hidden; padding-block:0; border-top:none; }
 .v2-hero__media{ position:relative; min-height:640px; display:flex; align-items:flex-end; background:var(--ink-v2); }
-.v2-hero__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-.v2-hero__media::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,22,31,.92) 0%, rgba(20,22,31,.35) 55%, rgba(20,22,31,.05) 100%); }
+.v2-hero__media img, .v2-hero__media video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.v2-hero__media::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,22,31,.92) 0%, rgba(20,22,31,.55) 55%, rgba(20,22,31,.3) 100%); }
 .v2-hero__content{ position:relative; z-index:1; padding:64px 0 56px; color:#fff; }
 .v2-hero__content .eyebrow{ color:var(--ivory); }
 .v2-hero__content .eyebrow::before{ background:var(--ivory); }
