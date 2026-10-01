@@ -286,10 +286,14 @@
 }
 .v2 .lp-pricing-note--tiny{ color:var(--ink-v2-soft) !important; font-size:.66rem; margin-top:6px; }
 
-/* FAQ: usa o mesmo componente .v2-faq */
-.v2 .faq-item{ background:none; border:none; border-bottom:1px solid var(--rule); border-radius:0; }
-.v2 .faq-item summary{ color:var(--ink-v2); }
-.v2 .faq-item p{ color:var(--ink-v2-soft); }
+/* FAQ: .faq-item é reusado no FAQ escuro do index.html (#duvidas, sem
+   .lp-faq) — sem esse escopo, o texto (--ink-v2) ficava da MESMA cor do
+   fundo --ink naquela seção e sumia por completo (achado 2026-10-01,
+   mesma classe de bug do .stamp-tag acima). Só a versão clara da LP
+   (.lp-faq) deve virar --ink-v2. */
+.v2 .lp-faq .faq-item{ background:none; border:none; border-bottom:1px solid var(--rule); border-radius:0; }
+.v2 .lp-faq .faq-item summary{ color:var(--ink-v2); }
+.v2 .lp-faq .faq-item p{ color:var(--ink-v2-soft); }
 
 .v2 .lp-closing{ background:var(--ink-v2) !important; color:#fff; padding-block:100px; }
 .v2 .lp-closing .lp-h2, .v2 .lp-closing .lp-lead{ color:#fff; }
