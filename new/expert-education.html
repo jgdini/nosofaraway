@@ -20,19 +20,18 @@
        papel do Marcelo na Expert.
      - Números (23+ anos, +200 mil vistos): já confirmados/sourced em
        marcelo-lusardo.html, reaproveitados aqui.
-     - "Nossas unidades": a pasta do Drive que o João mandou (Videos,
-       organizada por cidade — Adelaide/Brisbane/Fortaleza/Melbourne/
-       Porto Alegre/São Paulo/Sydney) só tem clips de vídeo estilo
-       Stories, não fotos prontas. Extraí UM frame de exemplo
-       (Brisbane) pra mostrar o conceito; as outras cidades estão
-       listadas em texto, sem foto ainda — dá mais trabalho (baixar+
-       recortar frame de cada vídeo) do que vale fazer sem o Marcelo
-       escolher o vídeo certo primeiro. Mesma lógica pra "fotos do
-       Staff": não achei fotos individuais de equipe na pasta, só
-       clipes de escritório — não inventei nenhuma.
-     - Pattern da identidade visual (assets/img/pattern-nsfa.png,
-       extraído do brandbook) usado como elemento decorativo atrás da
-       foto da unidade, como o João pediu.
+     - "Nossas unidades": foto de cada uma das 7 cidades (pedido do
+       João, 2026-09-30, 3ª rodada), extraída da pasta do Drive
+       (Videos, por cidade) — quadros de vídeo pra Adelaide/Brisbane/
+       Fortaleza/Melbourne/Sydney, fotos reais pra São Paulo. "Fotos
+       do Staff": não achei fotos individuais de equipe na pasta, só
+       clipes/fotos de escritório — não inventei nenhuma.
+     - Mapa com pin em cada uma das 7 cidades (mapa-múndi real,
+       recortado na faixa Brasil-África-Austrália pra caber as 7
+       cidades sem amontoar); Brisbane/Sydney/Melbourne têm um
+       pequeno ajuste esquemático de posição pra não colidir, já que
+       ficam a poucos % de distância uma da outra na costa leste
+       australiana.
      ===================================================================== -->
 
 <!-- ======================= HEADER ======================= -->
@@ -138,43 +137,72 @@
     <h2 class="section-title">Nossas unidades</h2>
     <p class="section-lead">Estrutura própria na Austrália e no Brasil — não é só uma promessa à distância.</p>
 
-    <div class="unidades-grid">
+    <div class="unidades-photo-grid">
       <figure class="unidade-photo">
-        <img src="../assets/img/unidade-brisbane.jpg" alt="Escritório da Expert Education em Brisbane, Austrália">
-        <img src="../assets/img/pattern-nsfa.png" alt="" class="unidade-photo__pattern" aria-hidden="true">
-        <figcaption>Brisbane, Austrália</figcaption>
+        <img src="../assets/img/unidades/brisbane.jpg" alt="Escritório da Expert Education em Brisbane, Austrália">
+        <figcaption>Brisbane</figcaption>
       </figure>
-      <div class="unidades-list">
-        <p class="unidades-list__lead">Além de Brisbane, a Expert também está presente em:</p>
-        <ul>
-          <li>Sydney</li>
-          <li>Melbourne</li>
-          <li>Adelaide</li>
-          <li>São Paulo</li>
-          <li>Porto Alegre</li>
-          <li>Fortaleza</li>
-        </ul>
-        <p class="unidades-list__note">[Foto de cada unidade entra aqui assim que o Marcelo escolher o material — tem bastante conteúdo no Drive esperando seleção.]</p>
-      </div>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/sydney.jpg" alt="Recepção da Expert Education em Sydney, Austrália">
+        <figcaption>Sydney</figcaption>
+      </figure>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/melbourne.jpg" alt="Recepção da Expert Education em Melbourne, Austrália">
+        <figcaption>Melbourne</figcaption>
+      </figure>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/adelaide.jpg" alt="Equipe da Expert Education em Adelaide, Austrália">
+        <figcaption>Adelaide</figcaption>
+      </figure>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/sao-paulo.jpg" alt="Escritório da Expert Education em São Paulo, Brasil">
+        <figcaption>São Paulo</figcaption>
+      </figure>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/porto-alegre.jpg" alt="Escritório da Expert Education em Porto Alegre, Brasil">
+        <figcaption>Porto Alegre</figcaption>
+      </figure>
+      <figure class="unidade-photo">
+        <img src="../assets/img/unidades/fortaleza.jpg" alt="Equipe da Expert Education em Fortaleza, Brasil">
+        <figcaption>Fortaleza</figcaption>
+      </figure>
     </div>
 
     <div class="expert-map">
-      <img src="../assets/img/world-map.jpg" alt="Mapa-múndi com as localizações da Expert Education no Brasil e na Austrália" class="expert-map__bg">
+      <img src="../assets/img/world-map-zoom.jpg" alt="Mapa com as localizações da Expert Education no Brasil e na Austrália" class="expert-map__bg">
 
-      <span class="expert-map__pin" style="left:35%; top:58%;">
+      <span class="expert-map__pin" style="left:29.26%; top:34.64%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card">
-          <strong>Brasil</strong>
-          <span>Fortaleza · Porto Alegre · São Paulo</span>
-        </span>
+        <span class="expert-map__pin-card"><strong>Fortaleza</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:27.41%; top:47.57%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card"><strong>São Paulo</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:27.1%; top:48.69%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Porto Alegre</strong></span>
       </span>
 
-      <span class="expert-map__pin expert-map__pin--flip" style="left:92%; top:70%;">
+      <!-- Brisbane/Sydney/Melbourne ficam a poucos % de distância uma da
+           outra no mapa real (costa leste australiana) — os 4 pins da
+           Austrália abaixo têm um pequeno ajuste esquemático de posição
+           pra não colidir, mantendo a posição geral de cada cidade. -->
+      <span class="expert-map__pin expert-map__pin--flip" style="left:92%; top:55%;">
         <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
-        <span class="expert-map__pin-card">
-          <strong>Austrália</strong>
-          <span>Adelaide · Brisbane · Melbourne · Sydney</span>
-        </span>
+        <span class="expert-map__pin-card"><strong>Brisbane</strong></span>
+      </span>
+      <span class="expert-map__pin expert-map__pin--flip" style="left:89%; top:64%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card"><strong>Sydney</strong></span>
+      </span>
+      <span class="expert-map__pin expert-map__pin--flip" style="left:84%; top:73%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Melbourne</strong></span>
+      </span>
+      <span class="expert-map__pin" style="left:76%; top:67%;">
+        <span class="expert-map__pin-dot"><img src="../assets/img/expert-icon.png" alt=""></span>
+        <span class="expert-map__pin-card expert-map__pin-card--below"><strong>Adelaide</strong></span>
       </span>
     </div>
   </div>

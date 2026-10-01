@@ -513,6 +513,13 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
    identidade visual espiando atrás, pedido do João (2026-09-30) pra
    manter a mesma linguagem visual do brandbook nas fotos */
 .unidades-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; margin-top:40px; }
+/* grade com foto de cada unidade (7 cidades) — pedido do João,
+   2026-09-30: "coloca uma foto de cada unidade" (antes só tinha
+   Brisbane com foto, resto era lista em texto). */
+.unidades-photo-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; margin-top:40px; }
+.unidades-photo-grid .unidade-photo figcaption{ text-align:center; }
+@media (max-width:900px){ .unidades-photo-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px){ .unidades-photo-grid{ grid-template-columns:1fr; } }
 .unidade-photo{ position:relative; margin:0; }
 .unidade-photo__pattern{ position:absolute; top:-36px; right:-36px; width:160px; z-index:0; opacity:.9; }
 .unidade-photo img:not(.unidade-photo__pattern){ position:relative; z-index:1; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:10px; box-shadow:0 24px 50px rgba(18,23,58,.2); display:block; }
@@ -537,19 +544,19 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
    imagem específica (ver commit/histórico se precisar recalibrar). */
 .expert-map{ position:relative; margin-top:48px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(36,31,92,.2); }
 .expert-map__bg{ width:100%; display:block; }
-.expert-map__pin{ position:absolute; top:0; left:0; }
-.expert-map__pin-dot{ position:absolute; top:0; left:0; width:34px; height:34px; border-radius:50%; background:#fff; border:2px solid var(--rust); box-shadow:0 4px 12px rgba(36,31,92,.4); display:flex; align-items:center; justify-content:center; padding:6px; transform:translate(-50%,-50%); z-index:1; }
+.expert-map__pin{ position:absolute; top:0; left:0; z-index:1; }
+.expert-map__pin-dot{ position:absolute; top:0; left:0; width:22px; height:22px; border-radius:50%; background:#fff; border:2px solid var(--rust); box-shadow:0 3px 8px rgba(36,31,92,.4); display:flex; align-items:center; justify-content:center; padding:4px; transform:translate(-50%,-50%); z-index:1; }
 .expert-map__pin-dot img{ width:100%; height:100%; object-fit:contain; }
-.expert-map__pin-card{ position:absolute; top:0; left:24px; transform:translateY(-50%); background:#fff; border-radius:10px; padding:8px 14px; box-shadow:0 6px 16px rgba(36,31,92,.3); white-space:nowrap; }
-.expert-map__pin-card strong{ display:block; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink); }
-.expert-map__pin-card span{ display:block; font-size:.72rem; color:#4A4F70; margin-top:2px; }
-.expert-map__pin--flip .expert-map__pin-card{ left:auto; right:24px; }
+.expert-map__pin-card{ position:absolute; top:0; left:16px; transform:translateY(-50%); background:#fff; border-radius:20px; padding:3px 10px; box-shadow:0 4px 10px rgba(36,31,92,.3); white-space:nowrap; }
+.expert-map__pin-card strong{ font-family:var(--font-mono); font-size:.64rem; font-weight:700; letter-spacing:.02em; color:var(--ink); }
+.expert-map__pin--flip .expert-map__pin-card{ left:auto; right:16px; }
+.expert-map__pin-card--below{ top:16px; left:50%; right:auto; transform:translateX(-50%); }
 @media (max-width:640px){
-  .expert-map__pin-dot{ width:24px; height:24px; padding:4px; }
-  .expert-map__pin-card{ left:18px; padding:5px 9px; }
-  .expert-map__pin--flip .expert-map__pin-card{ right:18px; }
-  .expert-map__pin-card strong{ font-size:.6rem; }
-  .expert-map__pin-card span{ font-size:.6rem; }
+  .expert-map__pin-dot{ width:16px; height:16px; padding:3px; }
+  .expert-map__pin-card{ left:11px; padding:2px 7px; }
+  .expert-map__pin--flip .expert-map__pin-card{ right:11px; }
+  .expert-map__pin-card--below{ left:50%; right:auto; top:11px; }
+  .expert-map__pin-card strong{ font-size:.56rem; }
 }
 
 /* "20 anos" (Expert Education) — placeholder com 3 fotos aleatórias da
