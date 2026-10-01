@@ -83,7 +83,7 @@
 .v2-rule{ border:0; border-top:1px solid var(--rule); margin:0; }
 
 /* -------------------- botões: CTA verde intocável, resto sóbrio -------------------- */
-.v2 .btn-ticket{ border-radius:2px; border:none; box-shadow:none; animation:none; }
+.v2 .btn-ticket{ border-radius:999px; border:none; box-shadow:none; animation:none; }
 .v2 .btn-ticket::before, .v2 .btn-ticket::after{ display:none; }
 .v2 .link-inline, .v2 .link-inline--light{ color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px; }
 

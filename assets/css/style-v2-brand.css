@@ -77,9 +77,3 @@
 .v2-site .v2-authority-item a{ color:var(--accent-onink); }
 .v2-site .v2-manifesto p{ color:var(--cream); }
 .v2-site .v2-manifesto .v2-manifesto__accent{ color:var(--accent-onink); }
-
-/* botões com bordas redondas igual o resto do site — a home é a única
-   página que carrega o .v2 (editorial "sóbrio", 2px, intocado nas LPs
-   de propósito); pedido do João (2026-09-30): "todos botões do site
-   deixar com bordas redondas". */
-.v2-site .btn-ticket{ border-radius:10px; }
