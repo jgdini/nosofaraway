@@ -1,0 +1,19 @@
+# Austrália Sem Fronteiras (No So Far Away)
+
+> Mentoria e ecossistema de apoio para brasileiros que querem estudar, trabalhar, imigrar e construir vida na Austrália, liderado por Marcelo Lusardo.
+
+Marcelo Lusardo é fundador do Austrália Sem Fronteiras e do canal No So Far Away no YouTube, sócio-investidor da Expert Education & Visa Services (fundada em 2003, mais de 200 mil vistos aprovados), Master Coach certificado pelo IBC (Instituto Brasileiro de Coaching) e Presidente Continental da Oceania da ACILBRAS (Academia de Artes, Ciências e Letras do Brasil). O programa cobre planejamento de visto, inglês, carreira, networking e comunidade, do primeiro passo no Brasil até a vida construída na Austrália.
+
+Nota: este domínio (jgdini.github.io/nosofaraway) é um ambiente de protótipo para aprovação do cliente antes da migração para o domínio definitivo — não é a URL pública final da marca.
+
+## Páginas principais
+
+- [Home](/nosofaraway/new/index.html): visão geral da mentoria, histórias de alunos com visto aprovado e FAQ sobre o programa.
+- [Quem é Marcelo Lusardo](/nosofaraway/new/marcelo-lusardo.html): trajetória de Marcelo, certificações de coaching (IBC) e títulos honorários em academias de letras.
+- [Ecossistema Austrália Sem Fronteiras](/nosofaraway/new/ecossistema-australia.html): página de oferta do programa completo (vistos, carreira, networking, educação).
+- [Expert Education & Visa Services](/nosofaraway/new/expert-education.html): parceira oficial de vistos, mais de 23 anos de atuação, unidades no Brasil e na Austrália.
+- [Notícias e vídeos](/nosofaraway/new/noticias.html): notícias reais sobre imigração e Austrália (SBS, ABC News) e vídeos do canal.
+
+## Canais
+
+- [Canal no YouTube](https://www.youtube.com/@nsfa_br): entrevistas, depoimentos de alunos e conteúdo sobre imigração australiana.

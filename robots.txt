@@ -1,0 +1,6 @@
+# Este domínio (jgdini.github.io/nosofaraway) é o ambiente de protótipo
+# e aprovação do cliente — o site definitivo vai pra um domínio próprio
+# (migração pra WordPress). Bloqueado de indexação até lá pra não
+# competir com o site final no Google depois da migração.
+User-agent: *
+Disallow: /
