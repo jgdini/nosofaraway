@@ -1,9 +1,11 @@
 name: Atualizar notícias
 
+# Cron desligado a pedido do João (2026-10-01): a atualização automática
+# sobrescrevia os vídeos escolhidos à mão em "Vídeos em destaque"
+# (noticias.html) e na home a cada 6h, sem distinguir vídeo fixado de
+# vídeo automático. Rodar manualmente via "Run workflow" quando quiser
+# atualizar notícias/vídeos de novo.
 on:
-  schedule:
-    # a cada 6 horas
-    - cron: '0 */6 * * *'
   workflow_dispatch: {}
 
 permissions:
