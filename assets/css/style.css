@@ -576,34 +576,10 @@ a.lp-video-card .lp-video-card__body{ display:block; }
   .unidade-photo__pattern{ width:110px; top:-24px; right:-20px; }
 }
 
-/* "mapa" Brasil + Austrália (Expert Education) — mapa-múndi real
-   (domínio público, CIA World Factbook via Wikimedia Commons), recorte
-   bem fechado nos dois países (menos oceano/áfrica no meio, pra ficarem
-   maiores) com 1 pin por cidade — pedido do João, 2026-09-30, 5ª rodada:
-   "preciso do logo nas cidades" (a versão com só 2 pins agrupados tinha
-   sido um meio-termo da rodada anterior). Posições calibradas sobre
-   esta imagem específica (ver commit/histórico se precisar recalibrar;
-   Brisbane/Sydney/Melbourne/Adelaide ficam perto uma da outra na costa
-   leste/sul australiana, então a etiqueta de cada uma aponta pra uma
-   direção diferente pra não colidir). */
-.expert-map{ position:relative; margin-top:48px; border-radius:16px; overflow:hidden; box-shadow:0 20px 50px rgba(36,31,92,.2); }
-.expert-map__bg{ width:100%; display:block; }
-.expert-map__pin{ position:absolute; top:0; left:0; z-index:1; }
-.expert-map__pin-dot{ position:absolute; top:0; left:0; width:26px; height:26px; border-radius:50%; background:#fff; border:2px solid var(--rust); box-shadow:0 3px 9px rgba(36,31,92,.4); display:flex; align-items:center; justify-content:center; padding:5px; transform:translate(-50%,-50%); z-index:1; }
-.expert-map__pin-dot img{ width:100%; height:100%; object-fit:contain; }
-.expert-map__pin-card{ position:absolute; top:0; left:18px; transform:translateY(-50%); background:#fff; border-radius:20px; padding:4px 11px; box-shadow:0 4px 10px rgba(36,31,92,.3); white-space:nowrap; }
-.expert-map__pin-card strong{ font-family:var(--font-mono); font-size:.68rem; font-weight:700; letter-spacing:.02em; color:var(--ink); }
-.expert-map__pin--flip .expert-map__pin-card{ left:auto; right:18px; }
-.expert-map__pin-card--below{ top:16px; left:50%; right:auto; transform:translateX(-50%); }
-.expert-map__pin-card--above{ top:auto; bottom:14px; left:50%; right:auto; transform:translateX(-50%); }
-.expert-map__legend{ display:none; }
-@media (max-width:1180px){
-  .expert-map__pin-dot{ width:18px; height:18px; padding:3px; }
-  .expert-map__pin-card{ display:none; }
-  .expert-map__legend{ display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; padding:0 4px; }
-  .expert-map__legend span{ display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:.72rem; color:var(--ink-text); }
-  .expert-map__legend span::before{ content:''; width:9px; height:9px; border-radius:50%; background:#fff; border:2px solid var(--rust); flex-shrink:0; }
-}
+/* mapa oficial da Expert (experteducation.com.br) — pins já vêm na imagem,
+   fundo transparente, então fica direto sobre o fundo da seção */
+.expert-map-oficial{ margin:48px auto 0; max-width:900px; }
+.expert-map-oficial img{ width:100%; height:auto; display:block; }
 
 /* "20 anos" (Expert Education) — placeholder com 3 fotos aleatórias da
    festa (pasta "20 anos" no Drive), pra ter o modelo pronto; trocar
