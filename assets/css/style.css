@@ -405,6 +405,9 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
   border-radius:20px; padding:5px 12px; margin-bottom:auto;
 }
 .ecosystem-card h3{ font-size:1.35rem; margin-bottom:8px; }
+/* o h3 herdava o azul-escuro do .v2 e sumia em cima da foto escurecida
+   (pedido do João, 2026-10-02: trocar pra dourado); seletor mais forte que ".v2 h3" */
+.ecosystem-grid .ecosystem-card h3{ color:#E8C46A; }
 .ecosystem-card p{ margin:0 0 14px; font-size:.92rem; color:#E4E7F6; }
 .ecosystem-card__cta{ font-family:var(--font-mono); font-size:.78rem; font-weight:700; letter-spacing:.04em; color:var(--cream); display:inline-flex; align-items:center; gap:6px; }
 .ecosystem-card:hover .ecosystem-card__cta{ text-decoration:underline; }
