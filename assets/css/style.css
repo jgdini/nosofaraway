@@ -348,6 +348,27 @@ h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-sp
 .lp-video-card__body strong{ display:block; font-size:1rem; color:var(--cream); font-family:var(--font-display); margin-bottom:6px; }
 .lp-video-card__body p{ font-size:.82rem; color:#A8AFCC; line-height:1.55; margin:0; }
 
+/* cards de link pro Instagram do canal (2026-10-02): mesma proporção 9:16
+   dos vídeos, play por cima; 5 cards = 3 em cima + 2 centralizados embaixo */
+a.lp-video-card{ text-decoration:none; color:inherit; }
+.lp-video-card__media{ position:relative; display:block; aspect-ratio:9/16; background:#000; overflow:hidden; }
+.lp-video-card__media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.lp-video-card__media--brand{ display:flex; align-items:center; justify-content:center; background:linear-gradient(160deg,#342C7A,#241F5C); }
+.lp-video-card__media--brand img{ width:70%; height:auto; object-fit:contain; margin-top:-14%; }
+.lp-video-card__media--brand .lp-video-card__play{ align-items:flex-end; padding-bottom:22%; background:none; }
+.lp-video-card__play{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; background:rgba(18,23,58,.25); }
+a.lp-video-card .lp-video-card__body{ display:block; }
+.lp-video-grid--five{ grid-template-columns:repeat(6,1fr); }
+.lp-video-grid--five .lp-video-card{ grid-column:span 2; }
+.lp-video-grid--five .lp-video-card:nth-child(4){ grid-column:2 / span 2; }
+.lp-video-grid--five .lp-video-card:nth-child(5){ grid-column:4 / span 2; }
+@media (max-width:900px){
+  .lp-video-grid--five{ grid-template-columns:1fr; }
+  .lp-video-grid--five .lp-video-card,
+  .lp-video-grid--five .lp-video-card:nth-child(4),
+  .lp-video-grid--five .lp-video-card:nth-child(5){ grid-column:auto; }
+}
+
 /* depoimentos "menores" (pedido do João, 2026-10-01) — grid secundário
    abaixo do .lp-success-grid em destaque, pra caber vários de uma vez
    sem competir com Rodrigo/Gabriel Sedlak. Estilo base (dark/gold),
