@@ -220,4 +220,26 @@
     revealTargets.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
+  // Cards de depoimento com link do YouTube (youtu.be/ID): em vez de abrir
+  // o YouTube em outra aba, o clique troca a miniatura pelo player dentro do
+  // próprio card (pedido do João, 2026-10-02). Funciona igual no mobile: o
+  // toque é o gesto que libera o autoplay.
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest ? e.target.closest('a.lp-success-card[href*="youtu.be/"], a.lp-mini-card[href*="youtu.be/"]') : null;
+    if (!card) return;
+    var m = card.getAttribute('href').match(/youtu\.be\/([\w-]{11})/);
+    var media = card.querySelector('.lp-success-card__photo, .lp-mini-card__media');
+    if (!m || !media) return;
+    e.preventDefault();
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1';
+    iframe.title = card.querySelector('strong, .lp-mini-card__name') ? card.querySelector('strong, .lp-mini-card__name').textContent : 'Depoimento';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    media.innerHTML = '';
+    media.appendChild(iframe);
+    card.removeAttribute('href');
+    card.removeAttribute('target');
+  });
+
 })();

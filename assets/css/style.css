@@ -379,6 +379,8 @@ a.lp-video-card .lp-video-card__body{ display:block; }
 .lp-mini-card__media img, .lp-mini-card__media video{ width:100%; height:100%; object-fit:cover; display:block; }
 .lp-mini-card__play{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:.85rem; color:#fff; background:rgba(18,23,58,.3); pointer-events:none; }
 .lp-mini-card__name{ font-size:.78rem; font-weight:600; padding:8px 10px; color:var(--cream); font-family:var(--font-display); }
+/* player do YouTube que substitui a miniatura ao clicar (main.js) */
+.lp-success-card__photo iframe, .lp-mini-card__media iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 @media (max-width:900px){
   .lp-success-grid{ grid-template-columns:1fr; }
   .lp-instagram-grid{ grid-template-columns:1fr; max-width:460px; }
