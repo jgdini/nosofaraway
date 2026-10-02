@@ -25,11 +25,16 @@
   function newsCard(item) {
     const card = document.createElement('article');
     card.className = 'news-card';
+    // Fontes em inglês: lang="en" deixa o navegador oferecer tradução, e o link
+    // abre a matéria traduzida pelo Google Tradutor (URL pública, sem chave nem
+    // serviço nosso, funciona igual em qualquer hospedagem).
+    const translated = 'https://translate.google.com/translate?sl=en&tl=pt&u=' + encodeURIComponent(item.link);
     card.innerHTML = `
       <span class="news-card__source">${item.source}</span>
-      <h3 class="news-card__title"><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
-      <p class="news-card__desc">${item.description}</p>
+      <h3 class="news-card__title" lang="en"><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+      <p class="news-card__desc" lang="en">${item.description}</p>
       <span class="news-card__date">${formatDate(item.pubDate)}</span>
+      <a class="news-card__translate" href="${translated}" target="_blank" rel="noopener">Ler em português →</a>
     `;
     return card;
   }
