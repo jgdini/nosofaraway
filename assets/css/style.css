@@ -54,7 +54,12 @@
 html{ scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
-  *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  /* carrossel de certificados fica de fora de propósito (pedido do João,
+     2026-10-02: "no celular não fica rodando igual no desk" — o celular
+     dele tem a preferência de SO "reduzir movimento" ligada, que já
+     existia aqui como acessibilidade geral; sem essa exceção, a faixa
+     fica estática no mobile em vez de rolar como no desktop) */
+  *:not(.cert-marquee__track),*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
 }
 
 body{
