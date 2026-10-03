@@ -394,6 +394,35 @@
       </a>
     </div>
 
+    <!-- História do PR do Rodrigo (pedido do João, 2026-10-03): print da
+         conversa de WhatsApp + áudio de resposta do Marcelo. O botão de play
+         fica por cima do play do print e toca o áudio (m4a + mp3, porque o
+         .ogg original do WhatsApp não toca no Safari/iPhone). -->
+    <div class="pr-story">
+      <div class="pr-story__phone">
+        <img src="../assets/img/depoimento-rodrigo-pr-print.jpg" alt="Conversa de WhatsApp em que Rodrigo conta ao Marcelo que o PR foi aprovado e o Marcelo responde com um áudio de 1 minuto e 24 segundos" width="640" height="1390" loading="lazy">
+        <button type="button" class="pr-story__play" data-audio-play="pr-audio" aria-label="Ouvir o áudio do Marcelo" aria-pressed="false">
+          <svg class="pr-story__icon pr-story__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+          <svg class="pr-story__icon pr-story__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+        </button>
+        <audio id="pr-audio" preload="none">
+          <source src="../assets/audio/rodrigo-pr-resposta-marcelo.m4a" type="audio/mp4">
+          <source src="../assets/audio/rodrigo-pr-resposta-marcelo.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="pr-story__copy">
+        <span class="stamp-tag">PR APROVADO</span>
+        <p class="pr-story__title">Rodrigo conseguiu a residência permanente e foi contar pro Marcelo.</p>
+        <p class="pr-story__text">É o mesmo Rodrigo dos vídeos aqui em cima. Quando saiu o PR (Permanent Resident), ele mandou mensagem no WhatsApp e o Marcelo respondeu por áudio.</p>
+        <p class="pr-story__hint">Toque no play da conversa pra ouvir a resposta.</p>
+        <a class="btn btn-ticket" href="#analise">
+          <span>Analisar meu perfil</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="pr-story__note">Cada caso é um caso: o resultado do Rodrigo não é garantia de residência pra ninguém.</p>
+      </div>
+    </div>
+
     <div class="lp-mini-grid">
       <figure class="lp-mini-card">
         <div class="lp-mini-card__media"><video controls preload="none" poster="../assets/img/depoimento-caio-poster.jpg" playsinline><source src="../assets/videos/depoimento-caio.mp4" type="video/mp4"></video></div>

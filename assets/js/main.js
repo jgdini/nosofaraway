@@ -242,4 +242,31 @@
     card.removeAttribute('target');
   });
 
+  // Botão de play por cima do print do WhatsApp (história do PR do Rodrigo):
+  // toca/pausa o <audio> indicado em data-audio-play.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('[data-audio-play]') : null;
+    if (!btn) return;
+    var audio = document.getElementById(btn.getAttribute('data-audio-play'));
+    if (!audio) return;
+    if (audio.paused) {
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () {});
+    } else {
+      audio.pause();
+    }
+    if (!audio._prBound) {
+      audio._prBound = true;
+      var sync = function () {
+        var on = !audio.paused;
+        btn.classList.toggle('is-playing', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.setAttribute('aria-label', on ? 'Pausar o áudio do Marcelo' : 'Ouvir o áudio do Marcelo');
+      };
+      audio.addEventListener('play', sync);
+      audio.addEventListener('pause', sync);
+      audio.addEventListener('ended', sync);
+    }
+  });
+
 })();
