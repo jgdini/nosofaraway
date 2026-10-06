@@ -105,7 +105,7 @@
         if (data.news && data.news.length) {
           data.news.forEach((item) => newsGrid.appendChild(newsCard(item)));
         } else {
-          newsGrid.innerHTML = '<p class="noticias-empty">Nenhuma notícia relevante nas últimas atualizações — volte em breve.</p>';
+          newsGrid.innerHTML = '<p class="noticias-empty">Nenhuma notícia relevante nas últimas atualizações, volte em breve.</p>';
         }
       }
 
