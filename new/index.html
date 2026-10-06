@@ -394,27 +394,38 @@
       </a>
     </div>
 
-    <!-- História do PR do Rodrigo (pedido do João, 2026-10-03): print da
-         conversa de WhatsApp + áudio de resposta do Marcelo. O botão de play
-         fica por cima do play do print e toca o áudio (m4a + mp3, porque o
-         .ogg original do WhatsApp não toca no Safari/iPhone). -->
+    <!-- História do PR do Rodrigo (pedido do João, 2026-10-03; print e 2º áudio
+         trocados em 2026-10-06). Print de conversa de WhatsApp (os links dos
+         sites de teste foram borrados na própria imagem) + dois áudios: o
+         primeiro é a resposta do Marcelo e o segundo, a do Rodrigo. Áudios em
+         m4a + mp3 porque o .ogg do WhatsApp não toca no Safari/iPhone. -->
     <div class="pr-story">
       <div class="pr-story__phone">
-        <img src="../assets/img/depoimento-rodrigo-pr-print.jpg" alt="Conversa de WhatsApp em que Rodrigo conta ao Marcelo que o PR foi aprovado e o Marcelo responde com um áudio de 1 minuto e 24 segundos" width="640" height="1390" loading="lazy">
-        <button type="button" class="pr-story__play" data-audio-play="pr-audio" aria-label="Ouvir o áudio do Marcelo" aria-pressed="false">
-          <svg class="pr-story__icon pr-story__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
-          <svg class="pr-story__icon pr-story__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
-        </button>
-        <audio id="pr-audio" preload="none">
-          <source src="../assets/audio/rodrigo-pr-resposta-marcelo.m4a" type="audio/mp4">
-          <source src="../assets/audio/rodrigo-pr-resposta-marcelo.mp3" type="audio/mpeg">
-        </audio>
+        <img src="../assets/img/depoimento-rodrigo-conversa.jpg" alt="Conversa de WhatsApp entre o Marcelo e o Rodrigo, com mensagens de áudio" width="871" height="752" loading="lazy">
       </div>
       <div class="pr-story__copy">
         <span class="stamp-tag">PR APROVADO</span>
         <p class="pr-story__title">Rodrigo conseguiu a residência permanente e foi contar pro Marcelo.</p>
-        <p class="pr-story__text">É o mesmo Rodrigo dos vídeos aqui em cima. Quando saiu o PR (Permanent Resident), ele mandou mensagem no WhatsApp e o Marcelo respondeu por áudio.</p>
-        <p class="pr-story__hint">Toque no play da conversa pra ouvir a resposta.</p>
+        <p class="pr-story__text">É o mesmo Rodrigo dos vídeos aqui em cima. Quando saiu o PR (Permanent Resident), ele mandou mensagem no WhatsApp, o Marcelo respondeu por áudio e o Rodrigo respondeu de volta.</p>
+        <p class="pr-story__hint">Toque nos botões pra ouvir a conversa:</p>
+        <div class="pr-story__audios">
+          <button type="button" class="pr-audio" data-audio-play="audio-marcelo" data-audio-name="Marcelo" aria-pressed="false" aria-label="Ouvir o áudio do Marcelo">
+            <span class="pr-audio__icon"><svg class="pr-audio__svg pr-audio__svg--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><svg class="pr-audio__svg pr-audio__svg--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg></span>
+            <span class="pr-audio__label"><strong>Marcelo</strong><small>1:24</small></span>
+          </button>
+          <button type="button" class="pr-audio" data-audio-play="audio-rodrigo" data-audio-name="Rodrigo" aria-pressed="false" aria-label="Ouvir o áudio do Rodrigo">
+            <span class="pr-audio__icon"><svg class="pr-audio__svg pr-audio__svg--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><svg class="pr-audio__svg pr-audio__svg--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg></span>
+            <span class="pr-audio__label"><strong>Rodrigo</strong><small>0:41</small></span>
+          </button>
+          <audio id="audio-marcelo" preload="none">
+            <source src="../assets/audio/audio-marcelo.m4a" type="audio/mp4">
+            <source src="../assets/audio/audio-marcelo.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="audio-rodrigo" preload="none">
+            <source src="../assets/audio/audio-rodrigo.m4a" type="audio/mp4">
+            <source src="../assets/audio/audio-rodrigo.mp3" type="audio/mpeg">
+          </audio>
+        </div>
         <a class="btn btn-ticket" href="#analise">
           <span>Analisar meu perfil</span>
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
