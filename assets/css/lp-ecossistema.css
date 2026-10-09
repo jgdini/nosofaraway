@@ -27,7 +27,7 @@ body.lp-body{ padding-bottom:0; }
   background:var(--ink); /* cor sólida de base — o vídeo/gradiente entram por cima, como elementos reais */
 }
 .lp-hero-v2__video-bg{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:var(--ink); }
-.hero-video-play{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2; width:76px; height:76px; border-radius:50%; border:0; background:var(--cta-green,#22C55E); color:#fff; font-size:1.6rem; line-height:1; cursor:pointer; pointer-events:auto; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+
 .lp-hero-v2__video-bg::after{
   content:""; position:absolute; inset:0;
   background:linear-gradient(90deg, rgba(18,23,58,.9) 0%, rgba(18,23,58,.8) 30%, rgba(18,23,58,.62) 55%, rgba(18,23,58,.45) 100%);
@@ -295,6 +295,7 @@ body.lp-body{ padding-bottom:0; }
     padding-block:0 44px; display:block; min-height:0;
     background:var(--ink);
   }
+  .v2 section.lp-hero-v2{ padding-block:0 44px; }
   /* pedido do João, 2026-10-01: vídeo precisa tocar sozinho no celular
      também (antes ficava display:none — achava mais seguro pro dado do
      celular — e caía só na foto estática). Em vez de fundo absoluto
@@ -303,7 +304,9 @@ body.lp-body{ padding-bottom:0; }
      mesmo lugar. autoplay+muted+playsinline (já no HTML) é o combo que
      os navegadores mobile aceitam tocar sozinho sem gesto do usuário. */
   .lp-hero-v2__video-bg{
-    position:relative; width:100%; aspect-ratio:9/16; margin-bottom:28px;
+    position:relative; aspect-ratio:9/16; margin:0 auto 28px;
+    width:min(100%, calc((100vh - 163px) * 9 / 16));
+    width:min(100%, calc((100svh - 163px) * 9 / 16));
     border-radius:10px; overflow:hidden;
   }
   .lp-hero-v2__video-bg::after{ display:none; }
