@@ -242,6 +242,25 @@
     card.removeAttribute('target');
   });
 
+  // Vídeo do hero: o arquivo é escolhido pelo tamanho da tela no carregamento
+  // (o Safari do iPhone não confia em <source media>). Se o início automático
+  // não acontecer, aparece um botão de play.
+  var heroVideo = document.querySelector('.lp-hero-v2__video-bg video[data-src-mobile]');
+  if (heroVideo) {
+    var isMobile = window.matchMedia('(max-width: 640px)').matches;
+    heroVideo.setAttribute('src', isMobile ? heroVideo.getAttribute('data-src-mobile') : heroVideo.getAttribute('data-src-desktop'));
+    if (isMobile) heroVideo.setAttribute('poster', heroVideo.getAttribute('data-poster-mobile'));
+    var heroPlay = heroVideo.parentNode.querySelector('.hero-video-play');
+    var showHeroPlay = function () { if (heroPlay && heroVideo.paused) heroPlay.hidden = false; };
+    heroVideo.addEventListener('playing', function () { if (heroPlay) heroPlay.hidden = true; });
+    heroVideo.addEventListener('pause', showHeroPlay);
+    setTimeout(showHeroPlay, 4000);
+    if (heroPlay) heroPlay.addEventListener('click', function () {
+      heroVideo.muted = true;
+      var p = heroVideo.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
   // Botões de áudio da história do PR do Rodrigo: cada [data-audio-play]
   // toca/pausa o <audio> do id indicado; tocar um pausa o outro.
   document.addEventListener('click', function (e) {

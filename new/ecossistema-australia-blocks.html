@@ -161,10 +161,10 @@
      <video>, sem duplicar decodificação. -->
 <section class="lp-hero-v2 blk-dark">
   <div class="lp-hero-v2__video-bg" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="../assets/img/hero-reels-poster.jpg">
-      <source src="../assets/videos/hero-celular.mp4" type="video/mp4" media="(max-width: 640px)">
+    <video autoplay muted loop playsinline preload="auto" poster="../assets/img/hero-reels-poster.jpg" data-src-mobile="../assets/videos/hero-celular.mp4" data-src-desktop="../assets/videos/hero-reels.mp4" data-poster-mobile="../assets/img/hero-celular-poster.jpg">
       <source src="../assets/videos/hero-reels.mp4" type="video/mp4">
     </video>
+    <button type="button" class="hero-video-play" hidden aria-label="Tocar o vídeo">▶</button>
   </div>
   <!-- sem vídeo de fundo no mobile (ver CSS) — faltava o fallback estático
        aqui, por isso a dobra ficava em branco no celular. Usa o próprio
